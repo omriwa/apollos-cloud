@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AdTech Platform Migration from PHP to Node.js &amp; React for Splicky | Apollo's Cloud EOOD</title>
+    <meta name="description" content="Full-stack platform migration from legacy PHP to Node.js and React for Splicky AdTech.">
+    <link rel="icon" href="https://apollos-cloud.eu/wp-content/uploads/2026/02/cropped-apollos.business.logo_-scaled-1-32x32.png" sizes="32x32">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css"><link rel="stylesheet" href="css/case-study-detail.css"><link rel="stylesheet" href="css/nav.css">
+</head>
+<body>
+    <header><div class="header-container">
+        <a href="index.html" class="logo"><img src="https://apollos-cloud.eu/wp-content/uploads/2026/02/cropped-apollos.business.logo_-1-scaled-1-235x165.png" alt="Apollo's Cloud Logo"></a>
+        <nav><ul><li><a href="index.html">Home</a></li><li><a href="what-we-do.html">What We Do</a></li><li class="has-dropdown"><a href="case-studies.html">Case Studies</a><ul class="dropdown"><li><a href="yara-iot-platform.html">Yara International</a></li><li><a href="mercedes-benz-kubernetes.html">Mercedes-Benz</a></li><li><a href="choco-notification-system.html">Choco</a></li><li><a href="lendis-fintech.html">Lendis</a></li><li><a href="vivy-healthtech.html">Vivy HealthTech</a></li><li><a href="migraven-it-security.html">MigRaven</a></li><li><a href="splicky-adtech.html">Splicky</a></li><li><a href="ust-adecco-azure.html">UST / Adecco</a></li><li><a href="webiny-serverless.html">Webiny</a></li></ul></li><li><a href="about-us.html">About Us</a></li><li><a href="contact.html">Contact</a></li></ul></nav>
+        <button class="mobile-menu-toggle" aria-label="Toggle menu" onclick="document.querySelector('nav ul').classList.toggle('active')"><span></span><span></span><span></span></button>
+    </div></header>
+    <section class="case-study-hero"><div class="container">
+        <div class="breadcrumb"><a href="case-studies.html">Case Studies</a> / <span>Splicky</span></div>
+        <div class="case-study-meta"><span class="case-tag">Use Cases</span><span class="case-author">By Omri Wallach</span></div>
+        <h1>AdTech Platform Migration from PHP to Node.js &amp; React for Splicky</h1>
+        <p class="lead-text">Splicky, a programmatic advertising platform, required a comprehensive modernization of their AdTech stack. The legacy PHP application was struggling to meet the performance demands of real-time ad serving and campaign management, necessitating a migration to a modern JavaScript-based architecture.</p>
+    </div></section>
+    <section class="case-study-body"><div class="container case-study-content">
+        <h2>Context</h2>
+        <p>The Splicky platform handles real-time bidding, campaign management, and analytics for programmatic advertising across mobile and display channels. The legacy PHP codebase had become a bottleneck for both performance and developer productivity, making it difficult to compete in the fast-evolving AdTech landscape.</p>
+        <p>I led the full-stack migration effort, architecting the new Node.js backend and React frontend while ensuring continuity of the live advertising platform.</p>
+        <h2>Engineering Challenges &amp; Solutions</h2>
+        <div class="challenge-card"><h3>Live Platform Migration</h3><p>The advertising platform needed to remain fully operational during migration—any downtime would directly impact ad revenue. We implemented an <strong>incremental migration strategy</strong> with parallel running systems and gradual traffic shifting.</p></div>
+        <div class="challenge-card"><h3>Performance Requirements</h3><p>AdTech demands sub-millisecond response times for bid requests. The new <strong>Node.js backend</strong> needed to significantly outperform the PHP predecessor while maintaining data consistency across high-throughput campaign operations.</p></div>
+        <div class="challenge-card"><h3>Modern Frontend Architecture</h3><p>The campaign management dashboard required a complete rebuild in <strong>React</strong> to provide real-time analytics, drag-and-drop campaign builders, and responsive data tables handling millions of ad impression records.</p></div>
+        <h2>The Architectural Solutions</h2>
+        <div class="solutions-grid">
+            <div class="solution-item"><h4>Node.js Backend</h4><p>Rebuilt the core backend in <strong>Node.js</strong> with optimized async I/O for high-throughput ad serving and campaign management APIs.</p></div>
+            <div class="solution-item"><h4>React Dashboard</h4><p>Developed a modern <strong>React frontend</strong> with real-time analytics dashboards, campaign management tools, and reporting interfaces.</p></div>
+            <div class="solution-item"><h4>Incremental Migration</h4><p>Executed a phased migration using <strong>API proxy patterns</strong> to gradually shift endpoints from PHP to Node.js without service interruption.</p></div>
+            <div class="solution-item"><h4>Developer Experience</h4><p>Modernized the development workflow with <strong>hot reloading, TypeScript, and automated testing</strong> to boost team productivity.</p></div>
+        </div>
+        <h2>Technical Impact</h2>
+        <div class="impact-grid">
+            <div class="impact-item"><h4>Performance Boost</h4><p>Node.js backend delivered significant response time improvements for ad-serving endpoints compared to the PHP predecessor.</p></div>
+            <div class="impact-item"><h4>Zero Revenue Impact</h4><p>Live migration completed without any advertising downtime or revenue loss through careful incremental rollout.</p></div>
+            <div class="impact-item"><h4>Developer Productivity</h4><p>Modern JavaScript stack and improved tooling increased developer velocity and reduced onboarding time for new engineers.</p></div>
+        </div>
+        <div class="tech-stack-section"><h3>Technical Stack</h3><div class="tech-tags"><span class="tech-tag">Node.js</span><span class="tech-tag">React</span><span class="tech-tag">JavaScript</span><span class="tech-tag">PHP Migration</span><span class="tech-tag">AdTech</span><span class="tech-tag">REST API</span><span class="tech-tag">Real-Time Analytics</span><span class="tech-tag">TypeScript</span><span class="tech-tag">Webpack</span></div></div>
+        <div class="profile-card"><img src="https://apollos-cloud.eu/wp-content/uploads/2026/02/omri_wallach_profile-300x200.jpg" alt="Omri Wallach" class="profile-card-avatar"><div class="profile-card-body"><div class="profile-card-name">Omri Wallach</div><div class="profile-card-role">Senior Cloud Engineer &amp; Solution Architect</div><p class="profile-card-bio">7+ years delivering mission-critical cloud platforms for Mercedes-Benz, Yara International, and leading European enterprises. Expert in Kubernetes, Distributed Systems, and Cloud-Native Architecture.</p><div class="profile-card-links"><a href="https://github.com/omriwa" target="_blank">GitHub</a><a href="https://linkedin.com/in/omri-wallach-19989a113" target="_blank">LinkedIn</a><a href="mailto:omriwallach1992@gmail.com">Email</a></div></div></div>
+        <div class="case-study-nav"><a href="migraven-it-security.html" class="nav-back">&larr; MigRaven</a><a href="ust-adecco-azure.html" class="nav-next">UST / Adecco &rarr;</a></div>
+    </div></section>
+    <footer><div class="container"><p>&copy; 2026 Apollo's Cloud EOOD. All rights reserved.</p><p>Bulgaria, Sofia 1000, William Gladstone 30 str. | t: +491777198008</p></div></footer>
+</body>
+</html>
