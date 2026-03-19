@@ -3,204 +3,239 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Case Studies - Apollo's Cloud EOOD Portfolio">
-    <title>Case Studies | Apollos Cloud EOOD</title>
+    <title>Case Studies | Apollo's Cloud EOOD</title>
+    <meta name="description" content="Enterprise cloud architecture case studies. Mercedes-Benz, Yara International, Choco, Lendis, Vivy, MigRaven, Splicky, UST/Adecco, Webiny.">
+    <link rel="icon" href="https://apollos-cloud.eu/wp-content/uploads/2026/02/cropped-apollos.business.logo_-scaled-1-32x32.png" sizes="32x32">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
     <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        :root {
-            --primary-bg: #ffffff;
-            --primary-text: #1a1a1a;
-            --secondary-text: #666666;
-            --accent-color: #0066cc;
-            --border-color: #eeeeee;
-            --light-bg: #f9f9f9;
-        }
-        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif; color: var(--primary-text); background: var(--primary-bg); line-height: 1.6; }
-        header { position: sticky; top: 0; background: var(--primary-bg); border-bottom: 1px solid var(--border-color); padding: 1.5rem 0; z-index: 1000; }
-        .header-container { max-width: 1200px; margin: 0 auto; padding: 0 2rem; display: flex; justify-content: space-between; align-items: center; }
-        .logo { font-size: 1.5rem; font-weight: 700; text-decoration: none; color: var(--primary-text); }
-        nav { display: flex; gap: 2rem; }
-        nav a { color: var(--secondary-text); text-decoration: none; font-weight: 500; transition: color 0.3s ease; }
-        .cta-button { background: var(--accent-color); color: white; padding: 0.75rem 1.5rem; border-radius: 4px; text-decoration: none; font-weight: 600; }
-        section { padding: 5rem 2rem; max-width: 1200px; margin: 0 auto; }
-        .section-label { font-size: 0.85rem; color: var(--secondary-text); font-weight: 700; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 1rem; }
-        .section-number { font-size: 2rem; color: var(--secondary-text); font-weight: 300; margin-bottom: 2rem; }
-        section h2 { font-size: 2.5rem; margin-bottom: 2rem; }
-        .case-study-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem; margin: 3rem 0; }
-        .case-study-card { background: var(--light-bg); border-radius: 8px; overflow: hidden; transition: transform 0.3s ease; }
-        .case-study-card:hover { transform: translateY(-5px); }
-        .case-study-img { width: 100%; height: 200px; display: flex; align-items: center; justify-content: center; font-size: 3rem; }
-        .case-study-content { padding: 2rem; }
-        .case-study-content h3 { margin-bottom: 0.5rem; }
-        .case-study-meta { font-size: 0.85rem; color: var(--secondary-text); margin-bottom: 1rem; }
-        .case-study-description { color: var(--secondary-text); margin-bottom: 1.5rem; }
-        .case-study-tech { display: flex; flex-wrap: wrap; gap: 0.5rem; }
-        .tech-tag { background: white; padding: 0.25rem 0.75rem; border-radius: 20px; font-size: 0.85rem; color: var(--accent-color); border: 1px solid var(--border-color); }
-        footer { background: var(--primary-text); color: white; padding: 3rem 2rem; margin-top: 3rem; }
-        .footer-container { max-width: 1200px; margin: 0 auto; }
-        .footer-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; margin-bottom: 2rem; }
-        .footer-section h4 { margin-bottom: 1rem; }
-        .footer-section a { display: block; color: #aaaaaa; text-decoration: none; margin-bottom: 0.5rem; }
-        .footer-bottom { border-top: 1px solid #333333; padding-top: 2rem; text-align: center; color: #aaaaaa; }
-        .contact-links { display: flex; gap: 1.5rem; flex-wrap: wrap; justify-content: center; margin: 2rem 0; }
-        @media (max-width: 768px) { nav { display: none; } section h2 { font-size: 1.8rem; } }
+        .case-hero { margin-top: 80px; padding: 5rem 0 3rem; background: linear-gradient(135deg, rgba(102,126,234,0.06) 0%, rgba(118,75,162,0.06) 100%); }
+        .case-cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); gap: 2.5rem; margin-top: 3rem; }
+        .case-card { background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 5px 25px rgba(0,0,0,0.08); transition: transform 0.3s ease, box-shadow 0.3s ease; position: relative; }
+        .case-card:hover { transform: translateY(-8px); box-shadow: 0 15px 40px rgba(102,126,234,0.15); }
+        .case-card-img { height: 200px; overflow: hidden; display: flex; align-items: center; justify-content: center; background: var(--secondary-bg); padding: 1.5rem; }
+        .case-card-img img { max-width: 100%; max-height: 100%; object-fit: contain; }
+        .case-card-body { padding: 2rem; }
+        .case-card-body h3 { font-size: 1.3rem; margin-bottom: 0.5rem; }
+        .case-card-body .card-subtitle { color: var(--accent-color); font-weight: 600; font-size: 0.85rem; margin-bottom: 1rem; letter-spacing: 0.5px; }
+        .case-card-body p { color: var(--secondary-text); font-size: 0.95rem; line-height: 1.7; margin-bottom: 1.2rem; }
+        .case-card-tags { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 1.2rem; }
+        .case-card-tags span { background: var(--accent-bg); padding: 0.3rem 0.8rem; border-radius: 15px; font-size: 0.8rem; color: var(--primary-text); border: 1px solid var(--border-color); }
+        .case-card-link { display: inline-block; color: var(--accent-color); text-decoration: none; font-weight: 600; font-size: 0.95rem; transition: color 0.3s; }
+        .case-card-link:hover { color: var(--accent-secondary); }
+        .stats-section { background: var(--primary-text); color: white; padding: 5rem 0; }
+        .stats-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 3rem; text-align: center; margin-top: 3rem; }
+        .stat-item h3 { font-size: 3rem; background: var(--gradient-primary); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; margin-bottom: 0.5rem; }
+        .stat-item p { color: rgba(255,255,255,0.7); font-size: 1rem; }
+        .stats-section h2 { color: white; }
+        .featured-badge { position: absolute; top: 1rem; right: 1rem; background: var(--gradient-primary); color: white; padding: 0.3rem 0.8rem; border-radius: 15px; font-size: 0.75rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; z-index: 1; }
     </style>
 </head>
 <body>
     <header>
         <div class="header-container">
-            <a href="index.html" class="logo">⚡ Apollos Cloud</a>
+            <a href="index.html" class="logo">
+                <img src="https://apollos-cloud.eu/wp-content/uploads/2026/02/cropped-apollos.business.logo_-1-scaled-1-235x165.png" alt="Apollo's Cloud Logo">
+            </a>
             <nav>
-                <a href="index.html">Home</a>
-                <a href="what-we-do.html">What We Do</a>
-                <a href="case-studies.html">Case Studies</a>
-                <a href="about-us.html">About Us</a>
-                <a href="contact.html" class="cta-button">Contact</a>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="what-we-do.html">What We Do</a></li>
+                    <li><a href="case-studies.html">Case Studies</a></li>
+                    <li><a href="about-us.html">About Us</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
             </nav>
         </div>
     </header>
 
+    <section class="case-hero">
+        <div class="container">
+            <div class="section-label">Portfolio</div>
+            <div class="section-number">01</div>
+            <h2>Case Studies &amp; Client Success</h2>
+            <p class="lead-text">Architectural solutions delivered for industry leaders across automotive, industrial IoT, FinTech, HealthTech, and AdTech sectors.</p>
+        </div>
+    </section>
+
     <section>
-        <span class="section-label">Portfolio</span>
-        <span class="section-number">01</span>
-        <h2>Case Studies & Client Success</h2>
-        
-        <div class="case-study-grid">
-            <div class="case-study-card">
-                <div class="case-study-img" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);">🚗</div>
-                <div class="case-study-content">
-                    <h3>Mercedes-Benz Speech Cloud</h3>
-                    <div class="case-study-meta">Kubernetes • Azure • Golang • Java</div>
-                    <p class="case-study-description">Architected Speech Cloud Platform on Kubernetes/Azure for vehicle integration. Led team of 4 engineers through architecture design and SRE-driven observability.</p>
-                    <div class="case-study-tech">
-                        <span class="tech-tag">Kubernetes</span>
-                        <span class="tech-tag">Azure</span>
-                        <span class="tech-tag">SRE</span>
+        <div class="container">
+            <div class="case-cards">
+
+                <div class="case-card">
+                    <span class="featured-badge">Detailed Study</span>
+                    <div class="case-card-img">
+                        <img src="https://apollos-cloud.eu/wp-content/uploads/2026/02/mercedes-benz-kubernetes-cloud-architecture.svg" alt="Mercedes-Benz Kubernetes">
+                    </div>
+                    <div class="case-card-body">
+                        <h3>Mercedes-Benz Speech Cloud</h3>
+                        <div class="card-subtitle">Kubernetes &bull; Azure &bull; Golang &bull; Java Spring Boot</div>
+                        <p>Architected the Speech Cloud Platform on Kubernetes/Azure for vehicle integration. Led team of 4 engineers through architecture design, gRPC optimization, and SRE-driven observability with Datadog and OpsGenie.</p>
+                        <div class="case-card-tags">
+                            <span>Kubernetes</span><span>Azure</span><span>SRE</span><span>gRPC</span><span>Terraform</span>
+                        </div>
+                        <a href="mercedes-benz-kubernetes.html" class="case-card-link">Read Full Case Study &rarr;</a>
                     </div>
                 </div>
-            </div>
 
-            <div class="case-study-card">
-                <div class="case-study-img" style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);">🌍</div>
-                <div class="case-study-content">
-                    <h3>Yara International IoT</h3>
-                    <div class="case-study-meta">AWS • Event-Driven • IoT</div>
-                    <p class="case-study-description">Built global IoT monitoring platform for factory networks. Designed event-driven architecture handling real-time sensor data with 99.9% reliability.</p>
-                    <div class="case-study-tech">
-                        <span class="tech-tag">AWS</span>
-                        <span class="tech-tag">IoT</span>
-                        <span class="tech-tag">EventBridge</span>
+                <div class="case-card">
+                    <span class="featured-badge">Detailed Study</span>
+                    <div class="case-card-img">
+                        <img src="https://apollos-cloud.eu/wp-content/uploads/2026/02/yara-international-aws-iot-architecture.svg" alt="Yara International IoT">
+                    </div>
+                    <div class="case-card-body">
+                        <h3>Yara International IoT Platform</h3>
+                        <div class="card-subtitle">AWS &bull; Event-Driven &bull; IoT &bull; Node.js</div>
+                        <p>Built global IoT monitoring platform for factory networks. Designed event-driven architecture handling real-time sensor data with DynamoDB single-table design and 60% deployment reliability improvement.</p>
+                        <div class="case-card-tags">
+                            <span>AWS</span><span>IoT</span><span>EventBridge</span><span>DynamoDB</span><span>Lambda</span>
+                        </div>
+                        <a href="yara-iot-platform.html" class="case-card-link">Read Full Case Study &rarr;</a>
                     </div>
                 </div>
-            </div>
 
-            <div class="case-study-card">
-                <div class="case-study-img" style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);">💳</div>
-                <div class="case-study-content">
-                    <h3>Lendis Fintech Platform</h3>
-                    <div class="case-study-meta">AWS • Microservices • Node.js</div>
-                    <p class="case-study-description">Led migration from legacy PHP monolith to AWS-native microservices. Implemented high-performance backend with real-time event processing.</p>
-                    <div class="case-study-tech">
-                        <span class="tech-tag">AWS</span>
-                        <span class="tech-tag">Microservices</span>
-                        <span class="tech-tag">Node.js</span>
+                <div class="case-card">
+                    <span class="featured-badge">Detailed Study</span>
+                    <div class="case-card-img">
+                        <img src="https://apollos-cloud.eu/wp-content/uploads/2026/02/choco-aws-serverless-distributed-systems.jpeg" alt="Choco AWS Serverless">
+                    </div>
+                    <div class="case-card-body">
+                        <h3>Choco Notification System</h3>
+                        <div class="card-subtitle">AWS CDK &bull; Step Functions &bull; Serverless</div>
+                        <p>Designed fault-tolerant notification system using Lambda, Step Functions, and state-machine-driven logic. Integrated with Twilio and WhatsApp, achieving 50% latency reduction for multi-channel delivery.</p>
+                        <div class="case-card-tags">
+                            <span>Lambda</span><span>Step Functions</span><span>CDK</span><span>Twilio</span>
+                        </div>
+                        <a href="choco-notification-system.html" class="case-card-link">Read Full Case Study &rarr;</a>
                     </div>
                 </div>
-            </div>
 
-            <div class="case-study-card">
-                <div class="case-study-img" style="background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);">💰</div>
-                <div class="case-study-content">
-                    <h3>Choco AWS Serverless</h3>
-                    <div class="case-study-meta">AWS • Serverless • CDK</div>
-                    <p class="case-study-description">Designed fault-tolerant notification system using Lambda, Step Functions, SNS. Integrated with Twilio and WhatsApp for multi-channel delivery.</p>
-                    <div class="case-study-tech">
-                        <span class="tech-tag">Lambda</span>
-                        <span class="tech-tag">Serverless</span>
-                        <span class="tech-tag">CDK</span>
+                <div class="case-card">
+                    <div class="case-card-img">
+                        <img src="https://apollos-cloud.eu/wp-content/uploads/2026/02/lendis-aws-microservices-migration.webp" alt="Lendis FinTech">
+                    </div>
+                    <div class="case-card-body">
+                        <h3>Lendis FinTech Platform</h3>
+                        <div class="card-subtitle">AWS &bull; Microservices &bull; Node.js</div>
+                        <p>Led migration from legacy PHP monolith to AWS-native microservices for FinTech operations. Implemented high-performance backend with real-time event processing and domain-driven design.</p>
+                        <div class="case-card-tags">
+                            <span>AWS</span><span>Microservices</span><span>Node.js</span><span>PHP Migration</span>
+                        </div>
                     </div>
                 </div>
-            </div>
 
-            <div class="case-study-card">
-                <div class="case-study-img" style="background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);">🏥</div>
-                <div class="case-study-content">
-                    <h3>Vivy HealthTech</h3>
-                    <div class="case-study-meta">AWS • Micro-Frontend • GraphQL</div>
-                    <p class="case-study-description">Built MVP using micro-frontend architecture with Node.js and GraphQL. Seamlessly integrated with Vivy's healthcare backend ecosystem.</p>
-                    <div class="case-study-tech">
-                        <span class="tech-tag">AWS</span>
-                        <span class="tech-tag">GraphQL</span>
-                        <span class="tech-tag">Micro-Frontend</span>
+                <div class="case-card">
+                    <div class="case-card-img">
+                        <img src="https://apollos-cloud.eu/wp-content/uploads/2026/02/vivy-healthtech-aws-microservices.svg" alt="Vivy HealthTech">
+                    </div>
+                    <div class="case-card-body">
+                        <h3>Vivy HealthTech</h3>
+                        <div class="card-subtitle">AWS &bull; Micro-Frontend &bull; GraphQL</div>
+                        <p>Built MVP using micro-frontend architecture with Node.js and GraphQL. Developed AWS backend mockup server seamlessly integrated with Vivy's healthcare backend ecosystem.</p>
+                        <div class="case-card-tags">
+                            <span>AWS</span><span>GraphQL</span><span>Micro-Frontend</span><span>Node.js</span>
+                        </div>
                     </div>
                 </div>
-            </div>
 
-            <div class="case-study-card">
-                <div class="case-study-img" style="background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);">🔒</div>
-                <div class="case-study-content">
-                    <h3>MigRaven IT Security</h3>
-                    <div class="case-study-meta">React • D3.js • Data Viz</div>
-                    <p class="case-study-description">Developed React-Redux SPA with advanced D3.js data visualization for IT access management. Built security policy dashboard for complex data visualization.</p>
-                    <div class="case-study-tech">
-                        <span class="tech-tag">React</span>
-                        <span class="tech-tag">D3.js</span>
-                        <span class="tech-tag">Redux</span>
+                <div class="case-card">
+                    <div class="case-card-img">
+                        <img src="https://apollos-cloud.eu/wp-content/uploads/2026/02/migraven-it-security-react-visualization.png" alt="MigRaven IT Security">
                     </div>
+                    <div class="case-card-body">
+                        <h3>MigRaven IT Security</h3>
+                        <div class="card-subtitle">React &bull; D3.js &bull; Data Visualization</div>
+                        <p>Developed React-Redux SPA with advanced D3.js data visualization for IT access management. Built security policy dashboard for complex permission hierarchy visualization.</p>
+                        <div class="case-card-tags">
+                            <span>React</span><span>D3.js</span><span>Redux</span><span>Data Viz</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="case-card">
+                    <div class="case-card-img">
+                        <img src="https://apollos-cloud.eu/wp-content/uploads/2026/02/splicky-adtech-node-react-migration.svg" alt="Splicky AdTech">
+                    </div>
+                    <div class="case-card-body">
+                        <h3>Splicky AdTech Platform</h3>
+                        <div class="card-subtitle">Node.js &bull; React &bull; PHP Migration</div>
+                        <p>AdTech platform migration from legacy PHP to Node.js and React architecture. Modernized the full-stack delivering improved performance and developer experience.</p>
+                        <div class="case-card-tags">
+                            <span>Node.js</span><span>React</span><span>AdTech</span><span>Migration</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="case-card">
+                    <div class="case-card-img">
+                        <img src="https://apollos-cloud.eu/wp-content/uploads/2026/02/adecco-azure-nestjs-cloud-migration.svg" alt="UST / Adecco Azure">
+                    </div>
+                    <div class="case-card-body">
+                        <h3>UST / Adecco</h3>
+                        <div class="card-subtitle">Azure &bull; NestJS &bull; Cloud Migration</div>
+                        <p>Azure cloud migration and fault-tolerant NestJS microservices for enterprise HR/staffing platform. Built resilient backend services with comprehensive error handling and monitoring.</p>
+                        <div class="case-card-tags">
+                            <span>Azure</span><span>NestJS</span><span>Microservices</span><span>Migration</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="case-card">
+                    <div class="case-card-img">
+                        <img src="https://apollos-cloud.eu/wp-content/uploads/2026/02/webiny-serverless-pulumi-infrastructure.png" alt="Webiny Serverless">
+                    </div>
+                    <div class="case-card-body">
+                        <h3>Webiny CMS</h3>
+                        <div class="card-subtitle">Serverless &bull; Pulumi &bull; GraphQL</div>
+                        <p>Serverless infrastructure, Pulumi IaC, and GraphQL API development for open-source CMS. Contributed to core platform architecture and deployment automation.</p>
+                        <div class="case-card-tags">
+                            <span>Serverless</span><span>Pulumi</span><span>GraphQL</span><span>IaC</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="stats-section">
+        <div class="container">
+            <div class="section-number" style="color: rgba(255,255,255,0.1);">02</div>
+            <h2>Measurable Impact</h2>
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <h3>60%</h3>
+                    <p>Deployment reliability improvement</p>
+                </div>
+                <div class="stat-item">
+                    <h3>40-60%</h3>
+                    <p>Reduction in build times</p>
+                </div>
+                <div class="stat-item">
+                    <h3>30%</h3>
+                    <p>Average cloud cost reduction</p>
+                </div>
+                <div class="stat-item">
+                    <h3>99.99%</h3>
+                    <p>System uptime across platforms</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <section>
-        <span class="section-label">Results</span>
-        <span class="section-number">02</span>
-        <h2>Measurable Impact</h2>
-        
-        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; margin-top: 3rem;">
-            <div style="padding: 2rem; background: var(--light-bg); border-radius: 8px;">
-                <h3 style="color: var(--accent-color); font-size: 2rem; margin-bottom: 0.5rem;">60%</h3>
-                <p style="color: var(--secondary-text);">Deployment reliability improvement</p>
-            </div>
-            <div style="padding: 2rem; background: var(--light-bg); border-radius: 8px;">
-                <h3 style="color: var(--accent-color); font-size: 2rem; margin-bottom: 0.5rem;">40-60%</h3>
-                <p style="color: var(--secondary-text);">Reduction in build times</p>
-            </div>
-            <div style="padding: 2rem; background: var(--light-bg); border-radius: 8px;">
-                <h3 style="color: var(--accent-color); font-size: 2rem; margin-bottom: 0.5rem;">30%</h3>
-                <p style="color: var(--secondary-text);">Average cloud cost reduction</p>
-            </div>
-            <div style="padding: 2rem; background: var(--light-bg); border-radius: 8px;">
-                <h3 style="color: var(--accent-color); font-size: 2rem; margin-bottom: 0.5rem;">99.99%</h3>
-                <p style="color: var(--secondary-text);">System uptime across platforms</p>
-            </div>
+    <section class="section-gray" style="text-align: center;">
+        <div class="container">
+            <h2>Ready to Transform Your Infrastructure?</h2>
+            <p class="lead-text">Let's discuss how Apollo's Cloud EOOD can help you build scalable, resilient cloud infrastructure.</p>
+            <a href="contact.html" class="cta-button">Get Started</a>
+            <a href="what-we-do.html" class="cta-secondary">Our Services</a>
         </div>
     </section>
 
     <footer>
-        <div class="footer-container">
-            <h3>Let's discuss your project</h3>
-            <div class="contact-links">
-                <a href="mailto:omriwallach1992@gmail.com" style="color: #aaaaaa; text-decoration: none;">📧 Email</a>
-                <a href="https://github.com/omriwa" target="_blank" style="color: #aaaaaa; text-decoration: none;">💻 GitHub</a>
-                <a href="https://linkedin.com/in/omri-wallach-19989a113" target="_blank" style="color: #aaaaaa; text-decoration: none;">💼 LinkedIn</a>
-            </div>
-            <div class="footer-grid">
-                <div class="footer-section">
-                    <h4>Company</h4>
-                    <a href="index.html">Home</a>
-                    <a href="what-we-do.html">What We Do</a>
-                    <a href="case-studies.html">Case Studies</a>
-                </div>
-                <div class="footer-section">
-                    <h4>Contact</h4>
-                    <p>Email: omriwallach1992@gmail.com</p>
-                    <p>Phone: +49 177-7198008</p>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2025 Apollos Cloud EOOD. All rights reserved.</p>
-            </div>
+        <div class="container">
+            <p>&copy; 2026 Apollo's Cloud EOOD. All rights reserved.</p>
+            <p>Bulgaria, Sofia 1000, William Gladstone 30 str. | t: +491777198008</p>
         </div>
     </footer>
 </body>

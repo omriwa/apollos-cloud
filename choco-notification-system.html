@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Choco AWS CDK & Step Functions | Apollo's Cloud EOOD Case Study</title>
+    <meta name="description" content="Scalable Client Notification Infrastructure: AWS CDK & Step Functions for Choco. Serverless, state machines, multi-channel messaging.">
+    <link rel="icon" href="https://apollos-cloud.eu/wp-content/uploads/2026/02/cropped-apollos.business.logo_-scaled-1-32x32.png" sizes="32x32">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/case-study-detail.css">
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <a href="index.html" class="logo">
+                <img src="https://apollos-cloud.eu/wp-content/uploads/2026/02/cropped-apollos.business.logo_-1-scaled-1-235x165.png" alt="Apollo's Cloud Logo">
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="what-we-do.html">What We Do</a></li>
+                    <li><a href="case-studies.html">Case Studies</a></li>
+                    <li><a href="about-us.html">About Us</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="case-study-hero">
+        <div class="container">
+            <div class="breadcrumb">
+                <a href="case-studies.html">Case Studies</a> / <span>Choco</span>
+            </div>
+            <div class="case-study-meta">
+                <span class="case-tag">Use Cases</span>
+                <span class="case-author">By Omri Wallach</span>
+            </div>
+            <h1>Scalable Client Notification Infrastructure: AWS CDK &amp; Step Functions for Choco</h1>
+            <p class="lead-text">Choco (PaaS, Germany) required a highly reliable and scalable client notification system to handle mission-critical communications. The objective was to build an internal monitoring and alerting system that ensured 100% deliverability and low latency while integrating with third-party messaging providers like Twilio and WhatsApp.</p>
+        </div>
+    </section>
+
+    <section class="case-study-body">
+        <div class="container case-study-content">
+
+            <div class="architecture-diagram">
+                <img src="https://apollos-cloud.eu/wp-content/uploads/2026/02/choco-notification-state-machine-architecture-procedure-1024x559.png" alt="Choco Notification State Machine Architecture">
+                <p class="diagram-caption">Scalable Client Notification Infrastructure: AWS CDK & Step Functions for Choco</p>
+            </div>
+
+            <h2>Context</h2>
+            <p>The Choco Notification Engine is a high-throughput backend service designed to orchestrate complex communication workflows across multiple messaging channels.</p>
+            <p>Working within the backend team and collaborating closely with DevOps and the Lead Architect, I led end-to-end projects, managing both business and technical aspects. The architecture utilized serverless AWS components and a state-machine-driven logic based on automata to ensure mission-critical reliability.</p>
+
+            <h2>Deep Engineering Challenges</h2>
+
+            <div class="challenge-card">
+                <h3>Complex Workflow Management</h3>
+                <p>Implementing reliable notification flows across different providers required a robust state-management solution. By utilizing <strong>AWS Step Functions</strong>, we replaced manual processes with a maintainable state machine that handled complex business logic and transmission scenarios.</p>
+            </div>
+
+            <div class="challenge-card">
+                <h3>Latency Optimization</h3>
+                <p>To meet strict service requirements, the system needed to process messages with minimal delay. We optimized the serverless components, resulting in a <strong>50% reduction in notification latency</strong>.</p>
+            </div>
+
+            <div class="challenge-card">
+                <h3>Advanced IaC Scaling</h3>
+                <p>Using <strong>AWS CDK</strong>, I designed the infrastructure to be modular and environment-aware, enabling the team to manage identical stacks for multiple environments (development, staging, live) seamlessly.</p>
+            </div>
+
+            <div class="challenge-card">
+                <h3>SLA Compliance &amp; Monitoring</h3>
+                <p>Ensuring high deliverability required a detailed monitoring layer. I implemented custom <strong>CloudWatch Alarms</strong> and metrics to monitor system performance and ensure SLA compliance.</p>
+            </div>
+
+            <h2>The Architectural Solutions</h2>
+            <p>Under the leadership of <strong>Omri Wallach</strong>, Apollo's Cloud engineered a robust notification backbone using Infrastructure as Code (IaC) and modern asynchronous patterns.</p>
+
+            <div class="solutions-grid">
+                <div class="solution-item">
+                    <h4>State Machine Orchestration</h4>
+                    <p>Developed business logic using <strong>AWS Step Functions</strong> to manage complex, multi-step notification workflows and automata-based logic.</p>
+                </div>
+                <div class="solution-item">
+                    <h4>Infrastructure as Code (IaC)</h4>
+                    <p>Fully automated the provisioning of AWS resources using <strong>AWS CDK</strong>, ensuring repeatable and version-controlled environments.</p>
+                </div>
+                <div class="solution-item">
+                    <h4>Multi-Channel Integration</h4>
+                    <p>Integrated <strong>API Gateway</strong> and <strong>Lambda</strong> with <strong>Twilio</strong> and <strong>WhatsApp</strong> messaging providers for global reach.</p>
+                </div>
+                <div class="solution-item">
+                    <h4>Internal Monitoring &amp; Alerting</h4>
+                    <p>Built a comprehensive monitoring system using <strong>CloudWatch</strong> metrics and alarms to track system health in real-time.</p>
+                </div>
+            </div>
+
+            <h2>Technical Impact &amp; Conclusions</h2>
+            <p>The transition to a CDK-managed, state-machine-driven architecture provided Choco with a professional-grade communication layer that directly improved user experience and operational transparency.</p>
+
+            <div class="impact-grid">
+                <div class="impact-item">
+                    <h4>50% Latency Reduction</h4>
+                    <p>Performance tuning and architectural refactoring boosted SLA compliance and message speed.</p>
+                </div>
+                <div class="impact-item">
+                    <h4>Enhanced Reliability</h4>
+                    <p>The state machine approach ensured robust transmission through internal microservices and third-party APIs.</p>
+                </div>
+                <div class="impact-item">
+                    <h4>Increased Codebase Quality</h4>
+                    <p>Implemented linters, compilers, and pre-commit hooks (Husky) to maintain high development standards.</p>
+                </div>
+                <div class="impact-item">
+                    <h4>Accelerated Deployment</h4>
+                    <p>Standardized CI/CD with GitHub Actions for rapid, reliable releases.</p>
+                </div>
+            </div>
+
+            <div class="tech-stack-section">
+                <h3>Technical Stack</h3>
+                <div class="tech-tags">
+                    <span class="tech-tag">AWS CDK</span>
+                    <span class="tech-tag">AWS Step Functions</span>
+                    <span class="tech-tag">AWS Lambda</span>
+                    <span class="tech-tag">API Gateway</span>
+                    <span class="tech-tag">CloudWatch</span>
+                    <span class="tech-tag">Twilio</span>
+                    <span class="tech-tag">WhatsApp API</span>
+                    <span class="tech-tag">Node.js</span>
+                    <span class="tech-tag">GitHub Actions</span>
+                    <span class="tech-tag">Serverless Architecture</span>
+                    <span class="tech-tag">State Machines</span>
+                </div>
+            </div>
+
+            <div class="author-box">
+                <img src="https://apollos-cloud.eu/wp-content/uploads/2026/02/omri_wallach_profile-300x200.jpg" alt="Omri Wallach" class="author-avatar">
+                <div class="author-info">
+                    <h4>Omri Wallach</h4>
+                    <p class="author-title">Senior Cloud Engineer &amp; Software Solution Architect at Apollo's Cloud</p>
+                    <p>Expertise: Kubernetes, Distributed Systems, Cloud-Native Architecture</p>
+                </div>
+            </div>
+
+            <div class="case-study-nav">
+                <a href="mercedes-benz-kubernetes.html" class="nav-back">&larr; Mercedes-Benz</a>
+                <a href="case-studies.html" class="nav-next">All Case Studies &rarr;</a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 Apollo's Cloud EOOD. All rights reserved.</p>
+            <p>Bulgaria, Sofia 1000, William Gladstone 30 str. | t: +491777198008</p>
+        </div>
+    </footer>
+</body>
+</html>

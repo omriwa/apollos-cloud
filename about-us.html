@@ -3,180 +3,186 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="About Us - Apollo's Cloud EOOD Leadership">
-    <title>About Us | Apollos Cloud EOOD</title>
-    <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        :root {
-            --primary-bg: #ffffff;
-            --primary-text: #1a1a1a;
-            --secondary-text: #666666;
-            --accent-color: #0066cc;
-            --border-color: #eeeeee;
-            --light-bg: #f9f9f9;
-        }
-        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif; color: var(--primary-text); background: var(--primary-bg); line-height: 1.6; }
-        header { position: sticky; top: 0; background: var(--primary-bg); border-bottom: 1px solid var(--border-color); padding: 1.5rem 0; z-index: 1000; }
-        .header-container { max-width: 1200px; margin: 0 auto; padding: 0 2rem; display: flex; justify-content: space-between; align-items: center; }
-        .logo { font-size: 1.5rem; font-weight: 700; text-decoration: none; color: var(--primary-text); }
-        nav { display: flex; gap: 2rem; }
-        nav a { color: var(--secondary-text); text-decoration: none; font-weight: 500; transition: color 0.3s ease; }
-        nav a:hover { color: var(--accent-color); }
-        .cta-button { background: var(--accent-color); color: white; padding: 0.75rem 1.5rem; border-radius: 4px; text-decoration: none; font-weight: 600; }
-        section { padding: 5rem 2rem; max-width: 1200px; margin: 0 auto; }
-        .section-label { font-size: 0.85rem; color: var(--secondary-text); font-weight: 700; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 1rem; }
-        .section-number { font-size: 2rem; color: var(--secondary-text); font-weight: 300; margin-bottom: 2rem; }
-        section h2 { font-size: 2.5rem; margin-bottom: 2rem; }
-        section h3 { font-size: 1.5rem; margin-bottom: 1rem; }
-        .team-member { padding: 2rem; background: var(--light-bg); border-radius: 8px; margin: 2rem 0; }
-        .team-member h3 { margin-top: 0; }
-        .highlight { background: var(--light-bg); padding: 2rem; border-radius: 8px; margin: 2rem 0; border-left: 4px solid var(--accent-color); }
-        footer { background: var(--primary-text); color: white; padding: 3rem 2rem; margin-top: 3rem; }
-        .footer-container { max-width: 1200px; margin: 0 auto; }
-        .footer-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; margin-bottom: 2rem; }
-        .footer-section h4 { margin-bottom: 1rem; }
-        .footer-section a { display: block; color: #aaaaaa; text-decoration: none; margin-bottom: 0.5rem; }
-        .footer-bottom { border-top: 1px solid #333333; padding-top: 2rem; text-align: center; color: #aaaaaa; }
-        .contact-links { display: flex; gap: 1.5rem; flex-wrap: wrap; justify-content: center; margin: 2rem 0; }
-        .contact-link { color: #aaaaaa; text-decoration: none; }
-        @media (max-width: 768px) { nav { display: none; } section h2 { font-size: 1.8rem; } }
-    </style>
+    <title>About Us | Apollo's Cloud EOOD</title>
+    <meta name="description" content="Specialized European Cloud Engineering Agency. Scalable Infrastructure for the Global Enterprise. Led by Solution Architect Omri Wallach.">
+    <link rel="icon" href="https://apollos-cloud.eu/wp-content/uploads/2026/02/cropped-apollos.business.logo_-scaled-1-32x32.png" sizes="32x32">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
     <header>
         <div class="header-container">
-            <a href="index.html" class="logo">⚡ Apollos Cloud</a>
+            <a href="index.html" class="logo">
+                <img src="https://apollos-cloud.eu/wp-content/uploads/2026/02/cropped-apollos.business.logo_-1-scaled-1-235x165.png" alt="Apollo's Cloud Logo">
+            </a>
             <nav>
-                <a href="index.html">Home</a>
-                <a href="what-we-do.html">What We Do</a>
-                <a href="case-studies.html">Case Studies</a>
-                <a href="about-us.html">About Us</a>
-                <a href="contact.html" class="cta-button">Contact</a>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="what-we-do.html">What We Do</a></li>
+                    <li><a href="case-studies.html">Case Studies</a></li>
+                    <li><a href="about-us.html">About Us</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
             </nav>
         </div>
     </header>
 
-    <section>
-        <span class="section-label">About Our Agency</span>
-        <h2>Specialized European Cloud Engineering</h2>
-        <p>Apollo's Cloud EOOD bridges architectural vision and production excellence. We design modular, resilient platforms for digital transformation.</p>
-    </section>
-
-    <section>
-        <span class="section-label">Our Vision</span>
-        <span class="section-number">01</span>
-        <h2>Engineering Resilient Cloud Foundations</h2>
-        <p>Apollo's Cloud EOOD redefines how modern enterprises build and scale in cloud-native environments. We believe sustainable success requires Architectural Integrity beyond rapid feature delivery.</p>
-        <div class="highlight">
-            <h3>The Decisive Factor in Excellence</h3>
-            <p>Headquartered in Sofia, Bulgaria, and operating across DACH region, we're a premier engineering agency dedicated to high-stakes digital transformation. We specialize in decoupling legacy monoliths, architecting Event-Driven systems, and orchestrating multi-region Kubernetes environments.</p>
+    <section class="hero" style="min-height: auto; padding: 5rem 0 3rem;">
+        <div class="container">
+            <div class="section-label">Specialized European Cloud Engineering Agency</div>
+            <h1>Scalable Infrastructure for the Global Enterprise</h1>
+            <p class="lead-text">Apollo's Cloud EOOD bridges the gap between high-level architectural vision and production-scale excellence. We design modular, resilient platforms that prepare enterprises for the next era of digital transformation.</p>
         </div>
     </section>
 
     <section>
-        <span class="section-label">Leadership</span>
-        <span class="section-number">02</span>
-        <h2>Omri Wallach - Principal Solution Architect</h2>
-        
-        <div class="team-member">
-            <h3>Senior Cloud Engineer & Solution Architect</h3>
-            <p><strong>Location:</strong> Berlin, Germany | <strong>Experience:</strong> 7+ years</p>
-            
-            <h4 style="margin-top: 2rem;">Key Achievements</h4>
-            <ul style="margin: 1rem 0 1rem 2rem; color: var(--secondary-text);">
-                <li>Tech Lead: Mercedes-Benz Speech Cloud (Kubernetes, Azure)</li>
-                <li>Tech Lead: Yara International IoT Platform (AWS, Event-Driven)</li>
-                <li>Expert in Node.js (NestJS), Golang, Java Spring Boot</li>
-                <li>Domain-Driven Design (DDD) & TDD/BDD Standards</li>
-                <li>Infrastructure as Code: Terraform, Pulumi, AWS CDK</li>
-                <li>Led teams of 5+ engineers through full SDLC</li>
-            </ul>
+        <div class="container">
+            <div class="section-number">01</div>
+            <div class="section-label">Vision</div>
+            <h2>Engineering the Future of Resilient Platforms</h2>
+            <p class="lead-text">Apollo's Cloud EOOD was founded to redefine how modern enterprises build and scale in a cloud-native world. We believe that long-term success is built on a foundation of <strong>Architectural Integrity</strong>, moving beyond rapid feature delivery to achieve true <strong>Infrastructure Maturity</strong>. Our mission is to empower global organizations through modular, high-performance distributed systems that are inherently AI-ready and operationally stable.</p>
+        </div>
+    </section>
 
-            <h4>Core Expertise</h4>
-            <ul style="margin: 1rem 0 1rem 2rem; color: var(--secondary-text);">
-                <li>Cloud Architecture (AWS, Azure, GCP)</li>
-                <li>DevOps & CI/CD Pipeline Design</li>
-                <li>Microservices & Distributed Systems</li>
-                <li>Kubernetes & Container Orchestration</li>
-                <li>Site Reliability Engineering (SRE)</li>
-                <li>Technical Team Leadership</li>
-            </ul>
+    <section class="section-gray">
+        <div class="container">
+            <h2>The Decisive Factor in Technical Excellence</h2>
+            <p class="lead-text">Headquartered in Sofia, Bulgaria, and operating across the DACH region, Apollo's Cloud EOOD is a premier engineering agency dedicated to high-stakes digital transformation. We specialize in decoupling legacy monoliths, architecting <strong>Event-Driven IoT ecosystems</strong>, and orchestrating <strong>multi-region Kubernetes environments</strong>.</p>
+            <p class="lead-text">By blending German-standard engineering precision with flexible EU agency agility, we deliver production-ready solutions proven to handle high traffic and strict reliability requirements. Our agency has successfully delivered infrastructure for world leaders in Automotive, Industrial IoT, and FinTech sectors, ensuring that every line of code serves a strategic business goal.</p>
         </div>
     </section>
 
     <section>
-        <span class="section-label">Global Impact</span>
-        <span class="section-number">03</span>
-        <h2>Trusted by Industry Leaders</h2>
-        <p>Our technical leadership powers global platforms serving millions of users. We deliver measurable operational ROI through Zero-Downtime Migrations, SRE-driven Observability, and architectural transformation at enterprise scale.</p>
+        <div class="container">
+            <div class="section-number">02</div>
+            <div class="section-label">Leadership</div>
+            <h2>Solution Architect</h2>
+            <div class="team-section">
+                <div class="team-avatar">
+                    <img src="https://apollos-cloud.eu/wp-content/uploads/2026/02/omri_wallach_profile-300x200.jpg" alt="Omri Wallach">
+                </div>
+                <h3 class="team-name">Omri Wallach</h3>
+                <p class="team-title">Solution Architect</p>
+                <p class="team-bio">Omri is a Berlin-based Senior Architect with over 7 years of experience delivering mission-critical cloud platforms for industry titans like <strong>Mercedes-Benz</strong> and <strong>Yara International</strong>. He leads every agency engagement with a hands-on, architecture-first methodology.</p>
+                <p class="team-bio">He is a recognized authority in <strong>Golang, Node.js (NestJS), and Kubernetes Orchestration</strong>, specializing in <strong>Domain-Driven Design (DDD)</strong> and the enforcement of rigorous <strong>TDD/BDD standards</strong>. Under his leadership, Apollo's Cloud EOOD ensures that complex technical requirements are translated into scalable, low-latency, and fault-tolerant systems.</p>
+            </div>
 
-        <h3 style="margin-top: 3rem;">Companies We've Worked With</h3>
-        <ul style="margin: 1rem 0 1rem 2rem; color: var(--secondary-text); columns: 2;">
-            <li>Mercedes-Benz</li>
-            <li>Yara International</li>
-            <li>Choco</li>
-            <li>Lendis</li>
-            <li>MigRaven</li>
-            <li>Splicky</li>
-            <li>Vivy HealthTech</li>
-            <li>Webiny CMS</li>
-            <li>And 100+ enterprises</li>
-        </ul>
+            <div class="services-grid" style="margin-top: 3rem;">
+                <div class="service-card">
+                    <h4>Core Expertise</h4>
+                    <ul>
+                        <li>Cloud Architecture (AWS, Azure, GCP)</li>
+                        <li>DevOps & CI/CD Pipeline Design</li>
+                        <li>Microservices & Distributed Systems</li>
+                        <li>Kubernetes & Container Orchestration</li>
+                        <li>Site Reliability Engineering (SRE)</li>
+                        <li>Technical Team Leadership</li>
+                    </ul>
+                </div>
+                <div class="service-card">
+                    <h4>Key Achievements</h4>
+                    <ul>
+                        <li>Tech Lead: Mercedes-Benz Speech Cloud (Kubernetes, Azure)</li>
+                        <li>Tech Lead: Yara International IoT Platform (AWS, Event-Driven)</li>
+                        <li>Expert in Node.js (NestJS), Golang, Java Spring Boot</li>
+                        <li>Domain-Driven Design (DDD) & TDD/BDD Standards</li>
+                        <li>Infrastructure as Code: Terraform, Pulumi, AWS CDK</li>
+                        <li>Led teams of 5+ engineers through full SDLC</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-gray">
+        <div class="container">
+            <div class="section-number">03</div>
+            <div class="section-label">Global Impact</div>
+            <h2>Trusted by Industry Leaders</h2>
+            <p class="lead-text">Our technical leadership has pioneered infrastructure solutions that power global connected car platforms and industrial monitoring networks. From reducing critical incident response times to achieving <strong>60% reliability improvements</strong> for world-class IoT systems, our agency delivers measurable operational ROI. We provide the specialized expertise needed for <strong>Zero-Downtime Migrations</strong> and <strong>SRE-driven Observability</strong>.</p>
+
+            <div class="clients-grid" style="margin-top: 2rem;">
+                <div class="client-card">
+                    <img src="https://apollos-cloud.eu/wp-content/uploads/2026/02/mercedes-benz-kubernetes-cloud-architecture.svg" alt="Mercedes-Benz">
+                    <h4>Mercedes-Benz</h4>
+                </div>
+                <div class="client-card">
+                    <img src="https://apollos-cloud.eu/wp-content/uploads/2026/02/yara-international-aws-iot-architecture.svg" alt="Yara International">
+                    <h4>Yara International</h4>
+                </div>
+                <div class="client-card">
+                    <img src="https://apollos-cloud.eu/wp-content/uploads/2026/02/choco-aws-serverless-distributed-systems.jpeg" alt="Choco">
+                    <h4>Choco</h4>
+                </div>
+                <div class="client-card">
+                    <img src="https://apollos-cloud.eu/wp-content/uploads/2026/02/lendis-aws-microservices-migration.webp" alt="Lendis">
+                    <h4>Lendis</h4>
+                </div>
+                <div class="client-card">
+                    <img src="https://apollos-cloud.eu/wp-content/uploads/2026/02/splicky-adtech-node-react-migration.svg" alt="Splicky">
+                    <h4>Splicky</h4>
+                </div>
+                <div class="client-card">
+                    <img src="https://apollos-cloud.eu/wp-content/uploads/2026/02/vivy-healthtech-aws-microservices.svg" alt="Vivy HealthTech">
+                    <h4>Vivy HealthTech</h4>
+                </div>
+                <div class="client-card">
+                    <img src="https://apollos-cloud.eu/wp-content/uploads/2026/02/adecco-azure-nestjs-cloud-migration.svg" alt="UST / Adecco">
+                    <h4>UST / Adecco</h4>
+                </div>
+                <div class="client-card">
+                    <img src="https://apollos-cloud.eu/wp-content/uploads/2026/02/webiny-serverless-pulumi-infrastructure.png" alt="Webiny">
+                    <h4>Webiny</h4>
+                </div>
+                <div class="client-card">
+                    <img src="https://apollos-cloud.eu/wp-content/uploads/2026/02/migraven-it-security-react-visualization.png" alt="MigRaven">
+                    <h4>MigRaven</h4>
+                </div>
+            </div>
+        </div>
     </section>
 
     <section>
-        <span class="section-label">Our Model</span>
-        <span class="section-number">04</span>
-        <h2>Why Bulgarian EOOD?</h2>
-        <p>Operating as an EOOD allows us to offer top-tier European talent with maximum flexibility. We provide local presence combined with a streamlined structure - ideal for long-term technical leadership.</p>
-        
-        <div class="highlight">
-            <h4>Key Advantages</h4>
-            <ul style="margin: 1rem 0 1rem 2rem; color: var(--secondary-text);">
-                <li>EU-based with local DACH presence</li>
-                <li>Flexible engagement models</li>
-                <li>German engineering standards</li>
-                <li>Tax-efficient structure</li>
-                <li>GDPR & EU data protection compliance</li>
-                <li>Direct Principal Architect access</li>
-            </ul>
+        <div class="container">
+            <div class="section-number">04</div>
+            <div class="section-label">Our Model</div>
+            <h2>Why the Bulgarian EOOD Model?</h2>
+            <h3>European Agility, German Standards</h3>
+            <p class="lead-text">Operating as a Bulgarian EOOD allows Apollo's Cloud to offer top-tier European engineering talent with maximum operational flexibility. We provide local DACH region presence combined with a streamlined, tax-efficient structure, making us the ideal partner for long-term technical leadership and strategic architectural audits.</p>
+
+            <div class="services-grid" style="margin-top: 2rem;">
+                <div class="service-card">
+                    <h4>Key Advantages</h4>
+                    <ul>
+                        <li>EU-based with local DACH presence</li>
+                        <li>Flexible engagement models</li>
+                        <li>German engineering standards</li>
+                        <li>Tax-efficient structure</li>
+                        <li>GDPR & EU data protection compliance</li>
+                        <li>Direct Principal Architect access</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-gray" style="text-align: center;">
+        <div class="container">
+            <h2>Ready to Work With Us?</h2>
+            <p class="lead-text">Let's discuss how Apollo's Cloud EOOD can transform your infrastructure and engineering practice.</p>
+            <div class="social-links" style="justify-content: center; margin-top: 2rem;">
+                <a href="mailto:omriwallach1992@gmail.com">Email</a>
+                <a href="https://github.com/omriwa">GitHub</a>
+                <a href="https://linkedin.com/in/omri-wallach-19989a113">LinkedIn</a>
+                <a href="tel:+491777198008">Phone</a>
+            </div>
         </div>
     </section>
 
     <footer>
-        <div class="footer-container">
-            <h3>Ready to work with us?</h3>
-            <div class="contact-links">
-                <a href="mailto:omriwallach1992@gmail.com" class="contact-link">📧 Email</a>
-                <a href="https://github.com/omriwa" target="_blank" class="contact-link">💻 GitHub</a>
-                <a href="https://linkedin.com/in/omri-wallach-19989a113" target="_blank" class="contact-link">💼 LinkedIn</a>
-                <a href="tel:+4901771198008" class="contact-link">📱 Phone</a>
-            </div>
-            <div class="footer-grid">
-                <div class="footer-section">
-                    <h4>Company</h4>
-                    <a href="index.html">Home</a>
-                    <a href="what-we-do.html">What We Do</a>
-                    <a href="case-studies.html">Case Studies</a>
-                    <a href="about-us.html">About Us</a>
-                </div>
-                <div class="footer-section">
-                    <h4>Contact</h4>
-                    <p>Email: omriwallach1992@gmail.com</p>
-                    <p>Phone: +49 177-7198008</p>
-                    <p>Location: Berlin, Germany</p>
-                </div>
-                <div class="footer-section">
-                    <h4>Expertise</h4>
-                    <p>Cloud Architecture</p>
-                    <p>DevOps & CI/CD</p>
-                    <p>Microservices</p>
-                    <p>Kubernetes</p>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2025 Apollos Cloud EOOD. All rights reserved.</p>
-            </div>
+        <div class="container">
+            <p>&copy; 2026 Apollo's Cloud EOOD. All rights reserved.</p>
+            <p>Bulgaria, Sofia 1000, William Gladstone 30 str. | t: +491777198008</p>
         </div>
     </footer>
 </body>

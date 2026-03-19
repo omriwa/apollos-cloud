@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yara International IoT Platform | Apollo's Cloud EOOD Case Study</title>
+    <meta name="description" content="Tech Lead & Architect: Building a Global AWS IoT Monitoring Platform for Yara International. Event-driven architecture, DynamoDB, AWS Lambda.">
+    <link rel="icon" href="https://apollos-cloud.eu/wp-content/uploads/2026/02/cropped-apollos.business.logo_-scaled-1-32x32.png" sizes="32x32">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/case-study-detail.css">
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <a href="index.html" class="logo">
+                <img src="https://apollos-cloud.eu/wp-content/uploads/2026/02/cropped-apollos.business.logo_-1-scaled-1-235x165.png" alt="Apollo's Cloud Logo">
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="what-we-do.html">What We Do</a></li>
+                    <li><a href="case-studies.html">Case Studies</a></li>
+                    <li><a href="about-us.html">About Us</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="case-study-hero">
+        <div class="container">
+            <div class="breadcrumb">
+                <a href="case-studies.html">Case Studies</a> / <span>Yara International</span>
+            </div>
+            <div class="case-study-meta">
+                <span class="case-tag">Use Cases</span>
+                <span class="case-author">By Omri Wallach</span>
+            </div>
+            <h1>Tech Lead &amp; Architect: Building a Global AWS IoT Monitoring Platform for Yara</h1>
+            <p class="lead-text">Yara International required a centralized, cloud-native solution to monitor factory sensors globally. The objective was to integrate real-time IoT sensor data with internal and third-party APIs while maintaining high enterprise security and operational reliability.</p>
+        </div>
+    </section>
+
+    <section class="case-study-body">
+        <div class="container case-study-content">
+
+            <div class="architecture-diagram">
+                <img src="https://apollos-cloud.eu/wp-content/uploads/2026/02/yara-global-iot-monitoring-platform-aws-architecture-1024x559.png" alt="Yara Global IoT Monitoring Platform AWS Architecture">
+                <p class="diagram-caption">Global IoT Monitoring Platform: AWS Cloud Architecture for Yara International</p>
+            </div>
+
+            <h2>Context</h2>
+            <p>The Yara Monitoring Platform is a high-scale, global PaaS solution engineered to monitor factory infrastructure through real-time IoT sensor integration. Leading a cross-functional team of five engineers, I served as the technical executor responsible for the end-to-end architecture, spanning backend, frontend, and DevOps.</p>
+            <p>The system was built on a microservices-based, event-driven architecture using AWS, designed to handle scheduled asynchronous tasks and complex data reporting for industrial sites worldwide.</p>
+
+            <h2>Deep Engineering Challenges</h2>
+            <p>The Yara IoT platform required solving high-stakes architectural problems involving global data consistency, security, and system reliability:</p>
+
+            <div class="challenge-card">
+                <h3>Global IoT Data Orchestration</h3>
+                <p>We had to architect a system capable of handling real-time data from industrial factory sensors located worldwide. This required an asynchronous, event-driven design using <strong>AWS EventBridge</strong> to ensure data from remote sites was processed reliably without bottlenecking the core API.</p>
+            </div>
+
+            <div class="challenge-card">
+                <h3>High-Performance Database Strategy</h3>
+                <p>Managing massive datasets from diverse IoT sensors required a sophisticated storage approach. I implemented a <strong>DynamoDB single-table design</strong> to ensure millisecond latency for complex queries while maintaining the scalability needed for global factory monitoring.</p>
+            </div>
+
+            <div class="challenge-card">
+                <h3>Enterprise-Grade Security in a PaaS Environment</h3>
+                <p>Integrating third-party and internal APIs across industrial sites necessitated a "zero-trust" security model. We utilized <strong>AWS KMS</strong>, <strong>Secrets Manager</strong>, and tunneling to protect sensitive industrial telemetry and credentials.</p>
+            </div>
+
+            <div class="challenge-card">
+                <h3>Zero-Downtime Reliability</h3>
+                <p>To achieve a 60% improvement in deployment reliability, I overhauled the SDLC by implementing a robust <strong>TDD/BDD</strong> framework (Jest/Cypress) and fully automated <strong>CI/CD</strong> pipelines via GitHub Actions and AWS CodePipeline.</p>
+            </div>
+
+            <h2>The Architectural Solutions</h2>
+            <p>Led by <strong>Omri Wallach</strong> as the Tech Lead, Apollo's Cloud architected an end-to-end, event-driven ecosystem designed for global scale.</p>
+
+            <div class="solutions-grid">
+                <div class="solution-item">
+                    <h4>Custom AWS Architecture</h4>
+                    <p>Engineered a microservices-based platform leveraging <strong>AWS Lambda</strong>, <strong>API Gateway</strong>, and serverless compute.</p>
+                </div>
+                <div class="solution-item">
+                    <h4>Event-Driven IoT Processing</h4>
+                    <p>Implemented asynchronous data handling and reporting via <strong>AWS EventBridge</strong> for real-time sensor data processing.</p>
+                </div>
+                <div class="solution-item">
+                    <h4>Enterprise Security &amp; Infrastructure</h4>
+                    <p>Secured the environment with <strong>Secrets Manager</strong> and tunneling, managed through <strong>CloudFormation</strong>.</p>
+                </div>
+                <div class="solution-item">
+                    <h4>Sophisticated Data Strategy</h4>
+                    <p>Utilized <strong>DynamoDB</strong> with single-table design and <strong>MySQL</strong> to manage high-velocity IoT data streams.</p>
+                </div>
+            </div>
+
+            <h2>Technical Impact &amp; Conclusions</h2>
+            <p>The implementation of a cloud-native, event-driven architecture for Yara transformed a fragmented monitoring process into a centralized, high-performance industrial ecosystem. By leveraging <strong>AWS serverless technologies</strong> and <strong>Domain-Driven Design (DDD)</strong>, we established a platform that is both resilient to global data spikes and easily maintainable for future scaling.</p>
+
+            <div class="impact-grid">
+                <div class="impact-item">
+                    <h4>Enhanced Operational Visibility</h4>
+                    <p>Integration of CloudWatch metrics and automated alarms provided real-time health monitoring of factory sensors, allowing for proactive incident response.</p>
+                </div>
+                <div class="impact-item">
+                    <h4>SDLC Optimization</h4>
+                    <p>By enforcing strict TDD/BDD practices and automating pipelines via GitHub Actions, we reduced manual reporting workloads significantly.</p>
+                </div>
+                <div class="impact-item">
+                    <h4>60% Reliability Improvement</h4>
+                    <p>The transition to an automated, containerized environment using Docker resulted in a 60% improvement in deployment reliability.</p>
+                </div>
+                <div class="impact-item">
+                    <h4>Strategic Scalability</h4>
+                    <p>The use of DynamoDB single-table design ensured the platform could handle increasing volumes of IoT data without performance degradation.</p>
+                </div>
+            </div>
+
+            <div class="tech-stack-section">
+                <h3>Technical Stack</h3>
+                <div class="tech-tags">
+                    <span class="tech-tag">Node.js</span>
+                    <span class="tech-tag">DynamoDB</span>
+                    <span class="tech-tag">Event-Driven Architecture</span>
+                    <span class="tech-tag">AWS Lambda</span>
+                    <span class="tech-tag">EventBridge</span>
+                    <span class="tech-tag">TDD/BDD</span>
+                    <span class="tech-tag">Microservices Architecture</span>
+                    <span class="tech-tag">CI/CD</span>
+                </div>
+            </div>
+
+            <div class="author-box">
+                <img src="https://apollos-cloud.eu/wp-content/uploads/2026/02/omri_wallach_profile-300x200.jpg" alt="Omri Wallach" class="author-avatar">
+                <div class="author-info">
+                    <h4>Omri Wallach</h4>
+                    <p class="author-title">Senior Cloud Engineer &amp; Software Solution Architect at Apollo's Cloud</p>
+                    <p>Expertise: Kubernetes, Distributed Systems, Cloud-Native Architecture</p>
+                </div>
+            </div>
+
+            <div class="case-study-nav">
+                <a href="case-studies.html" class="nav-back">&larr; All Case Studies</a>
+                <a href="mercedes-benz-kubernetes.html" class="nav-next">Mercedes-Benz &rarr;</a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 Apollo's Cloud EOOD. All rights reserved.</p>
+            <p>Bulgaria, Sofia 1000, William Gladstone 30 str. | t: +491777198008</p>
+        </div>
+    </footer>
+</body>
+</html>

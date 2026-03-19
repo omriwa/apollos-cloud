@@ -1,0 +1,258 @@
+/* Case Study Detail Pages */
+
+.case-study-hero {
+    margin-top: 80px;
+    padding: 5rem 0 3rem;
+    background: linear-gradient(135deg, rgba(102, 126, 234, 0.06) 0%, rgba(118, 75, 162, 0.06) 100%);
+}
+
+.breadcrumb {
+    margin-bottom: 1.5rem;
+    font-size: 0.9rem;
+    color: var(--secondary-text);
+}
+
+.breadcrumb a {
+    color: var(--accent-color);
+    text-decoration: none;
+}
+
+.breadcrumb a:hover {
+    text-decoration: underline;
+}
+
+.case-study-meta {
+    display: flex;
+    gap: 1.5rem;
+    align-items: center;
+    margin-bottom: 1.5rem;
+    flex-wrap: wrap;
+}
+
+.case-tag {
+    background: var(--gradient-primary);
+    color: white;
+    padding: 0.3rem 1rem;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 600;
+}
+
+.case-author {
+    color: var(--secondary-text);
+    font-size: 0.95rem;
+}
+
+.case-study-hero h1 {
+    font-size: clamp(1.8rem, 4vw, 3rem);
+    margin-bottom: 1.5rem;
+    line-height: 1.3;
+}
+
+.case-study-body {
+    padding: 4rem 0;
+}
+
+.case-study-content {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.case-study-content h2 {
+    font-size: clamp(1.5rem, 3vw, 2rem);
+    margin-top: 3rem;
+    margin-bottom: 1rem;
+    color: var(--primary-text);
+}
+
+.case-study-content p {
+    color: var(--secondary-text);
+    line-height: 1.9;
+    margin-bottom: 1.2rem;
+    font-size: 1.05rem;
+}
+
+.architecture-diagram {
+    margin: 2rem 0 3rem;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+}
+
+.architecture-diagram img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.diagram-caption {
+    text-align: center;
+    padding: 1rem;
+    background: var(--secondary-bg);
+    font-size: 0.9rem;
+    color: var(--secondary-text);
+    font-style: italic;
+    margin-bottom: 0;
+}
+
+.challenge-card {
+    background: white;
+    border-left: 4px solid var(--accent-color);
+    padding: 1.5rem 2rem;
+    margin-bottom: 1.5rem;
+    border-radius: 0 8px 8px 0;
+    box-shadow: 0 3px 15px rgba(0,0,0,0.06);
+}
+
+.challenge-card h3 {
+    font-size: 1.2rem;
+    margin-bottom: 0.8rem;
+    color: var(--primary-text);
+}
+
+.challenge-card p {
+    margin-bottom: 0;
+}
+
+.solutions-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 1.5rem;
+    margin: 2rem 0;
+}
+
+.solution-item {
+    background: white;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.07);
+    transition: transform 0.3s ease;
+}
+
+.solution-item:hover {
+    transform: translateY(-3px);
+}
+
+.solution-item h4 {
+    color: var(--accent-color);
+    margin-bottom: 0.8rem;
+    font-size: 1.1rem;
+}
+
+.solution-item p {
+    margin-bottom: 0;
+    font-size: 0.95rem;
+}
+
+.impact-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    margin: 2rem 0;
+}
+
+.impact-item {
+    background: linear-gradient(135deg, rgba(102,126,234,0.05), rgba(118,75,162,0.05));
+    padding: 1.5rem;
+    border-radius: 12px;
+    border: 1px solid rgba(102,126,234,0.1);
+}
+
+.impact-item h4 {
+    color: var(--accent-color);
+    margin-bottom: 0.5rem;
+    font-size: 1.05rem;
+}
+
+.impact-item p {
+    margin-bottom: 0;
+    font-size: 0.95rem;
+}
+
+.tech-stack-section {
+    margin: 3rem 0;
+    padding: 2rem;
+    background: var(--secondary-bg);
+    border-radius: 12px;
+}
+
+.tech-stack-section h3 {
+    margin-bottom: 1.2rem;
+}
+
+.author-box {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+    padding: 2rem;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+    margin: 3rem 0;
+}
+
+.author-box .author-avatar {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    flex-shrink: 0;
+}
+
+.author-info h4 {
+    font-size: 1.2rem;
+    margin-bottom: 0.3rem;
+}
+
+.author-info .author-title {
+    color: var(--accent-color);
+    font-weight: 600;
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+}
+
+.author-info p {
+    font-size: 0.9rem;
+    margin-bottom: 0;
+}
+
+.case-study-nav {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 3rem;
+    padding-top: 2rem;
+    border-top: 1px solid var(--border-color);
+}
+
+.case-study-nav a {
+    color: var(--accent-color);
+    text-decoration: none;
+    font-weight: 600;
+    padding: 0.8rem 1.5rem;
+    border-radius: 25px;
+    border: 2px solid var(--accent-color);
+    transition: all 0.3s ease;
+}
+
+.case-study-nav a:hover {
+    background: var(--accent-color);
+    color: white;
+}
+
+@media (max-width: 768px) {
+    .solutions-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .author-box {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .case-study-nav {
+        flex-direction: column;
+        gap: 1rem;
+        text-align: center;
+    }
+}

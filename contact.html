@@ -3,209 +3,149 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Contact - Apollo's Cloud EOOD">
-    <title>Contact | Apollos Cloud EOOD</title>
-    <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        :root {
-            --primary-bg: #ffffff;
-            --primary-text: #1a1a1a;
-            --secondary-text: #666666;
-            --accent-color: #0066cc;
-            --border-color: #eeeeee;
-            --light-bg: #f9f9f9;
-        }
-        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif; color: var(--primary-text); background: var(--primary-bg); line-height: 1.6; }
-        header { position: sticky; top: 0; background: var(--primary-bg); border-bottom: 1px solid var(--border-color); padding: 1.5rem 0; z-index: 1000; }
-        .header-container { max-width: 1200px; margin: 0 auto; padding: 0 2rem; display: flex; justify-content: space-between; align-items: center; }
-        .logo { font-size: 1.5rem; font-weight: 700; text-decoration: none; color: var(--primary-text); }
-        nav { display: flex; gap: 2rem; }
-        nav a { color: var(--secondary-text); text-decoration: none; font-weight: 500; transition: color 0.3s ease; }
-        nav a:hover { color: var(--accent-color); }
-        .cta-button { background: var(--accent-color); color: white; padding: 0.75rem 1.5rem; border-radius: 4px; text-decoration: none; font-weight: 600; }
-        section { padding: 5rem 2rem; max-width: 1200px; margin: 0 auto; }
-        .section-label { font-size: 0.85rem; color: var(--secondary-text); font-weight: 700; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 1rem; }
-        .section-number { font-size: 2rem; color: var(--secondary-text); font-weight: 300; margin-bottom: 2rem; }
-        section h2 { font-size: 2.5rem; margin-bottom: 2rem; }
-        section p { color: var(--secondary-text); margin-bottom: 2rem; line-height: 1.8; }
-        .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; margin: 3rem 0; align-items: start; }
-        .contact-form { background: var(--light-bg); padding: 2rem; border-radius: 8px; }
-        .form-group { margin-bottom: 1.5rem; }
-        label { display: block; font-weight: 600; margin-bottom: 0.5rem; }
-        input, textarea { width: 100%; padding: 0.75rem; border: 1px solid var(--border-color); border-radius: 4px; font-family: inherit; font-size: 1rem; }
-        textarea { resize: vertical; min-height: 150px; }
-        input:focus, textarea:focus { outline: none; border-color: var(--accent-color); }
-        .submit-btn { background: var(--accent-color); color: white; padding: 1rem 2rem; border: none; border-radius: 4px; font-weight: 600; cursor: pointer; width: 100%; transition: background 0.3s ease; }
-        .submit-btn:hover { background: #0052a3; }
-        .contact-info { display: flex; flex-direction: column; gap: 2rem; }
-        .info-item { padding: 2rem; background: var(--light-bg); border-radius: 8px; }
-        .info-item h3 { margin-bottom: 1rem; }
-        .info-item p { margin-bottom: 0.5rem; color: var(--secondary-text); }
-        .info-item a { color: var(--accent-color); text-decoration: none; font-weight: 600; }
-        footer { background: var(--primary-text); color: white; padding: 3rem 2rem; margin-top: 3rem; }
-        .footer-container { max-width: 1200px; margin: 0 auto; }
-        .footer-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; margin-bottom: 2rem; }
-        .footer-section h4 { margin-bottom: 1rem; }
-        .footer-section a { display: block; color: #aaaaaa; text-decoration: none; margin-bottom: 0.5rem; }
-        .footer-bottom { border-top: 1px solid #333333; padding-top: 2rem; text-align: center; color: #aaaaaa; }
-        .contact-links { display: flex; gap: 1.5rem; flex-wrap: wrap; justify-content: center; margin: 2rem 0; }
-        .contact-link { color: #aaaaaa; text-decoration: none; }
-        @media (max-width: 768px) { nav { display: none; } section h2 { font-size: 1.8rem; } .contact-grid { grid-template-columns: 1fr; } }
-    </style>
+    <title>Contact | Apollo's Cloud EOOD</title>
+    <meta name="description" content="Contact Apollo's Cloud EOOD for cloud architecture consulting, DevOps engineering, and technical leadership. Based in Sofia, Bulgaria with DACH presence.">
+    <link rel="icon" href="https://apollos-cloud.eu/wp-content/uploads/2026/02/cropped-apollos.business.logo_-scaled-1-32x32.png" sizes="32x32">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
     <header>
         <div class="header-container">
-            <a href="index.html" class="logo">⚡ Apollos Cloud</a>
+            <a href="index.html" class="logo">
+                <img src="https://apollos-cloud.eu/wp-content/uploads/2026/02/cropped-apollos.business.logo_-1-scaled-1-235x165.png" alt="Apollo's Cloud Logo">
+            </a>
             <nav>
-                <a href="index.html">Home</a>
-                <a href="what-we-do.html">What We Do</a>
-                <a href="case-studies.html">Case Studies</a>
-                <a href="about-us.html">About Us</a>
-                <a href="contact.html" class="cta-button">Contact</a>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="what-we-do.html">What We Do</a></li>
+                    <li><a href="case-studies.html">Case Studies</a></li>
+                    <li><a href="about-us.html">About Us</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
             </nav>
         </div>
     </header>
 
+    <section class="hero" style="min-height: auto; padding: 5rem 0 3rem;">
+        <div class="container">
+            <div class="section-label">Get In Touch</div>
+            <div class="section-number">01</div>
+            <h1>Let's Discuss Your Cloud Transformation</h1>
+            <p class="lead-text">Whether you're planning a cloud migration, optimizing infrastructure, or building distributed systems, we're ready to help. Reach out to discuss your project.</p>
+        </div>
+    </section>
+
     <section>
-        <span class="section-label">Get In Touch</span>
-        <span class="section-number">01</span>
-        <h2>Let's Discuss Your Cloud Transformation</h2>
-        <p>Whether you're planning a cloud migration, optimizing infrastructure, or building distributed systems, we're ready to help. Reach out to discuss your project.</p>
-        
-        <div class="contact-grid">
-            <div class="contact-form">
-                <h3>Send us a message</h3>
-                <form>
-                    <div class="form-group">
-                        <label for="name">Full Name *</label>
-                        <input type="text" id="name" name="name" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="email">Email Address *</label>
-                        <input type="email" id="email" name="email" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="company">Company Name</label>
-                        <input type="text" id="company" name="company">
-                    </div>
-                    <div class="form-group">
-                        <label for="message">Message *</label>
-                        <textarea id="message" name="message" required></textarea>
-                    </div>
-                    <button type="submit" class="submit-btn">Send Message</button>
-                </form>
-                <p style="margin-top: 1.5rem; font-size: 0.9rem; color: var(--secondary-text);">We typically respond within 24 hours.</p>
-            </div>
-
-            <div class="contact-info">
-                <div class="info-item">
-                    <h3>📧 Email</h3>
-                    <p><a href="mailto:omriwallach1992@gmail.com">omriwallach1992@gmail.com</a></p>
-                    <p style="font-size: 0.9rem;">Direct communication with Omri Wallach</p>
+        <div class="container">
+            <div class="contact-grid">
+                <div>
+                    <h3>Send us a message</h3>
+                    <form style="margin-top: 2rem;" onsubmit="event.preventDefault(); alert('Thank you for your message! We will get back to you within 24 hours.');">
+                        <div style="margin-bottom: 1.5rem;">
+                            <label style="display: block; margin-bottom: 0.5rem; font-weight: 600; color: var(--primary-text);">Full Name *</label>
+                            <input type="text" required style="width: 100%; padding: 0.8rem 1rem; border: 1px solid var(--border-color); border-radius: 8px; font-size: 1rem; font-family: inherit;">
+                        </div>
+                        <div style="margin-bottom: 1.5rem;">
+                            <label style="display: block; margin-bottom: 0.5rem; font-weight: 600; color: var(--primary-text);">Email Address *</label>
+                            <input type="email" required style="width: 100%; padding: 0.8rem 1rem; border: 1px solid var(--border-color); border-radius: 8px; font-size: 1rem; font-family: inherit;">
+                        </div>
+                        <div style="margin-bottom: 1.5rem;">
+                            <label style="display: block; margin-bottom: 0.5rem; font-weight: 600; color: var(--primary-text);">Company Name</label>
+                            <input type="text" style="width: 100%; padding: 0.8rem 1rem; border: 1px solid var(--border-color); border-radius: 8px; font-size: 1rem; font-family: inherit;">
+                        </div>
+                        <div style="margin-bottom: 1.5rem;">
+                            <label style="display: block; margin-bottom: 0.5rem; font-weight: 600; color: var(--primary-text);">Message *</label>
+                            <textarea required rows="5" style="width: 100%; padding: 0.8rem 1rem; border: 1px solid var(--border-color); border-radius: 8px; font-size: 1rem; font-family: inherit; resize: vertical;"></textarea>
+                        </div>
+                        <button type="submit" class="cta-button" style="border: none; cursor: pointer; font-size: 1rem;">Send Message</button>
+                    </form>
+                    <p style="margin-top: 1rem; color: var(--secondary-text); font-size: 0.9rem;">We typically respond within 24 hours.</p>
                 </div>
-
-                <div class="info-item">
-                    <h3>📱 Phone & WhatsApp</h3>
-                    <p><a href="tel:+4901771198008">+49 177-7198008</a></p>
-                    <p style="font-size: 0.9rem;">Available for quick consultations</p>
-                </div>
-
-                <div class="info-item">
-                    <h3>💲 Location</h3>
-                    <p>Berlin, Germany</p>
-                    <p>Sofia, Bulgaria</p>
-                    <p style="font-size: 0.9rem;">Serving clients across Europe and globally</p>
-                </div>
-
-                <div class="info-item">
-                    <h3>🔗 Connect</h3>
-                    <p><a href="https://github.com/omriwa" target="_blank">GitHub</a></p>
-                    <p><a href="https://linkedin.com/in/omri-wallach-19989a113" target="_blank">LinkedIn</a></p>
-                    <p style="font-size: 0.9rem;">Check out our portfolio and background</p>
+                <div>
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <h4>Email</h4>
+                            <a href="mailto:omriwallach1992@gmail.com">omriwallach1992@gmail.com</a>
+                            <p style="font-size: 0.9rem; color: var(--secondary-text); margin-top: 0.3rem;">Direct communication with Omri Wallach</p>
+                        </div>
+                        <div class="contact-item">
+                            <h4>Phone &amp; WhatsApp</h4>
+                            <a href="tel:+491777198008">+49 177-7198008</a>
+                            <p style="font-size: 0.9rem; color: var(--secondary-text); margin-top: 0.3rem;">Available for quick consultations</p>
+                        </div>
+                        <div class="contact-item">
+                            <h4>Location</h4>
+                            <p style="font-size: 1.1rem; color: var(--primary-text);">Bulgaria, Sofia 1000<br>William Gladstone 30 str.</p>
+                            <p style="font-size: 0.9rem; color: var(--secondary-text); margin-top: 0.3rem;">Serving clients across Europe and globally</p>
+                        </div>
+                        <div class="contact-item">
+                            <h4>Connect</h4>
+                            <div class="social-links">
+                                <a href="https://github.com/omriwa">GitHub</a>
+                                <a href="https://linkedin.com/in/omri-wallach-19989a113">LinkedIn</a>
+                                <a href="https://wa.me/491777198008">WhatsApp</a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section style="background: var(--light-bg); border-radius: 8px; padding: 3rem;">
-        <h2 style="margin-bottom: 1.5rem;">Our Process</h2>
-        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem;">
-            <div>
-                <h4 style="color: var(--accent-color); margin-bottom: 1rem;">1. Initial Consultation</h4>
-                <p style="color: var(--secondary-text);">We discuss your goals, challenges, and transformation objectives. No commitment required.</p>
-            </div>
-            <div>
-                <h4 style="color: var(--accent-color); margin-bottom: 1rem;">2. Architecture Review</h4>
-                <p style="color: var(--secondary-text);">Principal Architect conducts technical assessment and provides strategic recommendations.</p>
-            </div>
-            <div>
-                <h4 style="color: var(--accent-color); margin-bottom: 1rem;">3. Proposal</h4>
-                <p style="color: var(--secondary-text);">Detailed project proposal with timeline, deliverables, and investment.</p>
-            </div>
-            <div>
-                <h4 style="color: var(--accent-color); margin-bottom: 1rem;">4. Execution</h4>
-                <p style="color: var(--secondary-text);">Regular communication and ongoing technical support throughout engagement.</p>
+    <section class="section-gray">
+        <div class="container">
+            <div class="section-number">02</div>
+            <h2>Our Process</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <h4>1. Initial Consultation</h4>
+                    <p>We discuss your goals, challenges, and transformation objectives. No commitment required.</p>
+                </div>
+                <div class="service-card">
+                    <h4>2. Architecture Review</h4>
+                    <p>Principal Architect conducts technical assessment and provides strategic recommendations.</p>
+                </div>
+                <div class="service-card">
+                    <h4>3. Proposal</h4>
+                    <p>Detailed project proposal with timeline, deliverables, and investment.</p>
+                </div>
+                <div class="service-card">
+                    <h4>4. Execution</h4>
+                    <p>Regular communication and ongoing technical support throughout engagement.</p>
+                </div>
             </div>
         </div>
     </section>
 
     <section>
-        <h2 style="text-align: center; margin-bottom: 2rem;">Frequently Asked Questions</h2>
-        <div style="display: grid; gap: 2rem;">
-            <div style="border-left: 4px solid var(--accent-color); padding-left: 2rem;">
-                <h4 style="margin-bottom: 0.5rem;">What engagement models do you offer?</h4>
-                <p style="color: var(--secondary-text);">Fractional CTO services, project-based consulting, team augmentation, or architecture reviews. We tailor to your needs.</p>
-            </div>
-            <div style="border-left: 4px solid var(--accent-color); padding-left: 2rem;">
-                <h4 style="margin-bottom: 0.5rem;">How is pricing structured?</h4>
-                <p style="color: var(--secondary-text);">Varies based on scope and engagement type. We provide transparent, competitive quotes tailored to your project.</p>
-            </div>
-            <div style="border-left: 4px solid var(--accent-color); padding-left: 2rem;">
-                <h4 style="margin-bottom: 0.5rem;">Do you work with non-technical founders?</h4>
-                <p style="color: var(--secondary-text);">Absolutely. We translate business goals into technical strategies and explain concepts in business terms.</p>
-            </div>
-            <div style="border-left: 4px solid var(--accent-color); padding-left: 2rem;">
-                <h4 style="margin-bottom: 0.5rem;">How quickly can you start?</h4>
-                <p style="color: var(--secondary-text);">Typically 1-2 weeks for urgent projects, 2-4 weeks for regular engagements.</p>
+        <div class="container">
+            <h2>Frequently Asked Questions</h2>
+            <div class="services-grid" style="grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));">
+                <div class="service-card">
+                    <h4>What engagement models do you offer?</h4>
+                    <p>Fractional CTO services, project-based consulting, team augmentation, or architecture reviews. We tailor to your needs.</p>
+                </div>
+                <div class="service-card">
+                    <h4>How is pricing structured?</h4>
+                    <p>Varies based on scope and engagement type. We provide transparent, competitive quotes tailored to your project.</p>
+                </div>
+                <div class="service-card">
+                    <h4>Do you work with non-technical founders?</h4>
+                    <p>Absolutely. We translate business goals into technical strategies and explain concepts in business terms.</p>
+                </div>
+                <div class="service-card">
+                    <h4>How quickly can you start?</h4>
+                    <p>Typically 1-2 weeks for urgent projects, 2-4 weeks for regular engagements.</p>
+                </div>
             </div>
         </div>
     </section>
 
     <footer>
-        <div class="footer-container">
-            <h3>Ready to transform your infrastructure?</h3>
-            <div class="contact-links">
-                <a href="mailto:omriwallach1992@gmail.com" class="contact-link">📧 Email</a>
-                <a href="https://github.com/omriwa" target="_blank" class="contact-link">💻 GitHub</a>
-                <a href="https://linkedin.com/in/omri-wallach-19989a113" target="_blank" class="contact-link">💼 LinkedIn</a>
-                <a href="tel:+4901771198008" class="contact-link">📱 Phone</a>
-            </div>
-            <div class="footer-grid">
-                <div class="footer-section">
-                    <h4>Company</h4>
-                    <a href="index.html">Home</a>
-                    <a href="what-we-do.html">What We Do</a>
-                    <a href="case-studies.html">Case Studies</a>
-                    <a href="about-us.html">About Us</a>
-                </div>
-                <div class="footer-section">
-                    <h4>Direct Contact</h4>
-                    <p>Email: <a href="mailto:omriwallach1992@gmail.com">omriwallach1992@gmail.com</a></p>
-                    <p>Phone: +49 177-7198008</p>
-                    <p>Location: Berlin, Germany</p>
-                </div>
-                <div class="footer-section">
-                    <h4>Services</h4>
-                    <p>Cloud Architecture</p>
-                    <p>DevOps & CI/CD</p>
-                    <p>Microservices</p>
-                    <p>Technical Leadership</p>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2025 Apollos Cloud EOOD. All rights reserved.</p>
-            </div>
+        <div class="container">
+            <p>&copy; 2026 Apollo's Cloud EOOD. All rights reserved.</p>
+            <p>Bulgaria, Sofia 1000, William Gladstone 30 str. | t: +491777198008</p>
         </div>
     </footer>
 </body>

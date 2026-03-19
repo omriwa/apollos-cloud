@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mercedes-Benz Kubernetes & Speech Cloud | Apollo's Cloud EOOD Case Study</title>
+    <meta name="description" content="Enterprise Kubernetes Orchestration & Speech Cloud Scaling for Mercedes-Benz. Azure, Golang, gRPC, Terraform.">
+    <link rel="icon" href="https://apollos-cloud.eu/wp-content/uploads/2026/02/cropped-apollos.business.logo_-scaled-1-32x32.png" sizes="32x32">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/case-study-detail.css">
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <a href="index.html" class="logo">
+                <img src="https://apollos-cloud.eu/wp-content/uploads/2026/02/cropped-apollos.business.logo_-1-scaled-1-235x165.png" alt="Apollo's Cloud Logo">
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="what-we-do.html">What We Do</a></li>
+                    <li><a href="case-studies.html">Case Studies</a></li>
+                    <li><a href="about-us.html">About Us</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="case-study-hero">
+        <div class="container">
+            <div class="breadcrumb">
+                <a href="case-studies.html">Case Studies</a> / <span>Mercedes-Benz</span>
+            </div>
+            <div class="case-study-meta">
+                <span class="case-tag">Use Cases</span>
+                <span class="case-author">By Omri Wallach</span>
+            </div>
+            <h1>Enterprise Kubernetes Orchestration &amp; Speech Cloud Scaling for Mercedes-Benz</h1>
+            <p class="lead-text">High-scale automotive cloud environments require more than just uptime—they demand precision engineering. As a Senior Cloud Engineer within the Mercedes-Benz Speech Cloud team, I contributed to the architectural evolution of a global platform, ensuring sub-second voice command latency and seamless multi-region cluster stability through advanced Azure orchestration and Golang-based microservices.</p>
+        </div>
+    </section>
+
+    <section class="case-study-body">
+        <div class="container case-study-content">
+
+            <div class="architecture-diagram">
+                <img src="https://apollos-cloud.eu/wp-content/uploads/2026/02/apollos_cloud_hey_mecredes-1024x559.png" alt="Mercedes-Benz Speech Cloud Kubernetes Architecture">
+                <p class="diagram-caption">Enterprise Kubernetes Orchestration & Speech Cloud Scaling for Mercedes-Benz</p>
+            </div>
+
+            <h2>Context</h2>
+            <p><strong>Mercedes-Benz Speech Cloud</strong> is a sophisticated, global platform designed to handle real-time audio command functionality for millions of connected vehicles. Operating within a flat hierarchy alongside a Scrum Master, Product Owner, and four engineers, I focused on the technical design and implementation of backend and DevOps solutions. The architecture relied on a <strong>microservices-based Kubernetes cluster</strong> deployed on <strong>Azure Cloud</strong>, requiring extreme reliability for mission-critical driver interactions.</p>
+
+            <h2>Deep Engineering Challenges</h2>
+            <p>To maintain a leading edge in automotive SaaS, our team had to overcome complex distributed systems hurdles:</p>
+
+            <div class="challenge-card">
+                <h3>Observability in Distributed Systems</h3>
+                <p>With dozens of interacting microservices, identifying specific error rates or latency spikes across the fleet was a significant challenge for the SRE (Site Reliability Engineering) workflow.</p>
+            </div>
+
+            <div class="challenge-card">
+                <h3>Performance &amp; Latency Bottlenecks</h3>
+                <p>Real-time audio processing requires high-throughput service communication; legacy protocols created overhead that threatened the "live" user experience.</p>
+            </div>
+
+            <div class="challenge-card">
+                <h3>Massive Scale Management</h3>
+                <p>Coordinating deployments across a multi-cluster environment while ensuring vertical and horizontal pod scalability was essential to prevent service degradation during peak global traffic.</p>
+            </div>
+
+            <h2>The Architectural Solutions</h2>
+            <p>My contributions as a Senior Cloud Engineer focused on "hardening" the platform through modern engineering standards and proactive automation:</p>
+
+            <div class="solutions-grid">
+                <div class="solution-item">
+                    <h4>A. High-Performance Communication (gRPC &amp; Protobuf)</h4>
+                    <p>Actively optimized service-to-service communication by implementing <strong>gRPC and Protocol Buffers (ProtoBuf)</strong>. This reduced binary payload sizes and overhead, facilitating faster data exchange between the backend microservices and improving the overall response time of the speech system.</p>
+                </div>
+                <div class="solution-item">
+                    <h4>B. Declarative Infrastructure (IaC &amp; Terraform)</h4>
+                    <p>The infrastructure was managed as code using <strong>Terraform</strong>. I worked on designing scalable infrastructure solutions that ensured environmental parity and eliminated manual configuration errors, allowing for stable, repeatable deployments across the Azure ecosystem.</p>
+                </div>
+                <div class="solution-item">
+                    <h4>C. Metric-Driven Observability &amp; SRE</h4>
+                    <p>Transformed our monitoring posture by integrating <strong>Datadog</strong> to track critical metrics like error rates and health checks. Established a robust observability framework by integrating <strong>OpsGenie</strong> with Datadog monitors, ensuring the team received actionable, real-time alerts for proactive incident response.</p>
+                </div>
+                <div class="solution-item">
+                    <h4>D. Quality Engineering &amp; CI/CD</h4>
+                    <p>Implemented a rigorous testing suite following <strong>TDD/BDD principles</strong>, utilizing Golang testing libraries and Mockito for Java Spring Boot services. Improved the CI/CD pipelines within the <strong>Azure DevOps</strong> ecosystem, optimizing the path from code commit to production-ready Helm charts.</p>
+                </div>
+            </div>
+
+            <h2>Technical Impact &amp; Conclusions</h2>
+            <p>By taking a lead role in technical discussions and the SDLC, Apollo's Cloud delivered a more stable, documented, and scalable platform.</p>
+
+            <div class="impact-grid">
+                <div class="impact-item">
+                    <h4>Architectural Clarity</h4>
+                    <p>Delivered comprehensive documentation, including entity, infrastructure, and database schema diagrams.</p>
+                </div>
+                <div class="impact-item">
+                    <h4>Production Stability</h4>
+                    <p>Optimized logging and monitoring practices directly improved the team's ability to maintain high-quality service standards.</p>
+                </div>
+                <div class="impact-item">
+                    <h4>Scalable Delivery</h4>
+                    <p>Balanced hands-on development in Golang and Java Spring Boot with leadership that aligned technical output with stakeholder requirements.</p>
+                </div>
+            </div>
+
+            <div class="tech-stack-section">
+                <h3>Technical Stack</h3>
+                <div class="tech-tags">
+                    <span class="tech-tag">Azure Kubernetes Service (AKS)</span>
+                    <span class="tech-tag">Golang</span>
+                    <span class="tech-tag">Java Spring Boot</span>
+                    <span class="tech-tag">Terraform (IaC)</span>
+                    <span class="tech-tag">gRPC &amp; ProtoBuf</span>
+                    <span class="tech-tag">Datadog Observability</span>
+                    <span class="tech-tag">OpsGenie</span>
+                    <span class="tech-tag">Helm</span>
+                    <span class="tech-tag">Redis Caching</span>
+                    <span class="tech-tag">CI/CD (Azure Pipelines)</span>
+                    <span class="tech-tag">Microservices Architecture</span>
+                    <span class="tech-tag">TDD/BDD</span>
+                </div>
+            </div>
+
+            <div class="author-box">
+                <img src="https://apollos-cloud.eu/wp-content/uploads/2026/02/omri_wallach_profile-300x200.jpg" alt="Omri Wallach" class="author-avatar">
+                <div class="author-info">
+                    <h4>Omri Wallach</h4>
+                    <p class="author-title">Senior Cloud Engineer &amp; Software Solution Architect at Apollo's Cloud</p>
+                    <p>Expertise: Kubernetes, Distributed Systems, Cloud-Native Architecture</p>
+                </div>
+            </div>
+
+            <div class="case-study-nav">
+                <a href="yara-iot-platform.html" class="nav-back">&larr; Yara International</a>
+                <a href="choco-notification-system.html" class="nav-next">Choco &rarr;</a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 Apollo's Cloud EOOD. All rights reserved.</p>
+            <p>Bulgaria, Sofia 1000, William Gladstone 30 str. | t: +491777198008</p>
+        </div>
+    </footer>
+</body>
+</html>
