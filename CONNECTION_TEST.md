@@ -1,1 +1,1 @@
-Success
+Success - New PAT Token Works!
