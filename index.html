@@ -3,196 +3,287 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Apollos Cloud EOOD - Enterprise Cloud Architecture & Scalable Systems for Global SaaS & IoT">
-    <meta name="keywords" content="cloud architecture, AWS, Azure, Kubernetes, microservices, DevOps, software consultancy">
-    <title>Apollos Cloud EOOD | Enterprise Cloud Solutions</title>
-    <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        :root {
-            --primary-bg: #ffffff;
-            --primary-text: #1a1a1a;
-            --secondary-text: #666666;
-            --accent-color: #0066cc;
-            --border-color: #eeeeee;
-            --light-bg: #f9f9f9;
-        }
-        html { scroll-behavior: smooth; }
-        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif; color: var(--primary-text); background: var(--primary-bg); line-height: 1.6; }
-        header { position: sticky; top: 0; background: var(--primary-bg); border-bottom: 1px solid var(--border-color); z-index: 1000; padding: 1.5rem 0; }
-        .header-container { max-width: 1200px; margin: 0 auto; padding: 0 2rem; display: flex; justify-content: space-between; align-items: center; }
-        .logo { font-size: 1.5rem; font-weight: 700; text-decoration: none; color: var(--primary-text); display: flex; align-items: center; gap: 0.5rem; }
-        nav { display: flex; gap: 2rem; align-items: center; }
-        nav a { color: var(--secondary-text); text-decoration: none; font-weight: 500; transition: color 0.3s ease; }
-        nav a:hover { color: var(--accent-color); }
-        .cta-button { background: var(--accent-color); color: white; padding: 0.75rem 1.5rem; border-radius: 4px; text-decoration: none; font-weight: 600; border: none; cursor: pointer; transition: background 0.3s ease; }
-        .cta-button:hover { background: #0052a3; }
-        .hero { padding: 6rem 2rem; background: linear-gradient(135deg, #f5f7fa 0%, #ffffff 100%); }
-        .hero-container { max-width: 1200px; margin: 0 auto; }
-        .hero h1 { font-size: 3.5rem; line-height: 1.2; margin-bottom: 1.5rem; color: var(--primary-text); }
-        .hero p { font-size: 1.25rem; color: var(--secondary-text); max-width: 800px; margin-bottom: 2rem; line-height: 1.8; }
-        .hero-buttons { display: flex; gap: 1rem; flex-wrap: wrap; }
-        .btn { padding: 1rem 2rem; border-radius: 4px; font-weight: 600; text-decoration: none; cursor: pointer; border: none; transition: all 0.3s ease; font-size: 1rem; }
-        .btn-primary { background: var(--accent-color); color: white; }
-        .btn-primary:hover { background: #0052a3; }
-        .btn-secondary { background: var(--light-bg); color: var(--primary-text); border: 1px solid var(--border-color); }
-        .btn-secondary:hover { background: var(--border-color); }
-        section { padding: 5rem 2rem; max-width: 1200px; margin: 0 auto; }
-        .section-label { font-size: 0.85rem; color: var(--secondary-text); font-weight: 700; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 1rem; display: block; }
-        .section-number { display: block; font-size: 2rem; color: var(--secondary-text); font-weight: 300; margin-bottom: 2rem; }
-        section h2 { font-size: 2.5rem; margin-bottom: 2rem; color: var(--primary-text); }
-        section h3 { font-size: 1.5rem; margin-bottom: 1rem; color: var(--primary-text); }
-        section p { color: var(--secondary-text); margin-bottom: 1rem; line-height: 1.8; }
-        .portfolio-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem; margin: 3rem 0; }
-        .portfolio-item { background: var(--light-bg); border-radius: 8px; overflow: hidden; transition: transform 0.3s ease; }
-        .portfolio-item:hover { transform: translateY(-5px); }
-        .portfolio-item img { width: 100%; height: 200px; object-fit: cover; display: block; }
-        .portfolio-item h4 { padding: 1.5rem; font-size: 1.1rem; color: var(--primary-text); }
-        .tech-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 1.5rem; margin: 2rem 0; }
-        .tech-item { background: var(--light-bg); padding: 1.5rem; border-radius: 8px; text-align: center; transition: background 0.3s ease; }
-        .tech-item:hover { background: var(--border-color); }
-        .tech-item-icon { font-size: 2.5rem; margin-bottom: 0.5rem; display: block; }
-        .tech-item-name { font-weight: 600; color: var(--primary-text); }
-        .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; margin: 2rem 0; }
-        .service-item { padding: 2rem; background: var(--light-bg); border-radius: 8px; transition: all 0.3s ease; }
-        .service-item:hover { background: #f0f4ff; transform: translateY(-3px); }
-        .service-item h3 { margin-top: 0; }
-        .service-item p { margin-bottom: 0; }
-        .service-list { list-style: none; padding: 1rem 0; }
-        .service-list li { padding: 0.5rem 0; color: var(--secondary-text); border-bottom: 1px solid var(--border-color); }
-        .service-list li:last-child { border-bottom: none; }
-        .service-list li::before { content: "✓ "; color: var(--accent-color); font-weight: bold; margin-right: 0.5rem; }
-        .why-us-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: center; margin: 2rem 0; }
-        .why-us-item { padding: 2rem; background: var(--light-bg); border-radius: 8px; }
-        .why-us-item h4 { font-size: 1.2rem; margin-bottom: 1rem; color: var(--primary-text); }
-        .why-us-image { background: linear-gradient(135deg, #f5f7fa 0%, #e8ecf1 100%); height: 300px; border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: 4rem; }
-        .stats-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 2rem; margin: 2rem 0; }
-        .stat-card { text-align: center; padding: 2rem; background: var(--light-bg); border-radius: 8px; }
-        .stat-number { font-size: 2.5rem; font-weight: 700; color: var(--accent-color); margin-bottom: 0.5rem; }
-        .stat-label { color: var(--secondary-text); font-weight: 600; }
-        footer { background: var(--primary-text); color: white; padding: 3rem 2rem; margin-top: 3rem; }
-        .footer-container { max-width: 1200px; margin: 0 auto; }
-        .footer-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; margin-bottom: 2rem; }
-        .footer-section h4 { margin-bottom: 1rem; }
-        .footer-section a { display: block; color: #aaaaaa; text-decoration: none; margin-bottom: 0.5rem; transition: color 0.3s ease; }
-        .footer-section a:hover { color: white; }
-        .footer-bottom { border-top: 1px solid #333333; padding-top: 2rem; text-align: center; color: #aaaaaa; }
-        .contact-links { display: flex; gap: 1.5rem; flex-wrap: wrap; justify-content: center; margin: 2rem 0; }
-        .contact-link { color: #aaaaaa; text-decoration: none; transition: color 0.3s ease; }
-        .contact-link:hover { color: white; }
-        @media (max-width: 768px) { nav { display: none; } .hero h1 { font-size: 2rem; } .why-us-grid { grid-template-columns: 1fr; } .stats-grid { grid-template-columns: 1fr 1fr; } .portfolio-grid { grid-template-columns: 1fr; } .tech-grid { grid-template-columns: repeat(2, 1fr); } .hero-buttons { flex-direction: column; } .btn { width: 100%; text-align: center; } }
-    </style>
+    <meta name="description" content="Apollo's Cloud EOOD - Enterprise Cloud Architecture & Scalable Systems for Global SaaS & IoT. Expert solutions in AWS, Azure, Kubernetes, and microservices architecture.">
+    <meta name="keywords" content="cloud architecture, AWS, Azure, Kubernetes, microservices, DevOps, Node.js, Golang, SaaS development">
+    <meta name="author" content="Apollo's Cloud EOOD">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="Apollo's Cloud EOOD | Enterprise Cloud Architecture">
+    <meta property="og:description" content="High-scale engineering solutions and fractional technical leadership for global enterprises">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://apollos-cloud.eu/">
+    <meta property="og:image" content="https://apollos-cloud.eu/wp-content/uploads/2026/02/cropped-apollos.business.logo_-1-scaled-1-235x165.png">
+    
+    <title>Apollo's Cloud EOOD | Enterprise Cloud Architecture & Scalable Systems</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" type="image/png" href="https://apollos-cloud.eu/wp-content/uploads/2026/02/cropped-apollos.business.logo_-1-scaled-1-235x165.png">
 </head>
 <body>
+    <!-- Header -->
     <header>
         <div class="header-container">
-            <a href="index.html" class="logo">⚡ Apollos Cloud</a>
+            <div class="logo">
+                <a href="index.html">
+                    <img src="https://apollos-cloud.eu/wp-content/uploads/2026/02/cropped-apollos.business.logo_-1-scaled-1-235x165.png" alt="Apollo's Cloud Logo">
+                </a>
+            </div>
             <nav>
-                <a href="index.html">Home</a>
-                <a href="what-we-do.html">What We Do</a>
-                <a href="case-studies.html">Case Studies</a>
-                <a href="about-us.html">About Us</a>
-                <a href="contact.html" class="cta-button">Contact</a>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="what-we-do.html">What We Do</a></li>
+                    <li><a href="case-studies.html">Case Studies</a></li>
+                    <li><a href="about-us.html">About Us</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
             </nav>
         </div>
     </header>
+
+    <!-- Hero Section -->
     <section class="hero">
-        <div class="hero-container">
-            <h1>Enterprise Cloud Architecture & Scalable Systems for Global SaaS & IoT</h1>
-            <p>Apollo's Cloud EOOD delivers high-scale engineering solutions and fractional technical leadership. Led by Principal Solution Architect Omri Wallach, we bridge the gap between business strategy and production-ready infrastructure using Node.js, Go, and Kubernetes.</p>
-            <div class="hero-buttons">
-                <a href="contact.html" class="btn btn-primary">Start Your Project →</a>
-                <a href="what-we-do.html" class="btn btn-secondary">Explore Services</a>
+        <div class="container">
+            <div class="hero-content fade-in">
+                <div class="section-label">Enterprise Cloud Solutions</div>
+                <h1>Enterprise Cloud Architecture & Scalable Systems for Global SaaS & IoT</h1>
+                <p class="lead-text">
+                    Apollo's Cloud EOOD delivers high-scale engineering solutions and fractional technical leadership. 
+                    Led by Principal Solution Architect Omri Wallach, we bridge the gap between business strategy and 
+                    production-ready infrastructure using Node.js, Go, and Kubernetes.
+                </p>
+                <p class="lead-text">
+                    We work with startups, enterprises, and government-related organizations across Europe and the UAE.
+                </p>
+                <a href="contact.html" class="cta-button">Start Your Project</a>
+                <a href="case-studies.html" class="cta-secondary">View Case Studies</a>
             </div>
         </div>
     </section>
-    <section>
-        <span class="section-label">Portfolio</span>
-        <span class="section-number">00</span>
-        <h2>Architectural Solutions Delivered for Industry Leaders</h2>
-        <div class="portfolio-grid">
-            <div class="portfolio-item"><div style="background: #f0f4ff; height: 200px; display: flex; align-items: center; justify-content: center; font-size: 3rem;">💰</div><h4>Choco - AWS Serverless Systems</h4></div>
-            <div class="portfolio-item"><div style="background: #fff0f5; height: 200px; display: flex; align-items: center; justify-content: center; font-size: 3rem;">💳</div><h4>Lendis - Fintech Microservices</h4></div>
-            <div class="portfolio-item"><div style="background: #f0fff5; height: 200px; display: flex; align-items: center; justify-content: center; font-size: 3rem;">🚗</div><h4>Mercedes-Benz - Kubernetes Platform</h4></div>
-            <div class="portfolio-item"><div style="background: #fff8f0; height: 200px; display: flex; align-items: center; justify-content: center; font-size: 3rem;">🔒</div><h4>MigRaven - IT Security Platform</h4></div>
-            <div class="portfolio-item"><div style="background: #f5f0ff; height: 200px; display: flex; align-items: center; justify-content: center; font-size: 3rem;">📊</div><h4>Splicky - AdTech Platform</h4></div>
-            <div class="portfolio-item"><div style="background: #f0f5ff; height: 200px; display: flex; align-items: center; justify-content: center; font-size: 3rem;">🏥</div><h4>Yara International - IoT Monitoring</h4></div>
+
+    <!-- Clients Section -->
+    <section class="section-gray">
+        <div class="container">
+            <div class="section-number">00</div>
+            <div class="section-label">Trusted Partners</div>
+            <h2>Architectural Solutions Delivered for Industry Leaders</h2>
+            
+            <div class="clients-grid">
+                <div class="client-card">
+                    <img src="https://apollos-cloud.eu/wp-content/uploads/2026/02/choco-aws-serverless-distributed-systems.jpeg" alt="Choco - AWS Serverless">
+                    <h4>Choco</h4>
+                    <p>Legacy PHP monolith to AWS-native microservices migration</p>
+                </div>
+                
+                <div class="client-card">
+                    <img src="https://apollos-cloud.eu/wp-content/uploads/2026/02/lendis-aws-microservices-migration.webp" alt="Lendis FinTech Migration">
+                    <h4>Lendis</h4>
+                    <p>Legacy PHP monolith to AWS-native microservices migration for Fintech</p>
+                </div>
+                
+                <div class="client-card">
+                    <img src="https://apollos-cloud.eu/wp-content/uploads/2026/02/mercedes-benz-kubernetes-cloud-architecture.svg" alt="Mercedes-Benz Kubernetes">
+                    <h4>Mercedes-Benz</h4>
+                    <p>Kubernetes cloud architecture and speech platform optimization</p>
+                </div>
+                
+                <div class="client-card">
+                    <img src="https://apollos-cloud.eu/wp-content/uploads/2026/02/migraven-it-security-react-visualization.png" alt="MigRaven IT Security">
+                    <h4>MigRaven</h4>
+                    <p>React-Redux SPA development and D3.js data visualization for IT access management</p>
+                </div>
+                
+                <div class="client-card">
+                    <img src="https://apollos-cloud.eu/wp-content/uploads/2026/02/splicky-adtech-node-react-migration.svg" alt="Splicky AdTech">
+                    <h4>Splicky</h4>
+                    <p>AdTech platform migration from legacy PHP to Node.js and React architecture</p>
+                </div>
+                
+                <div class="client-card">
+                    <img src="https://apollos-cloud.eu/wp-content/uploads/2026/02/adecco-azure-nestjs-cloud-migration.svg" alt="UST Adecco Azure">
+                    <h4>UST / Adecco</h4>
+                    <p>Azure cloud migration and fault-tolerant NestJS microservices</p>
+                </div>
+                
+                <div class="client-card">
+                    <img src="https://apollos-cloud.eu/wp-content/uploads/2026/02/vivy-healthtech-aws-microservices.svg" alt="Vivy HealthTech">
+                    <h4>Vivy</h4>
+                    <p>Microservices architecture and AWS backend mockup server for HealthTech</p>
+                </div>
+                
+                <div class="client-card">
+                    <img src="https://apollos-cloud.eu/wp-content/uploads/2026/02/webiny-serverless-pulumi-infrastructure.png" alt="Webiny Serverless">
+                    <h4>Webiny</h4>
+                    <p>Serverless infrastructure, Pulumi IaC, and GraphQL API development for CMS</p>
+                </div>
+                
+                <div class="client-card">
+                    <img src="https://apollos-cloud.eu/wp-content/uploads/2026/02/yara-international-aws-iot-architecture.svg" alt="Yara International IoT">
+                    <h4>Yara International</h4>
+                    <p>Event-driven AWS architecture and IoT platform engineering</p>
+                </div>
+            </div>
         </div>
     </section>
+
+    <!-- Technologies Section -->
     <section>
-        <span class="section-label">Technologies</span>
-        <span class="section-number">00</span>
-        <h2>Our Technology Stack</h2>
-        <div class="tech-grid">
-            <div class="tech-item"><span class="tech-item-icon">☁️</span><span class="tech-item-name">AWS</span></div>
-            <div class="tech-item"><span class="tech-item-icon">🌩️</span><span class="tech-item-name">Azure</span></div>
-            <div class="tech-item"><span class="tech-item-icon">🐳</span><span class="tech-item-name">Docker</span></div>
-            <div class="tech-item"><span class="tech-item-icon">⚙️</span><span class="tech-item-name">Kubernetes</span></div>
-            <div class="tech-item"><span class="tech-item-icon">📜</span><span class="tech-item-name">Terraform</span></div>
-            <div class="tech-item"><span class="tech-item-icon">🔧</span><span class="tech-item-name">CloudFormation</span></div>
-            <div class="tech-item"><span class="tech-item-icon">⚡</span><span class="tech-item-name">Serverless</span></div>
-            <div class="tech-item"><span class="tech-item-icon">💾</span><span class="tech-item-name">Databases</span></div>
-            <div class="tech-item"><span class="tech-item-icon">🔄</span><span class="tech-item-name">CI/CD Pipelines</span></div>
-            <div class="tech-item"><span class="tech-item-icon">📊</span><span class="tech-item-name">Datadog</span></div>
-            <div class="tech-item"><span class="tech-item-icon">🎯</span><span class="tech-item-name">Prometheus</span></div>
-            <div class="tech-item"><span class="tech-item-icon">📝</span><span class="tech-item-name">Node.js</span></div>
+        <div class="container">
+            <div class="section-number">01</div>
+            <div class="section-label">Core Capabilities</div>
+            <h2>Technologies</h2>
+            
+            <div class="tech-grid">
+                <div class="tech-column">
+                    <h4>Distributed Backend Systems</h4>
+                    <p>High-performance Go and Node.js (NestJS) services.</p>
+                    <div class="tech-tags">
+                        <span class="tech-tag">gRPC</span>
+                        <span class="tech-tag">GraphQL</span>
+                        <span class="tech-tag">Event-Driven Architecture</span>
+                        <span class="tech-tag">Domain-Driven Design (DDD)</span>
+                        <span class="tech-tag">Microservices</span>
+                        <span class="tech-tag">Node.js</span>
+                        <span class="tech-tag">Golang</span>
+                    </div>
+                </div>
+
+                <div class="tech-column">
+                    <h4>Cloud Infrastructure (IaC)</h4>
+                    <p>Managing multi-region AWS & Azure environments.</p>
+                    <div class="tech-tags">
+                        <span class="tech-tag">Kubernetes (EKS/AKS)</span>
+                        <span class="tech-tag">Terraform</span>
+                        <span class="tech-tag">Pulumi</span>
+                        <span class="tech-tag">Serverless</span>
+                        <span class="tech-tag">AWS CDK</span>
+                        <span class="tech-tag">Docker</span>
+                    </div>
+                </div>
+
+                <div class="tech-column">
+                    <h4>Site Reliability & Observability</h4>
+                    <p>Zero-downtime operations and monitoring.</p>
+                    <div class="tech-tags">
+                        <span class="tech-tag">SRE Principles</span>
+                        <span class="tech-tag">Datadog</span>
+                        <span class="tech-tag">Prometheus</span>
+                        <span class="tech-tag">OpsGenie</span>
+                        <span class="tech-tag">CI/CD (GitHub Actions)</span>
+                        <span class="tech-tag">CloudWatch</span>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
-    <section>
-        <span class="section-label">Services</span>
-        <span class="section-number">01</span>
-        <h2>What We Deliver</h2>
-        <div class="services-grid">
-            <div class="service-item"><h3>☁️ Cloud Architecture Design</h3><p>Strategic design of scalable cloud infrastructure across AWS, Azure, and GCP.</p><ul class="service-list"><li>Multi-region architecture</li><li>Hybrid cloud solutions</li><li>Cost optimization</li><li>Security frameworks</li></ul></div>
-            <div class="service-item"><h3>📦 Microservices Architecture</h3><p>High-performance distributed systems using Node.js, Go, and Java.</p><ul class="service-list"><li>Domain-Driven Design</li><li>Event-driven systems</li><li>gRPC & GraphQL APIs</li><li>Fault tolerance</li></ul></div>
-            <div class="service-item"><h3>🚀 DevOps & CI/CD</h3><p>Automated deployment pipelines and infrastructure management.</p><ul class="service-list"><li>GitHub Actions setup</li><li>Infrastructure as Code</li><li>Container orchestration</li><li>Zero-downtime deployments</li></ul></div>
-            <div class="service-item"><h3>🔒 Security & Compliance</h3><p>Enterprise-grade security and regulatory compliance solutions.</p><ul class="service-list"><li>Zero-trust architecture</li><li>KMS & Secrets management</li><li>VPN & network security</li><li>Compliance audits</li></ul></div>
-            <div class="service-item"><h3>📊 Observability & SRE</h3><p>Complete monitoring and reliability engineering frameworks.</p><ul class="service-list"><li>Datadog integration</li><li>SLO/SLI management</li><li>Automated alerting</li><li>Performance optimization</li></ul></div>
-            <div class="service-item"><h3>💼 Technical Leadership</h3><p>Fractional CTO services and technical team augmentation.</p><ul class="service-list"><li>Architecture reviews</li><li>Team mentoring</li><li>Process improvement</li><li>Strategic guidance</li></ul></div>
+
+    <!-- Why Us Section -->
+    <section class="section-gray">
+        <div class="container">
+            <div class="section-number">02</div>
+            <div class="section-label">Our Approach</div>
+            <h2>Why Enterprises Partner With Apollo's Cloud EOOD</h2>
+            
+            <div class="features-grid">
+                <div class="feature-item">
+                    <div class="feature-content">
+                        <h4>Architecture-First Delivery Model</h4>
+                        <p>
+                            Focus on <strong>Technical Debt Mitigation</strong> and <strong>Domain-Driven Design (DDD)</strong>. 
+                            Under the direction of our Solution Architect, Apollo's Cloud EOOD ensures every platform begins 
+                            with a rigorous technical blueprint using Domain-Driven Design (DDD). We mitigate technical debt 
+                            before the first line of code is written, specializing in decoupling legacy PHP monoliths into 
+                            high-performance microservices.
+                        </p>
+                    </div>
+                    <div class="feature-image">
+                        <img src="https://apollos-cloud.eu/wp-content/uploads/2026/02/Engineering-First-Approach-1024x683.png" alt="Engineering-First Approach">
+                    </div>
+                </div>
+
+                <div class="feature-item">
+                    <div class="feature-image">
+                        <img src="https://apollos-cloud.eu/wp-content/uploads/2026/02/Enterprise-Production-Experience.png" alt="Enterprise Production Experience">
+                    </div>
+                    <div class="feature-content">
+                        <h4>Enterprise Production Experience</h4>
+                        <p>
+                            <strong>Enterprise-Grade Operational Standards.</strong> We build for high-traffic environments 
+                            where downtime is not an option. Our experience includes optimizing the <strong>Mercedes-Benz 
+                            Speech Cloud</strong> on multi-cluster Kubernetes and managing global IoT sensor networks for 
+                            <strong>Yara International</strong>. We implement advanced observability via Datadog, Prometheus, 
+                            and OpsGenie to ensure 99.9% reliability.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="feature-item">
+                    <div class="feature-content">
+                        <h4>Cloud-Native And Scalable</h4>
+                        <p>
+                            <strong>Automated Cloud Scaling & GitOps.</strong> We move beyond manual infrastructure. 
+                            Using Terraform, Pulumi, and AWS CDK, our agency automates multi-region deployments for 
+                            seamless global scaling. We specialize in Event-Driven Architectures and Serverless systems 
+                            that adapt to demand without human intervention, significantly reducing operational overhead.
+                        </p>
+                    </div>
+                    <div class="feature-image">
+                        <img src="https://apollos-cloud.eu/wp-content/uploads/2026/02/Cloud-Native-And-Scalable.png" alt="Cloud-Native And Scalable">
+                    </div>
+                </div>
+
+                <div class="feature-item">
+                    <div class="feature-image">
+                        <img src="https://apollos-cloud.eu/wp-content/uploads/2026/02/Leadership-And-Implementation.png" alt="Leadership And Implementation">
+                    </div>
+                    <div class="feature-content">
+                        <h4>Leadership And Implementation</h4>
+                        <p>
+                            <strong>Hands-on Technical Leadership.</strong> We don't just advise; we deliver. 
+                            Apollo's Cloud EOOD provides fractional technical leadership and senior engineering talent 
+                            to drive the full SDLC. We enforce rigorous engineering standards—including TDD/BDD 
+                            (Jest, Cypress) and automated CI/CD—ensuring your internal teams grow while your product scales.
+                        </p>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
+
+    <!-- Industries Section -->
     <section>
-        <span class="section-label">Why Choose Us</span>
-        <span class="section-number">02</span>
-        <h2>Why Enterprises Partner with Apollo's Cloud EOOD</h2>
-        <div class="why-us-grid">
-            <div class="why-us-item"><h4>Architecture-First Approach</h4><p>We focus on technical debt mitigation and Domain-Driven Design (DDD) from day one. Every platform begins with rigorous architectural planning to prevent future scalability issues.</p><h4 style="margin-top: 2rem;">Enterprise Production Experience</h4><p>Experience optimizing the Mercedes-Benz Speech Cloud on Kubernetes and managing global IoT sensor networks for Yara International. We build for 99.9%+ reliability.</p><h4 style="margin-top: 2rem;">Cloud-Native & Scalable</h4><p>Automated multi-region deployments using Terraform, Pulumi, and AWS CDK. Event-driven architectures that adapt to demand without human intervention.</p></div>
-            <div style="display: flex; flex-direction: column; gap: 2rem;"><div class="why-us-image">🏗️</div><div class="why-us-image">☁️</div></div>
+        <div class="container">
+            <div class="section-number">03</div>
+            <div class="section-label">Our Focus</div>
+            <h2>Industries We Support</h2>
+            
+            <div class="tech-tags" style="justify-content: center; display: flex; flex-wrap: wrap; margin-top: 3rem;">
+                <span class="tech-tag">Automotive & Mobility Platforms</span>
+                <span class="tech-tag">Industrial & IoT Infrastructure</span>
+                <span class="tech-tag">SaaS & Web Platforms</span>
+                <span class="tech-tag">Government Digital Infrastructure</span>
+                <span class="tech-tag">AI & Data Platforms</span>
+            </div>
         </div>
     </section>
-    <section>
-        <span class="section-label">Track Record</span>
-        <span class="section-number">03</span>
-        <h2>Our Impact</h2>
-        <div class="stats-grid">
-            <div class="stat-card"><div class="stat-number">10+</div><div class="stat-label">Years Experience</div></div>
-            <div class="stat-card"><div class="stat-number">50+</div><div class="stat-label">Projects Delivered</div></div>
-            <div class="stat-card"><div class="stat-number">100+</div><div class="stat-label">Enterprise Clients</div></div>
-            <div class="stat-card"><div class="stat-number">99.9%</div><div class="stat-label">System Uptime</div></div>
+
+    <!-- CTA Section -->
+    <section class="section-gray">
+        <div class="container" style="text-align: center;">
+            <h2>Ready to Transform Your Infrastructure?</h2>
+            <p class="lead-text" style="max-width: 700px; margin: 1.5rem auto 2rem;">
+                Let's discuss how Apollo's Cloud EOOD can help you build scalable, resilient cloud infrastructure 
+                that supports your business growth.
+            </p>
+            <a href="contact.html" class="cta-button">Get Started</a>
+            <a href="case-studies.html" class="cta-secondary">View Our Work</a>
         </div>
     </section>
+
+    <!-- Footer -->
     <footer>
-        <div class="footer-container">
-            <h3>Contact Us</h3>
-            <p style="margin-bottom: 2rem;">Let's talk about transforming your infrastructure</p>
-            <div class="contact-links"><a href="mailto:omriwallach1992@gmail.com" class="contact-link">📧 Email</a><a href="https://github.com/omriwa" target="_blank" class="contact-link">💻 GitHub</a><a href="https://linkedin.com/in/omri-wallach-19989a113" target="_blank" class="contact-link">💼 LinkedIn</a><a href="tel:+4901771198008" class="contact-link">📱 Phone</a></div>
-            <div class="footer-grid">
-                <div class="footer-section"><h4>Company</h4><a href="index.html">Home</a><a href="what-we-do.html">What We Do</a><a href="case-studies.html">Case Studies</a><a href="about-us.html">About Us</a></div>
-                <div class="footer-section"><h4>Contact Info</h4><p>Email: omriwallach1992@gmail.com</p><p>Phone: +49 177-7198008</p><p>Location: Berlin, Germany</p></div>
-                <div class="footer-section"><h4>Services</h4><a href="what-we-do.html">Cloud Architecture</a><a href="what-we-do.html">DevOps & CI/CD</a><a href="what-we-do.html">Microservices</a><a href="what-we-do.html">Technical Leadership</a></div>
-            </div>
-            <div class="footer-bottom"><p>&copy; 2025 Apollos Cloud EOOD. All rights reserved.</p><p style="margin-top: 1rem; color: #666666;">Enterprise Cloud Architecture & Software Development | Berlin, Germany</p></div>
+        <div class="container">
+            <p>&copy; 2026 Apollo's Cloud EOOD. All rights reserved.</p>
+            <p style="margin-top: 0.5rem;">Bulgaria, Sofia 1000, William Gladstone 30 str. | t: +491777198008</p>
         </div>
     </footer>
-    <script>
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({ behavior: 'smooth' });
-                }
-            });
-        });
-    </script>
 </body>
 </html>
