@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Legacy PHP to AWS Microservices Migration for Lendis FinTech | Apollo's Cloud EOOD Case Study</title>
-    <meta name="description" content="Cloud migration from legacy PHP monolith to AWS-native microservices for Lendis FinTech. Node.js, NestJS, event-driven architecture.">
+    <title>Legacy PHP to AWS Microservices Migration for Lendis FinTech | Apollo's Cloud EOOD</title>
+    <meta name="description" content="Cloud migration from legacy PHP monolith to AWS-native microservices for Lendis FinTech.">
     <link rel="icon" href="https://apollos-cloud.eu/wp-content/uploads/2026/02/cropped-apollos.business.logo_-scaled-1-32x32.png" sizes="32x32">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
@@ -12,47 +12,45 @@
     <link rel="stylesheet" href="css/nav.css">
 </head>
 <body>
-    <header><div class="header-container">
-        <a href="index.html" class="logo"><img src="https://apollos-cloud.eu/wp-content/uploads/2026/02/cropped-apollos.business.logo_-1-scaled-1-235x165.png" alt="Apollo's Cloud Logo"></a>
-        <nav><ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="what-we-do.html">What We Do</a></li>
-            <li class="has-dropdown"><a href="case-studies.html">Case Studies</a>
-                <ul class="dropdown">
-                    <li><a href="yara-iot-platform.html">Yara International</a></li>
-                    <li><a href="mercedes-benz-kubernetes.html">Mercedes-Benz</a></li>
-                    <li><a href="choco-notification-system.html">Choco</a></li>
-                    <li><a href="lendis-fintech.html">Lendis</a></li>
-                    <li><a href="vivy-healthtech.html">Vivy HealthTech</a></li>
-                    <li><a href="migraven-it-security.html">MigRaven</a></li>
-                    <li><a href="splicky-adtech.html">Splicky</a></li>
-                    <li><a href="ust-adecco-azure.html">UST / Adecco</a></li>
-                    <li><a href="webiny-serverless.html">Webiny</a></li>
-                </ul>
-            </li>
-            <li><a href="about-us.html">About Us</a></li>
-            <li><a href="contact.html">Contact</a></li>
-        </ul></nav>
-        <button class="mobile-menu-toggle" aria-label="Toggle menu" onclick="document.querySelector('nav ul').classList.toggle('active')"><span></span><span></span><span></span></button>
-    </div></header>
-
+    <header>
+        <div class="header-container">
+            <a href="index.html" class="logo"><img src="https://apollos-cloud.eu/wp-content/uploads/2026/02/cropped-apollos.business.logo_-1-scaled-1-235x165.png" alt="Apollo's Cloud Logo"></a>
+            <nav><ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="what-we-do.html">What We Do</a></li>
+                <li class="has-dropdown"><a href="case-studies.html">Case Studies</a>
+                    <ul class="dropdown">
+                        <li><a href="yara-iot-platform.html">Yara International</a></li>
+                        <li><a href="mercedes-benz-kubernetes.html">Mercedes-Benz</a></li>
+                        <li><a href="choco-notification-system.html">Choco</a></li>
+                        <li><a href="lendis-fintech.html">Lendis</a></li>
+                        <li><a href="vivy-healthtech.html">Vivy HealthTech</a></li>
+                        <li><a href="migraven-it-security.html">MigRaven</a></li>
+                        <li><a href="splicky-adtech.html">Splicky</a></li>
+                        <li><a href="ust-adecco-azure.html">UST / Adecco</a></li>
+                        <li><a href="webiny-serverless.html">Webiny</a></li>
+                    </ul>
+                </li>
+                <li><a href="about-us.html">About Us</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul></nav>
+            <button class="mobile-menu-toggle" aria-label="Toggle menu" onclick="document.querySelector('nav ul').classList.toggle('active')"><span></span><span></span><span></span></button>
+        </div>
+    </header>
     <section class="case-study-hero"><div class="container">
         <div class="breadcrumb"><a href="case-studies.html">Case Studies</a> / <span>Lendis</span></div>
         <div class="case-study-meta"><span class="case-tag">Use Cases</span><span class="case-author">By Omri Wallach</span></div>
         <h1>Legacy PHP to AWS Microservices Migration for Lendis FinTech</h1>
         <p class="lead-text">Lendis, a Berlin-based FinTech company specializing in office equipment leasing, required a fundamental modernization of their technology stack. The legacy PHP monolith was reaching its scalability limits, preventing the company from delivering the real-time features and reliability their growing customer base demanded.</p>
     </div></section>
-
     <section class="case-study-body"><div class="container case-study-content">
         <h2>Context</h2>
-        <p>The Lendis platform handles complex financial workflows including lease management, payment processing, and inventory tracking. The existing PHP monolith had accumulated significant technical debt, making feature development slow and error-prone. The business required a migration to a modern, scalable architecture that could support real-time event processing and rapid feature delivery without disrupting ongoing operations.</p>
+        <p>The Lendis platform handles complex financial workflows including lease management, payment processing, and inventory tracking. The existing PHP monolith had accumulated significant technical debt, making feature development slow and error-prone.</p>
         <p>Working as a senior engineer, I led the architectural design and hands-on implementation of the migration strategy, ensuring zero-downtime transition from the legacy system to a cloud-native microservices platform.</p>
-
         <h2>Engineering Challenges &amp; Solutions</h2>
-        <div class="challenge-card"><h3>Monolith Decomposition Strategy</h3><p>The legacy PHP application contained tightly coupled business logic spanning leasing, payments, and inventory. We applied <strong>Domain-Driven Design (DDD)</strong> principles to identify bounded contexts and define clean service boundaries for the microservices extraction.</p></div>
+        <div class="challenge-card"><h3>Monolith Decomposition Strategy</h3><p>The legacy PHP application contained tightly coupled business logic spanning leasing, payments, and inventory. We applied <strong>Domain-Driven Design (DDD)</strong> principles to identify bounded contexts and define clean service boundaries.</p></div>
         <div class="challenge-card"><h3>Zero-Downtime Migration</h3><p>With active customers depending on the platform daily, the migration required a <strong>strangler fig pattern</strong> approach—incrementally routing traffic from the monolith to new microservices while maintaining full backward compatibility.</p></div>
         <div class="challenge-card"><h3>Real-Time Event Processing</h3><p>The FinTech domain demanded real-time processing of financial events. We implemented an <strong>event-driven architecture</strong> using AWS services to handle lease lifecycle events, payment notifications, and inventory updates asynchronously.</p></div>
-
         <h2>The Architectural Solutions</h2>
         <div class="solutions-grid">
             <div class="solution-item"><h4>AWS Microservices Platform</h4><p>Architected a <strong>Node.js/NestJS</strong> microservices backend deployed on AWS with containerized services, API Gateway, and event-driven communication patterns.</p></div>
@@ -60,7 +58,6 @@
             <div class="solution-item"><h4>Event-Driven Architecture</h4><p>Implemented asynchronous event processing using <strong>AWS SNS/SQS</strong> for reliable inter-service communication and real-time business event handling.</p></div>
             <div class="solution-item"><h4>CI/CD &amp; Quality Gates</h4><p>Established automated pipelines with <strong>TDD/BDD practices</strong>, ensuring high code quality and rapid, reliable deployments across environments.</p></div>
         </div>
-
         <h2>Technical Impact</h2>
         <div class="impact-grid">
             <div class="impact-item"><h4>Successful Migration</h4><p>Migrated core business logic from PHP monolith to AWS microservices with zero customer-facing downtime.</p></div>
@@ -68,14 +65,10 @@
             <div class="impact-item"><h4>Improved Scalability</h4><p>Event-driven architecture allowed the platform to handle growing transaction volumes without performance degradation.</p></div>
             <div class="impact-item"><h4>Engineering Standards</h4><p>Established TDD/BDD practices and CI/CD automation that improved codebase quality and developer productivity.</p></div>
         </div>
-
         <div class="tech-stack-section"><h3>Technical Stack</h3><div class="tech-tags"><span class="tech-tag">Node.js</span><span class="tech-tag">NestJS</span><span class="tech-tag">AWS</span><span class="tech-tag">Microservices</span><span class="tech-tag">Event-Driven Architecture</span><span class="tech-tag">DDD</span><span class="tech-tag">SNS/SQS</span><span class="tech-tag">Docker</span><span class="tech-tag">CI/CD</span><span class="tech-tag">TDD/BDD</span><span class="tech-tag">PHP Migration</span></div></div>
-
         <div class="profile-card"><img src="https://apollos-cloud.eu/wp-content/uploads/2026/02/omri_wallach_profile-300x200.jpg" alt="Omri Wallach" class="profile-card-avatar"><div class="profile-card-body"><div class="profile-card-name">Omri Wallach</div><div class="profile-card-role">Senior Cloud Engineer &amp; Solution Architect</div><p class="profile-card-bio">7+ years delivering mission-critical cloud platforms for Mercedes-Benz, Yara International, and leading European enterprises. Expert in Kubernetes, Distributed Systems, and Cloud-Native Architecture.</p><div class="profile-card-links"><a href="https://github.com/omriwa" target="_blank">GitHub</a><a href="https://linkedin.com/in/omri-wallach-19989a113" target="_blank">LinkedIn</a><a href="mailto:omriwallach1992@gmail.com">Email</a></div></div></div>
-
         <div class="case-study-nav"><a href="choco-notification-system.html" class="nav-back">&larr; Choco</a><a href="vivy-healthtech.html" class="nav-next">Vivy HealthTech &rarr;</a></div>
     </div></section>
-
     <footer><div class="container"><p>&copy; 2026 Apollo's Cloud EOOD. All rights reserved.</p><p>Bulgaria, Sofia 1000, William Gladstone 30 str. | t: +491777198008</p></div></footer>
 </body>
 </html>
