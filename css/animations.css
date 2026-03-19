@@ -1,0 +1,281 @@
+/* ===== SCROLL REVEAL ANIMATIONS ===== */
+
+/* Base state: hidden, shifted down */
+.reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+/* Revealed state */
+.reveal.revealed {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Cards get a slight scale too */
+.client-card.reveal,
+.service-card.reveal,
+.tech-column.reveal,
+.solution-item.reveal,
+.impact-item.reveal,
+.case-card.reveal,
+.stat-item.reveal {
+    transform: translateY(30px) scale(0.97);
+}
+
+.client-card.revealed,
+.service-card.revealed,
+.tech-column.revealed,
+.solution-item.revealed,
+.impact-item.revealed,
+.case-card.revealed,
+.stat-item.revealed {
+    transform: translateY(0) scale(1);
+}
+
+/* Feature items slide from sides */
+.feature-item.reveal:nth-child(odd) {
+    transform: translateX(-40px);
+    opacity: 0;
+    transition: opacity 0.7s ease-out, transform 0.7s ease-out;
+}
+
+.feature-item.reveal:nth-child(even) {
+    transform: translateX(40px);
+    opacity: 0;
+    transition: opacity 0.7s ease-out, transform 0.7s ease-out;
+}
+
+.feature-item.revealed {
+    transform: translateX(0) !important;
+    opacity: 1;
+}
+
+/* Challenge cards slide from left */
+.challenge-card.reveal {
+    transform: translateX(-20px);
+    transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+
+.challenge-card.revealed {
+    transform: translateX(0);
+}
+
+/* Hero content fades in + slides up */
+.hero-content.reveal,
+.case-study-hero .container.reveal {
+    transform: translateY(40px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.hero-content.revealed,
+.case-study-hero .container.revealed {
+    transform: translateY(0);
+}
+
+/* Profile card pops in */
+.profile-card.reveal {
+    transform: translateY(20px) scale(0.95);
+    transition: opacity 0.6s ease-out, transform 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.profile-card.revealed {
+    transform: translateY(0) scale(1);
+}
+
+/* ===== HOVER MICRO-INTERACTIONS ===== */
+
+/* Tech tags bounce on hover */
+.tech-tag {
+    transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+}
+
+.tech-tag:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(102, 126, 234, 0.15);
+    background: rgba(102, 126, 234, 0.08);
+}
+
+/* CTA buttons pulse subtle glow */
+.cta-button {
+    position: relative;
+    overflow: hidden;
+}
+
+.cta-button::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    transition: width 0.6s ease, height 0.6s ease;
+}
+
+.cta-button:hover::before {
+    width: 300px;
+    height: 300px;
+}
+
+/* Section labels fade-slide */
+.section-label {
+    transition: color 0.3s ease;
+}
+
+/* Nav links smooth underline */
+nav a {
+    transition: color 0.3s ease;
+}
+
+/* ===== WHATSAPP FLOATING BUTTON ===== */
+
+.whatsapp-float {
+    position: fixed;
+    bottom: 24px;
+    right: 24px;
+    width: 56px;
+    height: 56px;
+    background: #25D366;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4);
+    z-index: 9999;
+    text-decoration: none;
+    cursor: pointer;
+    opacity: 0;
+    transform: scale(0.5) translateY(20px);
+    transition: opacity 0.4s ease, transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.3s ease;
+}
+
+.whatsapp-float.whatsapp-visible {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+}
+
+.whatsapp-float:hover {
+    transform: scale(1.1) translateY(-3px);
+    box-shadow: 0 8px 30px rgba(37, 211, 102, 0.5);
+}
+
+.whatsapp-float:active {
+    transform: scale(0.95);
+}
+
+/* Pulse ring animation */
+.whatsapp-float::after {
+    content: '';
+    position: absolute;
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    background: rgba(37, 211, 102, 0.3);
+    animation: whatsappPulse 2s ease-out infinite;
+    z-index: -1;
+}
+
+@keyframes whatsappPulse {
+    0% {
+        transform: scale(1);
+        opacity: 0.6;
+    }
+    100% {
+        transform: scale(1.6);
+        opacity: 0;
+    }
+}
+
+/* Tooltip */
+.whatsapp-tooltip {
+    position: absolute;
+    right: 68px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: #333;
+    color: white;
+    padding: 0.4rem 0.8rem;
+    border-radius: 6px;
+    font-size: 0.8rem;
+    font-weight: 500;
+    white-space: nowrap;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.whatsapp-tooltip::after {
+    content: '';
+    position: absolute;
+    left: 100%;
+    top: 50%;
+    transform: translateY(-50%);
+    border: 5px solid transparent;
+    border-left-color: #333;
+}
+
+.whatsapp-float:hover .whatsapp-tooltip {
+    opacity: 1;
+}
+
+/* ===== RESPONSIVE: WhatsApp button ===== */
+@media (max-width: 768px) {
+    .whatsapp-float {
+        bottom: 16px;
+        right: 16px;
+        width: 50px;
+        height: 50px;
+    }
+
+    .whatsapp-float::after {
+        width: 50px;
+        height: 50px;
+    }
+
+    .whatsapp-float svg {
+        width: 24px;
+        height: 24px;
+    }
+
+    .whatsapp-tooltip {
+        display: none;
+    }
+}
+
+/* ===== RESPECT REDUCED MOTION ===== */
+@media (prefers-reduced-motion: reduce) {
+    .reveal {
+        opacity: 1;
+        transform: none;
+        transition: none;
+    }
+
+    .reveal.revealed {
+        transform: none;
+    }
+
+    .whatsapp-float,
+    .whatsapp-float.whatsapp-visible {
+        transition: none;
+        opacity: 1;
+        transform: scale(1);
+    }
+
+    .whatsapp-float::after {
+        animation: none;
+    }
+
+    .cta-button::before {
+        display: none;
+    }
+
+    *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        transition-duration: 0.01ms !important;
+    }
+}
