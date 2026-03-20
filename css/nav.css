@@ -1,13 +1,8 @@
 /*
- * DROPDOWN NAVIGATION — Industry Standard Pattern
- *
- * How it works:
- * 1. .dropdown sits at top:100% (flush with parent bottom) — ZERO gap
- * 2. .dropdown has padding-top to create visual spacing
- * 3. The padding area is transparent but still hoverable
- * 4. Mouse moves from nav link → transparent padding → visible panel
- *    without ever leaving the :hover zone
- * 5. The decorative arrow sits inside the padding area
+ * DROPDOWN NAVIGATION - Industry Standard
+ * Uses top:100% + padding-top pattern for zero dead-zone hover.
+ * .dropdown is forced to flex-direction:column to prevent
+ * inheriting the horizontal flex from nav > ul.
  */
 
 /* === PARENT LI === */
@@ -15,13 +10,13 @@
     position: relative;
 }
 
-/* Caret after "Case Studies" */
 .has-dropdown > a {
     display: inline-flex;
     align-items: center;
     gap: 5px;
 }
 
+/* Caret arrow (after, not before) */
 .has-dropdown > a::after {
     content: '';
     display: inline-block;
@@ -33,74 +28,76 @@
     margin-top: 1px;
 }
 
-.has-dropdown:hover > a::after {
-    transform: rotate(180deg);
-}
-
-/* Remove the old ::before caret if it exists */
+/* Kill any stray ::before from old code */
 .has-dropdown > a::before {
     display: none !important;
 }
 
-/* === DROPDOWN CONTAINER ===
- * KEY: top:100% + padding-top creates a hoverable bridge with no dead zone */
+.has-dropdown:hover > a::after {
+    transform: rotate(180deg);
+}
+
+/* Active state for Case Studies link when on a case study page */
+.has-dropdown > a[aria-current="page"] {
+    color: var(--accent-indigo, #4a56c0);
+}
+
+/* === DROPDOWN UL ===
+ * CRITICAL: override nav > ul flex-row with flex-direction: column
+ * and reset gap to 0.
+ */
 .dropdown {
+    /* Layout reset - THIS FIXES THE HORIZONTAL BUG */
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 0 !important;
+    list-style: none !important;
+
+    /* Positioning */
     position: absolute;
-    top: 100%;                  /* flush — no gap to parent */
+    top: 100%;
     left: 50%;
     transform: translateX(-50%);
-    padding-top: 16px;          /* transparent hoverable gap — this IS the bridge */
-    min-width: 230px;
+    padding-top: 14px;  /* hoverable bridge */
+    width: 210px;       /* compact fixed width */
+    min-width: 0;       /* override any min-width */
     z-index: 1001;
 
-    /* hidden by default */
+    /* Hidden by default */
     visibility: hidden;
     opacity: 0;
     pointer-events: none;
     transition: opacity 0.2s ease, visibility 0.2s;
-}
 
-/* === VISIBLE PANEL (inner) === */
-.dropdown-inner,
-.dropdown > li:first-child {
-    border-radius: 12px;
-}
-
-/* Since we can't add a wrapper div easily, we style the dropdown's visual appearance
-   using a ::after that acts as the panel background */
-
-/* Actually — simpler: we use the dropdown UL directly but clip the visual to exclude padding-top.
-   We do this by giving the dropdown a background+border that only appears below the padding. */
-
-.dropdown {
-    background: transparent;    /* the container itself is invisible */
+    /* Container is transparent */
+    background: transparent;
     border: none;
     box-shadow: none;
     border-radius: 0;
 }
 
-/* Visual panel background via a pseudo-element behind the list items */
+/* Panel background (sits below the padding bridge) */
 .dropdown::before {
     content: '';
     position: absolute;
-    top: 16px;                  /* matches padding-top */
+    top: 14px;
     left: 0;
     right: 0;
     bottom: 0;
     background: var(--card-bg, #fff);
-    border-radius: 12px;
+    border-radius: 10px;
     border: 1px solid var(--border-color, #e5ddd3);
-    box-shadow: 0 12px 36px rgba(30,42,58,0.12), 0 4px 10px rgba(30,42,58,0.06);
+    box-shadow: 0 10px 32px rgba(30,42,58,0.12), 0 3px 8px rgba(30,42,58,0.06);
     z-index: -1;
 }
 
-/* Decorative arrow tip — sits in the padding area */
+/* Decorative arrow */
 .dropdown::after {
     content: '';
     position: absolute;
-    top: 10px;                  /* inside the padding area, above the panel */
+    top: 9px;
     left: 50%;
-    width: 12px; height: 12px;
+    width: 11px; height: 11px;
     background: var(--card-bg, #fff);
     border: 1px solid var(--border-color, #e5ddd3);
     border-bottom: none; border-right: none;
@@ -119,47 +116,51 @@
 .dropdown li {
     list-style: none;
     position: relative;
-    z-index: 1;                 /* above the ::before background */
-}
-
-.dropdown li:first-child a {
-    border-radius: 12px 12px 0 0;
-}
-
-.dropdown li:last-child a {
-    border-radius: 0 0 12px 12px;
+    z-index: 1;
 }
 
 .dropdown a {
     display: block;
-    padding: 0.5rem 1.3rem;
+    padding: 0.45rem 1.1rem;
     color: var(--primary-text, #1e2a3a);
-    font-size: 0.85rem;
+    font-size: 0.84rem;
     font-weight: 500;
     white-space: nowrap;
     transition: background 0.15s, color 0.15s;
     text-decoration: none;
+    position: relative;
 }
 
-/* Override any underline animation from main nav */
-.dropdown a::after { display: none !important; }
-.dropdown a::before { display: none !important; }
+/* Kill ALL pseudo-elements on dropdown links (from main nav styles) */
+.dropdown a::after,
+.dropdown a::before {
+    display: none !important;
+}
 
 .dropdown a:hover {
     background: linear-gradient(135deg, rgba(74,86,192,0.07), rgba(12,133,153,0.07));
     color: var(--accent-indigo, #4a56c0);
 }
 
-/* First and last items need extra rounding-safe padding */
+/* Active submenu item */
+.dropdown a[aria-current="page"] {
+    color: var(--accent-indigo, #4a56c0);
+    background: linear-gradient(135deg, rgba(74,86,192,0.05), rgba(12,133,153,0.05));
+    font-weight: 600;
+}
+
+/* Rounding on first/last */
 .dropdown li:first-child a {
-    padding-top: 0.65rem;
+    border-radius: 10px 10px 0 0;
+    padding-top: 0.6rem;
 }
 
 .dropdown li:last-child a {
-    padding-bottom: 0.65rem;
+    border-radius: 0 0 10px 10px;
+    padding-bottom: 0.6rem;
 }
 
-/* === MOBILE MENU TOGGLE === */
+/* === MOBILE TOGGLE === */
 .mobile-menu-toggle {
     display: none;
     flex-direction: column;
@@ -180,7 +181,7 @@
     transition: all 0.3s;
 }
 
-/* === MOBILE OVERRIDES === */
+/* === MOBILE === */
 @media (max-width: 768px) {
     .mobile-menu-toggle { display: flex; }
 
@@ -208,28 +209,24 @@
 
     nav > ul > li:last-child { border-bottom: none; }
 
-    /* Mobile: dropdown always open, flat layout */
     .has-dropdown .dropdown {
-        visibility: visible;
-        opacity: 1;
-        pointer-events: auto;
-        position: static;
-        transform: none;
-        padding-top: 0.4rem;
-        min-width: auto;
-        transition: none;
+        visibility: visible !important;
+        opacity: 1 !important;
+        pointer-events: auto !important;
+        position: static !important;
+        transform: none !important;
+        width: auto !important;
+        padding-top: 0.4rem !important;
+        transition: none !important;
     }
 
-    .has-dropdown .dropdown::before {
-        display: none;  /* no panel background on mobile */
-    }
-
+    .has-dropdown .dropdown::before,
     .has-dropdown .dropdown::after {
-        display: none;  /* no arrow on mobile */
+        display: none !important;
     }
 
     .has-dropdown > a::after {
-        display: none;  /* no caret on mobile */
+        display: none;
     }
 
     .dropdown a {
@@ -240,12 +237,13 @@
         border-radius: 0 !important;
     }
 
-    .dropdown a:hover {
+    .dropdown a:hover,
+    .dropdown a[aria-current="page"] {
         background: transparent;
         color: var(--accent-indigo, #4a56c0);
         border-left-color: var(--accent-indigo, #4a56c0);
     }
 
-    .dropdown li:first-child a { padding-top: 0.35rem; }
-    .dropdown li:last-child a { padding-bottom: 0.35rem; }
+    .dropdown li:first-child a { padding-top: 0.35rem; border-radius: 0 !important; }
+    .dropdown li:last-child a { padding-bottom: 0.35rem; border-radius: 0 !important; }
 }
