@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 559" fill="none">
+  <defs>
+    <linearGradient id="gp" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#4a56c0"/><stop offset="1" stop-color="#0c8599"/></linearGradient>
+    <linearGradient id="gw" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#d97706"/><stop offset="1" stop-color="#be185d"/></linearGradient>
+    <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 Z" fill="#4a56c0"/></marker>
+  </defs>
+  <rect width="1024" height="559" fill="#f7f3ee"/>
+  <text x="512" y="38" text-anchor="middle" font-family="Montserrat,sans-serif" font-size="16" font-weight="700" fill="#4d5f72">YARA INTERNATIONAL — GLOBAL AWS IoT MONITORING PLATFORM</text>
+  <!-- Factory Sensors -->
+  <rect x="40" y="120" width="170" height="320" rx="16" fill="rgba(217,119,6,0.06)" stroke="#d97706" stroke-width="2"/>
+  <text x="125" y="152" text-anchor="middle" font-family="Montserrat,sans-serif" font-size="12" font-weight="700" fill="#d97706">GLOBAL FACTORIES</text>
+  <rect x="58" y="172" width="134" height="42" rx="8" fill="#fff" stroke="#e5ddd3" stroke-width="1.5"/>
+  <text x="125" y="198" text-anchor="middle" font-family="Montserrat,sans-serif" font-size="10" fill="#4d5f72">🏭 Europe Sensors</text>
+  <rect x="58" y="226" width="134" height="42" rx="8" fill="#fff" stroke="#e5ddd3" stroke-width="1.5"/>
+  <text x="125" y="252" text-anchor="middle" font-family="Montserrat,sans-serif" font-size="10" fill="#4d5f72">🏭 Americas Sensors</text>
+  <rect x="58" y="280" width="134" height="42" rx="8" fill="#fff" stroke="#e5ddd3" stroke-width="1.5"/>
+  <text x="125" y="306" text-anchor="middle" font-family="Montserrat,sans-serif" font-size="10" fill="#4d5f72">🏭 Asia-Pacific Sensors</text>
+  <rect x="58" y="334" width="134" height="42" rx="8" fill="#fff" stroke="#e5ddd3" stroke-width="1.5"/>
+  <text x="125" y="360" text-anchor="middle" font-family="Montserrat,sans-serif" font-size="10" fill="#4d5f72">🏭 Middle East Sensors</text>
+  <text x="125" y="410" text-anchor="middle" font-family="Montserrat,sans-serif" font-size="10" font-weight="600" fill="#d97706">Real-Time Telemetry</text>
+  <!-- Arrows from factories -->
+  <path d="M210 280 L275 280" stroke="#d97706" stroke-width="2" marker-end="url(#arr)" stroke-dasharray="5 3"/>
+  <!-- AWS Cloud -->
+  <rect x="285" y="75" width="690" height="405" rx="22" fill="rgba(74,86,192,0.04)" stroke="#4a56c0" stroke-width="2" stroke-dasharray="8 4"/>
+  <text x="630" y="103" text-anchor="middle" font-family="Montserrat,sans-serif" font-size="14" font-weight="700" fill="#4a56c0">AWS CLOUD — EVENT-DRIVEN ARCHITECTURE</text>
+  <!-- Ingestion Layer -->
+  <rect x="310" y="125" width="200" height="60" rx="10" fill="url(#gp)"/>
+  <text x="410" y="152" text-anchor="middle" font-family="Montserrat,sans-serif" font-size="12" font-weight="700" fill="#fff">API Gateway</text>
+  <text x="410" y="170" text-anchor="middle" font-family="Montserrat,sans-serif" font-size="10" fill="rgba(255,255,255,0.8)">Sensor Data Ingestion</text>
+  <rect x="530" y="125" width="200" height="60" rx="10" fill="url(#gw)"/>
+  <text x="630" y="152" text-anchor="middle" font-family="Montserrat,sans-serif" font-size="12" font-weight="700" fill="#fff">AWS EventBridge</text>
+  <text x="630" y="170" text-anchor="middle" font-family="Montserrat,sans-serif" font-size="10" fill="rgba(255,255,255,0.8)">Event Bus / Router</text>
+  <rect x="750" y="125" width="200" height="60" rx="10" fill="#fff" stroke="#0c8599" stroke-width="2"/>
+  <text x="850" y="152" text-anchor="middle" font-family="Montserrat,sans-serif" font-size="12" font-weight="600" fill="#0c8599">SNS / SES</text>
+  <text x="850" y="170" text-anchor="middle" font-family="Montserrat,sans-serif" font-size="10" fill="#4d5f72">Notifications</text>
+  <!-- Arrows -->
+  <path d="M510 155 L530 155" stroke="#4a56c0" stroke-width="2" marker-end="url(#arr)"/>
+  <path d="M730 155 L750 155" stroke="#4a56c0" stroke-width="2" marker-end="url(#arr)"/>
+  <!-- Lambda Functions -->
+  <rect x="310" y="215" width="145" height="70" rx="10" fill="#fff" stroke="#4a56c0" stroke-width="2"/>
+  <text x="383" y="244" text-anchor="middle" font-family="Montserrat,sans-serif" font-size="11" font-weight="600" fill="#4a56c0">IoT Processor λ</text>
+  <text x="383" y="264" text-anchor="middle" font-family="Montserrat,sans-serif" font-size="10" fill="#4d5f72">Node.js Lambda</text>
+  <rect x="475" y="215" width="145" height="70" rx="10" fill="#fff" stroke="#4a56c0" stroke-width="2"/>
+  <text x="548" y="244" text-anchor="middle" font-family="Montserrat,sans-serif" font-size="11" font-weight="600" fill="#4a56c0">Report Engine λ</text>
+  <text x="548" y="264" text-anchor="middle" font-family="Montserrat,sans-serif" font-size="10" fill="#4d5f72">Async Reporting</text>
+  <rect x="640" y="215" width="145" height="70" rx="10" fill="#fff" stroke="#4a56c0" stroke-width="2"/>
+  <text x="713" y="244" text-anchor="middle" font-family="Montserrat,sans-serif" font-size="11" font-weight="600" fill="#4a56c0">Scheduler λ</text>
+  <text x="713" y="264" text-anchor="middle" font-family="Montserrat,sans-serif" font-size="10" fill="#4d5f72">Cron Jobs</text>
+  <rect x="805" y="215" width="145" height="70" rx="10" fill="#fff" stroke="#4a56c0" stroke-width="2"/>
+  <text x="878" y="244" text-anchor="middle" font-family="Montserrat,sans-serif" font-size="11" font-weight="600" fill="#4a56c0">Auth Service</text>
+  <text x="878" y="264" text-anchor="middle" font-family="Montserrat,sans-serif" font-size="10" fill="#4d5f72">KMS / Secrets</text>
+  <!-- Data Layer -->
+  <rect x="310" y="315" width="200" height="65" rx="10" fill="#fff" stroke="#059669" stroke-width="2"/>
+  <text x="410" y="342" text-anchor="middle" font-family="Montserrat,sans-serif" font-size="12" font-weight="600" fill="#059669">DynamoDB</text>
+  <text x="410" y="362" text-anchor="middle" font-family="Montserrat,sans-serif" font-size="10" fill="#4d5f72">Single-Table Design</text>
+  <rect x="530" y="315" width="200" height="65" rx="10" fill="#fff" stroke="#059669" stroke-width="2"/>
+  <text x="630" y="342" text-anchor="middle" font-family="Montserrat,sans-serif" font-size="12" font-weight="600" fill="#059669">MySQL</text>
+  <text x="630" y="362" text-anchor="middle" font-family="Montserrat,sans-serif" font-size="10" fill="#4d5f72">Relational Data</text>
+  <rect x="750" y="315" width="200" height="65" rx="10" fill="#fff" stroke="#059669" stroke-width="2"/>
+  <text x="850" y="342" text-anchor="middle" font-family="Montserrat,sans-serif" font-size="12" font-weight="600" fill="#059669">CloudWatch</text>
+  <text x="850" y="362" text-anchor="middle" font-family="Montserrat,sans-serif" font-size="10" fill="#4d5f72">Metrics / Alarms</text>
+  <!-- Infra strip -->
+  <rect x="310" y="410" width="640" height="45" rx="10" fill="rgba(5,150,105,0.06)" stroke="#059669" stroke-width="1.5"/>
+  <text x="630" y="438" text-anchor="middle" font-family="Montserrat,sans-serif" font-size="11" font-weight="600" fill="#059669">CloudFormation • Docker • ECS • GitHub Actions CI/CD • TDD/BDD (Jest, Cypress)</text>
+  <!-- Impact badge -->
+  <rect x="380" y="484" width="264" height="36" rx="18" fill="url(#gw)"/>
+  <text x="512" y="507" text-anchor="middle" font-family="Montserrat,sans-serif" font-size="12" font-weight="700" fill="#fff">60% RELIABILITY IMPROVEMENT</text>
+  <text x="512" y="540" text-anchor="middle" font-family="Montserrat,sans-serif" font-size="11" fill="#7a8da0">Architecture by Omri Wallach • Apollo's Cloud EOOD</text>
+</svg>

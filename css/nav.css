@@ -1,5 +1,14 @@
-/* Dropdown Navigation - Warm Theme */
-.has-dropdown { position: relative; }
+/* Dropdown Navigation - Warm Theme + UX Fix */
+.has-dropdown {
+    position: relative;
+}
+
+/* Caret arrow next to "Case Studies" */
+.has-dropdown > a {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+}
 
 .has-dropdown > a::before {
     content: '';
@@ -8,52 +17,80 @@
     border-left: 4px solid transparent;
     border-right: 4px solid transparent;
     border-top: 4px solid currentColor;
-    margin-left: 6px;
-    vertical-align: middle;
+    order: 1;
     position: relative;
-    top: -1px;
+    top: 1px;
+    transition: transform 0.3s;
 }
 
-.dropdown {
-    display: none;
+.has-dropdown:hover > a::before {
+    transform: rotate(180deg);
+}
+
+/* ★ UX FIX: invisible bridge that prevents the dropdown from closing */
+.has-dropdown::after {
+    content: '';
     position: absolute;
     top: 100%;
+    left: 0;
+    right: 0;
+    height: 24px;         /* covers the gap between link and dropdown */
+    background: transparent;
+    pointer-events: auto;  /* catches mouse events in the gap */
+}
+
+/* Dropdown panel */
+.dropdown {
+    visibility: hidden;
+    opacity: 0;
+    position: absolute;
+    top: calc(100% + 14px);  /* sits below the invisible bridge */
     left: 50%;
-    transform: translateX(-50%);
+    transform: translateX(-50%) translateY(6px);
     background: var(--card-bg, #fff);
     border-radius: 14px;
     box-shadow: 0 15px 40px rgba(30,42,58,0.12), 0 4px 12px rgba(30,42,58,0.06);
-    padding: 0.8rem 0;
-    min-width: 240px;
+    padding: 0.7rem 0;
+    min-width: 230px;
     z-index: 1001;
     border: 1px solid var(--border-color, #e5ddd3);
-    margin-top: 10px;
+    /* Smooth transition instead of instant display:none */
+    transition: opacity 0.25s ease, transform 0.25s ease, visibility 0.25s;
 }
 
+/* Arrow tip on the dropdown */
 .dropdown::before {
     content: '';
     position: absolute;
-    top: -8px;
+    top: -7px;
     left: 50%;
-    width: 16px; height: 16px;
+    width: 14px; height: 14px;
     background: var(--card-bg, #fff);
     border: 1px solid var(--border-color, #e5ddd3);
     border-bottom: none; border-right: none;
     transform: translateX(-50%) rotate(45deg);
 }
 
-.has-dropdown:hover .dropdown { display: block; }
+/* ★ Show dropdown on hover — applied to parent so the bridge is included */
+.has-dropdown:hover .dropdown {
+    visibility: visible;
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+}
 
-.dropdown li { list-style: none; }
+.dropdown li {
+    list-style: none;
+}
 
 .dropdown a {
     display: block;
-    padding: 0.5rem 1.5rem;
+    padding: 0.5rem 1.4rem;
     color: var(--primary-text, #1e2a3a);
     font-size: 0.85rem;
     font-weight: 500;
     white-space: nowrap;
-    transition: background 0.2s, color 0.2s;
+    transition: background 0.2s, color 0.2s, padding-left 0.2s;
+    border-left: 3px solid transparent;
 }
 
 .dropdown a::after { display: none !important; }
@@ -61,6 +98,8 @@
 .dropdown a:hover {
     background: linear-gradient(135deg, rgba(74,86,192,0.06), rgba(12,133,153,0.06));
     color: var(--accent-indigo, #4a56c0);
+    border-left-color: var(--accent-indigo, #4a56c0);
+    padding-left: 1.6rem;
 }
 
 /* Mobile Menu Toggle */
@@ -84,8 +123,12 @@
     transition: all 0.3s;
 }
 
+/* ===== MOBILE ===== */
 @media (max-width: 768px) {
     .mobile-menu-toggle { display: flex; }
+
+    /* Hide the invisible bridge on mobile */
+    .has-dropdown::after { display: none; }
 
     nav > ul {
         display: none;
@@ -111,7 +154,10 @@
 
     nav > ul > li:last-child { border-bottom: none; }
 
+    /* Mobile dropdown: always visible, no hover needed */
     .has-dropdown .dropdown {
+        visibility: visible;
+        opacity: 1;
         position: static;
         transform: none;
         box-shadow: none;
@@ -121,19 +167,22 @@
         margin-top: 0.4rem;
         min-width: auto;
         display: block;
-        padding-left: 1rem;
+        padding-left: 0.5rem;
+        transition: none;
     }
 
     .dropdown::before { display: none; }
 
     .dropdown a {
-        padding: 0.35rem 0;
+        padding: 0.4rem 0 0.4rem 0.6rem;
         font-size: 0.82rem;
         color: var(--secondary-text, #4d5f72);
+        border-left: 2px solid var(--border-color, #e5ddd3);
     }
 
     .dropdown a:hover {
         background: transparent;
         color: var(--accent-indigo, #4a56c0);
+        border-left-color: var(--accent-indigo, #4a56c0);
     }
 }

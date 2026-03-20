@@ -1,21 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AWS IoT Platform Architecture for Yara International | Cloud Consulting Case Study</title>
     <meta name="description" content="How Apollo's Cloud built a global AWS IoT monitoring platform for Yara International. Event-driven architecture, DynamoDB, Lambda, 60% reliability improvement.">
     <meta name="robots" content="index, follow, max-image-preview:large">
     <link rel="canonical" href="https://omriwa.github.io/apollos-cloud/yara-iot-platform.html">
-    <meta property="og:title" content="AWS IoT Platform Architecture for Yara International">
-    <meta property="og:description" content="Global AWS IoT monitoring platform. Event-driven architecture, DynamoDB, Lambda, 60% reliability improvement.">
-    <meta property="og:type" content="article">
-    <meta property="og:url" content="https://omriwa.github.io/apollos-cloud/yara-iot-platform.html">
-    <meta property="og:image" content="https://apollos-cloud.eu/wp-content/uploads/2026/02/cropped-apollos.business.logo_-1-scaled-1.png">
-    <meta name="twitter:card" content="summary_large_image">
-    <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://omriwa.github.io/apollos-cloud/#organization","name":"Apollo's Cloud EOOD","url":"https://omriwa.github.io/apollos-cloud/"},{"@type":"Article","headline":"AWS IoT Platform Architecture for Yara International","author":{"@type":"Person","name":"Omri Wallach"},"publisher":{"@id":"https://omriwa.github.io/apollos-cloud/#organization"}}]}</script>
+    <meta property="og:title" content="AWS IoT Platform Architecture for Yara International"><meta property="og:type" content="article">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/style.css"><link rel="stylesheet" href="css/case-study-detail.css"><link rel="stylesheet" href="css/nav.css">
+    <link rel="stylesheet" href="css/style.css"><link rel="stylesheet" href="css/case-study-detail.css"><link rel="stylesheet" href="css/nav.css"><link rel="stylesheet" href="css/animations.css">
     <link rel="icon" type="image/png" href="https://apollos-cloud.eu/wp-content/uploads/2026/02/cropped-apollos.business.logo_-scaled-1-32x32.png" sizes="32x32">
 </head>
 <body>
@@ -28,7 +21,7 @@
         <p class="lead-text">How Apollo's Cloud built a global AWS IoT monitoring platform for Yara International. Event-driven architecture, DynamoDB, Lambda, 60% reliability improvement.</p>
     </div></section>
     <section class="case-study-body"><div class="container case-study-content">
-        <div class="architecture-diagram"><img src="https://apollos-cloud.eu/wp-content/uploads/2026/02/yara-global-iot-monitoring-platform-aws-architecture-1024x559.png" alt="Yara Global IoT Monitoring Platform AWS Architecture" width="1024" height="559" loading="lazy"><p class="diagram-caption">Yara Global IoT Monitoring Platform AWS Architecture</p></div>
+        <div class="architecture-diagram"><img src="img/yara-architecture.svg" alt="Yara Global IoT Monitoring Platform AWS Architecture" width="1024" height="559" loading="lazy"><p class="diagram-caption">Yara Global IoT Monitoring Platform — AWS Event-Driven Architecture</p></div>
         <h2>Context</h2><p>The Yara Monitoring Platform is a high-scale, global PaaS solution for factory infrastructure monitoring through real-time IoT sensor integration. Leading a team of five engineers, I was responsible for end-to-end architecture spanning backend, frontend, and DevOps.</p><p>Built on <strong>microservices-based, event-driven architecture</strong> using AWS for scheduled asynchronous tasks and complex data reporting for industrial sites worldwide.</p>
         <h2>Engineering Challenges</h2>
         <div class="challenge-card"><h3>Global IoT Data Orchestration</h3><p>Asynchronous, event-driven design with <strong>AWS EventBridge</strong> for reliable worldwide sensor data processing.</p></div>
@@ -40,10 +33,11 @@
         <h2>Measurable Impact</h2>
         <div class="impact-grid"><div class="impact-item"><h4>60% Reliability Improvement</h4><p>Automated containerized environment dramatically improved deployment reliability.</p></div><div class="impact-item"><h4>Enhanced Visibility</h4><p>CloudWatch metrics and automated alarms for real-time health monitoring.</p></div><div class="impact-item"><h4>SDLC Optimization</h4><p>TDD/BDD and GitHub Actions reduced manual workloads significantly.</p></div><div class="impact-item"><h4>Strategic Scalability</h4><p>DynamoDB handles increasing IoT volumes without degradation.</p></div></div>
         <div class="tech-stack-section"><h3>Technical Stack</h3><div class="tech-tags"><span class="tech-tag">Node.js</span><span class="tech-tag">DynamoDB</span><span class="tech-tag">Event-Driven</span><span class="tech-tag">AWS Lambda</span><span class="tech-tag">EventBridge</span><span class="tech-tag">TDD/BDD</span><span class="tech-tag">Microservices</span><span class="tech-tag">CI/CD</span><span class="tech-tag">CloudWatch</span><span class="tech-tag">Docker</span></div></div>
-        <div class="profile-card"><img src="https://apollos-cloud.eu/wp-content/uploads/2026/02/omri_wallach_profile-300x200.jpg" alt="Omri Wallach - Cloud Architect" class="profile-card-avatar" width="300" height="200" loading="lazy"><div class="profile-card-body"><div class="profile-card-name">Omri Wallach</div><div class="profile-card-role">Senior Cloud Engineer &amp; Solution Architect</div><p class="profile-card-bio">7+ years delivering mission-critical cloud platforms for Mercedes-Benz, Yara International, and leading European enterprises.</p><div class="profile-card-links"><a href="https://github.com/omriwa" target="_blank" rel="noopener">GitHub</a><a href="https://linkedin.com/in/omri-wallach-19989a113" target="_blank" rel="noopener">LinkedIn</a><a href="mailto:omriwallach1992@gmail.com">Email</a></div></div></div>
+        <div class="profile-card"><img src="https://apollos-cloud.eu/wp-content/uploads/2026/02/omri_wallach_profile-300x200.jpg" alt="Omri Wallach" class="profile-card-avatar" width="300" height="200" loading="lazy"><div class="profile-card-body"><div class="profile-card-name">Omri Wallach</div><div class="profile-card-role">Senior Cloud Engineer &amp; Solution Architect</div><p class="profile-card-bio">7+ years delivering mission-critical cloud platforms for Mercedes-Benz, Yara International, and leading European enterprises.</p><div class="profile-card-links"><a href="https://github.com/omriwa" target="_blank" rel="noopener">GitHub</a><a href="https://linkedin.com/in/omri-wallach-19989a113" target="_blank" rel="noopener">LinkedIn</a><a href="mailto:omriwallach1992@gmail.com">Email</a></div></div></div>
         <nav class="case-study-nav" aria-label="Case study navigation"><a href="case-studies.html" class="nav-back">&larr; All Case Studies</a><a href="mercedes-benz-kubernetes.html" class="nav-next">Mercedes-Benz &rarr;</a></nav>
     </div></section>
     </main>
-    <footer role="contentinfo"><div class="container"><p>&copy; 2026 Apollo's Cloud EOOD.</p><p style="margin-top:.5rem">Sofia, Bulgaria | Berlin, Germany | <a href="tel:+491777198008" style="color:inherit">+49 177-7198008</a></p><nav aria-label="Footer" style="margin-top:1rem"><a href="what-we-do.html" style="color:rgba(255,255,255,.7);margin-right:1.5rem">Services</a><a href="case-studies.html" style="color:rgba(255,255,255,.7);margin-right:1.5rem">Case Studies</a><a href="about-us.html" style="color:rgba(255,255,255,.7);margin-right:1.5rem">About</a><a href="contact.html" style="color:rgba(255,255,255,.7)">Contact</a></nav></div></footer>
+    <footer role="contentinfo"><div class="container"><p>&copy; 2026 Apollo's Cloud EOOD.</p><p style="margin-top:.5rem">Sofia | Berlin | <a href="tel:+491777198008">+49 177-7198008</a></p><nav aria-label="Footer" style="margin-top:1rem"><a href="what-we-do.html" style="margin-right:1.5rem">Services</a><a href="case-studies.html" style="margin-right:1.5rem">Case Studies</a><a href="about-us.html" style="margin-right:1.5rem">About</a><a href="contact.html">Contact</a></nav></div></footer>
+    <script src="js/main.js" defer></script>
 </body>
 </html>
