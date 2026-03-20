@@ -1,8 +1,7 @@
 /*
  * DROPDOWN NAVIGATION - Industry Standard
- * Uses top:100% + padding-top pattern for zero dead-zone hover.
- * .dropdown is forced to flex-direction:column to prevent
- * inheriting the horizontal flex from nav > ul.
+ * Logo protrudes via negative margins in style.css.
+ * Dropdown uses top:100% + padding-top for zero dead-zone.
  */
 
 /* === PARENT LI === */
@@ -16,7 +15,6 @@
     gap: 5px;
 }
 
-/* Caret arrow (after, not before) */
 .has-dropdown > a::after {
     content: '';
     display: inline-block;
@@ -28,62 +26,43 @@
     margin-top: 1px;
 }
 
-/* Kill any stray ::before from old code */
-.has-dropdown > a::before {
-    display: none !important;
-}
+.has-dropdown > a::before { display: none !important; }
 
-.has-dropdown:hover > a::after {
-    transform: rotate(180deg);
-}
+.has-dropdown:hover > a::after { transform: rotate(180deg); }
 
-/* Active state for Case Studies link when on a case study page */
-.has-dropdown > a[aria-current="page"] {
-    color: var(--accent-indigo, #4a56c0);
-}
+.has-dropdown > a[aria-current="page"] { color: var(--accent-indigo, #4a56c0); }
 
-/* === DROPDOWN UL ===
- * CRITICAL: override nav > ul flex-row with flex-direction: column
- * and reset gap to 0.
- */
+/* === DROPDOWN UL === */
 .dropdown {
-    /* Layout reset - THIS FIXES THE HORIZONTAL BUG */
     display: flex !important;
     flex-direction: column !important;
     gap: 0 !important;
     list-style: none !important;
 
-    /* Positioning */
     position: absolute;
     top: 100%;
     left: 50%;
     transform: translateX(-50%);
-    padding-top: 14px;  /* hoverable bridge */
-    width: 210px;       /* compact fixed width */
-    min-width: 0;       /* override any min-width */
+    padding-top: 14px;
+    width: 210px;
+    min-width: 0;
     z-index: 1001;
 
-    /* Hidden by default */
     visibility: hidden;
     opacity: 0;
     pointer-events: none;
     transition: opacity 0.2s ease, visibility 0.2s;
 
-    /* Container is transparent */
     background: transparent;
     border: none;
     box-shadow: none;
     border-radius: 0;
 }
 
-/* Panel background (sits below the padding bridge) */
 .dropdown::before {
     content: '';
     position: absolute;
-    top: 14px;
-    left: 0;
-    right: 0;
-    bottom: 0;
+    top: 14px; left: 0; right: 0; bottom: 0;
     background: var(--card-bg, #fff);
     border-radius: 10px;
     border: 1px solid var(--border-color, #e5ddd3);
@@ -91,12 +70,10 @@
     z-index: -1;
 }
 
-/* Decorative arrow */
 .dropdown::after {
     content: '';
     position: absolute;
-    top: 9px;
-    left: 50%;
+    top: 9px; left: 50%;
     width: 11px; height: 11px;
     background: var(--card-bg, #fff);
     border: 1px solid var(--border-color, #e5ddd3);
@@ -105,7 +82,6 @@
     z-index: 0;
 }
 
-/* === SHOW ON HOVER === */
 .has-dropdown:hover .dropdown {
     visibility: visible;
     opacity: 1;
@@ -131,34 +107,23 @@
     position: relative;
 }
 
-/* Kill ALL pseudo-elements on dropdown links (from main nav styles) */
 .dropdown a::after,
-.dropdown a::before {
-    display: none !important;
-}
+.dropdown a::before { display: none !important; }
 
 .dropdown a:hover {
     background: linear-gradient(135deg, rgba(74,86,192,0.07), rgba(12,133,153,0.07));
     color: var(--accent-indigo, #4a56c0);
 }
 
-/* Active submenu item */
+/* Active submenu item — works on ALL devices */
 .dropdown a[aria-current="page"] {
     color: var(--accent-indigo, #4a56c0);
-    background: linear-gradient(135deg, rgba(74,86,192,0.05), rgba(12,133,153,0.05));
+    background: linear-gradient(135deg, rgba(74,86,192,0.06), rgba(12,133,153,0.06));
     font-weight: 600;
 }
 
-/* Rounding on first/last */
-.dropdown li:first-child a {
-    border-radius: 10px 10px 0 0;
-    padding-top: 0.6rem;
-}
-
-.dropdown li:last-child a {
-    border-radius: 0 0 10px 10px;
-    padding-bottom: 0.6rem;
-}
+.dropdown li:first-child a { border-radius: 10px 10px 0 0; padding-top: 0.6rem; }
+.dropdown li:last-child a { border-radius: 0 0 10px 10px; padding-bottom: 0.6rem; }
 
 /* === MOBILE TOGGLE === */
 .mobile-menu-toggle {
@@ -174,8 +139,7 @@
 
 .mobile-menu-toggle span {
     display: block;
-    width: 24px;
-    height: 2.5px;
+    width: 24px; height: 2.5px;
     background: var(--primary-text, #1e2a3a);
     border-radius: 2px;
     transition: all 0.3s;
@@ -188,8 +152,7 @@
     nav > ul {
         display: none;
         position: absolute;
-        top: 100%;
-        left: 0; right: 0;
+        top: 100%; left: 0; right: 0;
         background: var(--primary-bg, #fffdf9);
         flex-direction: column;
         padding: 0.5rem 1.5rem 1.5rem;
@@ -209,6 +172,18 @@
 
     nav > ul > li:last-child { border-bottom: none; }
 
+    /* Active indicator on mobile: color + left accent bar */
+    nav > ul > li > a[aria-current="page"] {
+        color: var(--accent-indigo, #4a56c0);
+        padding-left: 0.7rem;
+        border-left: 3px solid var(--accent-indigo, #4a56c0);
+    }
+
+    /* Remove desktop underline on mobile */
+    nav > ul > li > a::after {
+        display: none;
+    }
+
     .has-dropdown .dropdown {
         visibility: visible !important;
         opacity: 1 !important;
@@ -221,13 +196,9 @@
     }
 
     .has-dropdown .dropdown::before,
-    .has-dropdown .dropdown::after {
-        display: none !important;
-    }
+    .has-dropdown .dropdown::after { display: none !important; }
 
-    .has-dropdown > a::after {
-        display: none;
-    }
+    .has-dropdown > a::after { display: none; }
 
     .dropdown a {
         padding: 0.35rem 0 0.35rem 0.8rem;
@@ -237,11 +208,13 @@
         border-radius: 0 !important;
     }
 
+    /* Active submenu item on mobile */
     .dropdown a:hover,
     .dropdown a[aria-current="page"] {
         background: transparent;
         color: var(--accent-indigo, #4a56c0);
         border-left-color: var(--accent-indigo, #4a56c0);
+        font-weight: 600;
     }
 
     .dropdown li:first-child a { padding-top: 0.35rem; border-radius: 0 !important; }
