@@ -34,7 +34,7 @@
     --radius: 14px;
     --radius-sm: 8px;
     --radius-lg: 20px;
-    --nav-height: 64px;
+    --nav-height: 68px;
 }
 
 *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
@@ -68,24 +68,20 @@ header {
 }
 
 /*
- * LOGO: 200px wide, protruding beyond the navbar.
- * The logo extends above/below the 64px bar using negative margins.
- * This is the same pattern used by Stripe, Linear, and Vercel.
+ * LOGO: SVG wordmark, fits naturally inside the navbar.
+ * No negative margins, no overflow. Clean containment.
  */
 .logo {
     display: flex;
     align-items: center;
     flex-shrink: 0;
-    position: relative;
-    z-index: 1;
 }
 
-.logo img {
-    width: 200px;
-    height: auto;          /* natural: ~140px at 235:165 ratio */
-    margin: -36px 0;       /* protrude above & below the 64px bar */
+.logo img,
+.logo svg {
+    height: 48px;
+    width: auto;
     display: block;
-    transition: width 0.3s;
 }
 
 /* Top-level nav only */
@@ -106,22 +102,15 @@ nav a[aria-current="page"] {
     color: var(--accent-indigo);
 }
 
-/* Underline indicator for top-level nav — works on ALL devices (not hover-only) */
+/* Underline indicator for top-level nav */
 nav > ul > li > a::after {
     content: ''; position: absolute; bottom: -4px; left: 0;
     width: 0; height: 2.5px; background: var(--gradient-primary);
     transition: width 0.3s; border-radius: 2px;
 }
 
-/* Show on hover (desktop) */
-nav > ul > li > a:hover::after {
-    width: 100%;
-}
-
-/* ALWAYS show for active page — this works on touch devices too */
-nav > ul > li > a[aria-current="page"]::after {
-    width: 100%;
-}
+nav > ul > li > a:hover::after { width: 100%; }
+nav > ul > li > a[aria-current="page"]::after { width: 100%; }
 
 .container { max-width: 1400px; margin: 0 auto; padding: 0 2rem; }
 
@@ -352,7 +341,6 @@ section { padding: 5.5rem 0; position: relative; }
 .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0; }
 .text-center { text-align: center; }
 
-/* Stats row */
 .stats-row { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 1.5rem; margin-top: 2.5rem; }
 .stat-item { text-align: center; padding: 1.8rem 1rem; background: var(--card-bg); border-radius: var(--radius); border: 1px solid var(--border-color); box-shadow: var(--shadow-sm); transition: transform 0.3s, box-shadow 0.3s; }
 .stat-item:hover { transform: translateY(-4px); box-shadow: var(--shadow-md); }
@@ -375,8 +363,6 @@ footer a:hover { color: #fff; }
 footer nav { display: flex; justify-content: center; flex-wrap: wrap; gap: 0.5rem 1.5rem; }
 
 /* ===== RESPONSIVE ===== */
-
-/* Tablet */
 @media (max-width: 1024px) {
     .container { padding: 0 1.5rem; }
     .header-container { padding: 0 1.5rem; }
@@ -384,15 +370,14 @@ footer nav { display: flex; justify-content: center; flex-wrap: wrap; gap: 0.5re
     .hero { min-height: auto; padding: 4rem 0; }
     .feature-item { gap: 2rem; padding: 2rem; }
     nav > ul { gap: 1.5rem; }
-    .logo img { width: 160px; margin: -28px 0; }
+    .logo img, .logo svg { height: 42px; }
 }
 
-/* Mobile */
 @media (max-width: 768px) {
-    :root { --nav-height: 56px; }
+    :root { --nav-height: 58px; }
     .container { padding: 0 1.2rem; }
     .header-container { padding: 0 1rem; }
-    .logo img { width: 130px; margin: -20px 0; }
+    .logo img, .logo svg { height: 36px; }
     nav > ul { display: none; }
     .mobile-menu-toggle { display: flex; }
     .hero { min-height: auto; padding: 3rem 0; }
@@ -409,12 +394,11 @@ footer nav { display: flex; justify-content: center; flex-wrap: wrap; gap: 0.5re
     .client-card img { max-height: 60px; max-width: 140px; height: 60px; }
 }
 
-/* Small mobile */
 @media (max-width: 480px) {
     :root { --nav-height: 50px; }
     .container { padding: 0 1rem; }
     .header-container { padding: 0 0.8rem; }
-    .logo img { width: 110px; margin: -16px 0; }
+    .logo img, .logo svg { height: 30px; }
     .hero { padding: 2.5rem 0; }
     section { padding: 2.5rem 0; }
     .client-card, .service-card, .tech-column { padding: 1.5rem; }

@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 52" fill="none">
+  <defs>
+    <linearGradient id="lg1" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#4a56c0"/>
+      <stop offset="1" stop-color="#0c8599"/>
+    </linearGradient>
+    <linearGradient id="lg2" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#d97706"/>
+      <stop offset="1" stop-color="#be185d"/>
+    </linearGradient>
+  </defs>
+  <!-- Cloud icon -->
+  <g transform="translate(2, 6)">
+    <!-- Cloud shape -->
+    <path d="M34 32H10a8 8 0 01-1.2-15.9A10 10 0 0128.5 13 7 7 0 0134 32z" fill="url(#lg1)" opacity="0.12"/>
+    <path d="M34 32H10a8 8 0 01-1.2-15.9A10 10 0 0128.5 13 7 7 0 0134 32z" fill="none" stroke="url(#lg1)" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+    <!-- Lightning bolt -->
+    <path d="M20 17l-3 7h6l-3 7" fill="none" stroke="url(#lg2)" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+  <!-- Text: Apollo's -->
+  <text x="46" y="28" font-family="Montserrat, 'Segoe UI', sans-serif" font-size="22" font-weight="700" fill="#1e2a3a" letter-spacing="-0.5">Apollo's</text>
+  <!-- Text: Cloud -->
+  <text x="158" y="28" font-family="Montserrat, 'Segoe UI', sans-serif" font-size="22" font-weight="700" fill="url(#lg1)" letter-spacing="-0.5">Cloud</text>
+  <!-- Tagline -->
+  <text x="46" y="44" font-family="Montserrat, 'Segoe UI', sans-serif" font-size="8.5" font-weight="600" fill="#7a8da0" letter-spacing="2.5">ENTERPRISE CLOUD ARCHITECTURE</text>
+</svg>
