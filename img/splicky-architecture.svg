@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 559" fill="none">
+  <defs><linearGradient id="gp" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#4a56c0"/><stop offset="1" stop-color="#0c8599"/></linearGradient><linearGradient id="gw" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#d97706"/><stop offset="1" stop-color="#be185d"/></linearGradient><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto"><path d="M0,0 L10,5 L0,10 Z" fill="#4a56c0"/></marker></defs>
+  <rect width="1024" height="559" fill="#f7f3ee"/>
+  <text x="512" y="40" text-anchor="middle" font-family="Montserrat,sans-serif" font-size="16" font-weight="700" fill="#4d5f72">SPLICKY ADTECH — PHP TO NODE.JS &amp; REACT MIGRATION</text>
+  <!-- Before -->
+  <rect x="60" y="80" width="290" height="380" rx="18" fill="rgba(190,24,93,0.04)" stroke="#be185d" stroke-width="2"/>
+  <text x="205" y="112" text-anchor="middle" font-family="Montserrat,sans-serif" font-size="14" font-weight="700" fill="#be185d">BEFORE</text>
+  <rect x="90" y="135" width="230" height="50" rx="10" fill="#fff" stroke="#e5ddd3" stroke-width="1.5"/>
+  <text x="205" y="165" text-anchor="middle" font-family="Montserrat,sans-serif" font-size="12" fill="#4d5f72">PHP Monolith + jQuery</text>
+  <rect x="90" y="200" width="230" height="50" rx="10" fill="#fff" stroke="#e5ddd3" stroke-width="1.5"/>
+  <text x="205" y="230" text-anchor="middle" font-family="Montserrat,sans-serif" font-size="12" fill="#4d5f72">Server-Side Rendering</text>
+  <rect x="90" y="265" width="230" height="50" rx="10" fill="#fff" stroke="#e5ddd3" stroke-width="1.5"/>
+  <text x="205" y="295" text-anchor="middle" font-family="Montserrat,sans-serif" font-size="12" fill="#4d5f72">Single Database</text>
+  <rect x="90" y="330" width="230" height="50" rx="10" fill="#fff" stroke="#e5ddd3" stroke-width="1.5"/>
+  <text x="205" y="360" text-anchor="middle" font-family="Montserrat,sans-serif" font-size="12" fill="#4d5f72">Manual Deployments</text>
+  <text x="205" y="430" text-anchor="middle" font-family="Montserrat,sans-serif" font-size="11" font-weight="600" fill="#be185d">⚠ Scaling bottleneck</text>
+  <!-- Arrow -->
+  <path d="M370 280 L430 280" stroke="url(#gp)" stroke-width="3" marker-end="url(#arrow)"/>
+  <!-- After -->
+  <rect x="450" y="80" width="510" height="380" rx="18" fill="rgba(74,86,192,0.04)" stroke="#4a56c0" stroke-width="2"/>
+  <text x="705" y="112" text-anchor="middle" font-family="Montserrat,sans-serif" font-size="14" font-weight="700" fill="#4a56c0">AFTER — MODERNIZED PLATFORM</text>
+  <rect x="480" y="135" width="220" height="55" rx="10" fill="#fff" stroke="#0c8599" stroke-width="2"/>
+  <text x="590" y="158" text-anchor="middle" font-family="Montserrat,sans-serif" font-size="12" font-weight="600" fill="#0c8599">React Frontend</text>
+  <text x="590" y="178" text-anchor="middle" font-family="Montserrat,sans-serif" font-size="10" fill="#4d5f72">SPA / Component-based</text>
+  <rect x="720" y="135" width="220" height="55" rx="10" fill="#fff" stroke="#0c8599" stroke-width="2"/>
+  <text x="830" y="158" text-anchor="middle" font-family="Montserrat,sans-serif" font-size="12" font-weight="600" fill="#0c8599">Ad Campaign Mgr</text>
+  <text x="830" y="178" text-anchor="middle" font-family="Montserrat,sans-serif" font-size="10" fill="#4d5f72">React Dashboard</text>
+  <rect x="480" y="210" width="460" height="50" rx="10" fill="url(#gp)"/>
+  <text x="710" y="240" text-anchor="middle" font-family="Montserrat,sans-serif" font-size="13" font-weight="700" fill="#fff">Node.js API Layer (Express/NestJS)</text>
+  <rect x="480" y="280" width="145" height="55" rx="10" fill="#fff" stroke="#d97706" stroke-width="1.5"/>
+  <text x="553" y="303" text-anchor="middle" font-family="Montserrat,sans-serif" font-size="11" font-weight="600" fill="#d97706">Ad Service</text>
+  <text x="553" y="323" text-anchor="middle" font-family="Montserrat,sans-serif" font-size="9" fill="#4d5f72">Bidding Logic</text>
+  <rect x="640" y="280" width="145" height="55" rx="10" fill="#fff" stroke="#d97706" stroke-width="1.5"/>
+  <text x="713" y="303" text-anchor="middle" font-family="Montserrat,sans-serif" font-size="11" font-weight="600" fill="#d97706">Analytics</text>
+  <text x="713" y="323" text-anchor="middle" font-family="Montserrat,sans-serif" font-size="9" fill="#4d5f72">Reports / KPIs</text>
+  <rect x="800" y="280" width="145" height="55" rx="10" fill="#fff" stroke="#d97706" stroke-width="1.5"/>
+  <text x="873" y="303" text-anchor="middle" font-family="Montserrat,sans-serif" font-size="11" font-weight="600" fill="#d97706">User Mgmt</text>
+  <text x="873" y="323" text-anchor="middle" font-family="Montserrat,sans-serif" font-size="9" fill="#4d5f72">Auth / Roles</text>
+  <rect x="480" y="355" width="460" height="45" rx="10" fill="rgba(5,150,105,0.08)" stroke="#059669" stroke-width="1.5"/>
+  <text x="710" y="383" text-anchor="middle" font-family="Montserrat,sans-serif" font-size="12" font-weight="600" fill="#059669">CI/CD • Docker • Automated Testing</text>
+  <text x="710" y="430" text-anchor="middle" font-family="Montserrat,sans-serif" font-size="11" font-weight="600" fill="#059669">✓ Zero-downtime migration</text>
+  <text x="512" y="530" text-anchor="middle" font-family="Montserrat,sans-serif" font-size="11" fill="#7a8da0">Architecture by Omri Wallach • Apollo's Cloud EOOD</text>
+</svg>

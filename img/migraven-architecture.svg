@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 559" fill="none">
+  <defs><linearGradient id="gp" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#4a56c0"/><stop offset="1" stop-color="#0c8599"/></linearGradient></defs>
+  <rect width="1024" height="559" fill="#f7f3ee"/>
+  <text x="512" y="40" text-anchor="middle" font-family="Montserrat,sans-serif" font-size="16" font-weight="700" fill="#4d5f72">MIGRAVEN — REACT &amp; D3.JS IT ACCESS MANAGEMENT DASHBOARD</text>
+  <!-- Data Sources -->
+  <rect x="60" y="120" width="180" height="320" rx="16" fill="rgba(217,119,6,0.06)" stroke="#d97706" stroke-width="2"/>
+  <text x="150" y="150" text-anchor="middle" font-family="Montserrat,sans-serif" font-size="13" font-weight="700" fill="#d97706">DATA SOURCES</text>
+  <rect x="80" y="170" width="140" height="45" rx="8" fill="#fff" stroke="#e5ddd3" stroke-width="1.5"/>
+  <text x="150" y="198" text-anchor="middle" font-family="Montserrat,sans-serif" font-size="11" fill="#4d5f72">Active Directory</text>
+  <rect x="80" y="230" width="140" height="45" rx="8" fill="#fff" stroke="#e5ddd3" stroke-width="1.5"/>
+  <text x="150" y="258" text-anchor="middle" font-family="Montserrat,sans-serif" font-size="11" fill="#4d5f72">File Server ACLs</text>
+  <rect x="80" y="290" width="140" height="45" rx="8" fill="#fff" stroke="#e5ddd3" stroke-width="1.5"/>
+  <text x="150" y="318" text-anchor="middle" font-family="Montserrat,sans-serif" font-size="11" fill="#4d5f72">Permission Trees</text>
+  <rect x="80" y="350" width="140" height="45" rx="8" fill="#fff" stroke="#e5ddd3" stroke-width="1.5"/>
+  <text x="150" y="378" text-anchor="middle" font-family="Montserrat,sans-serif" font-size="11" fill="#4d5f72">Audit Logs</text>
+  <!-- React App -->
+  <rect x="310" y="100" width="400" height="360" rx="20" fill="rgba(74,86,192,0.04)" stroke="#4a56c0" stroke-width="2"/>
+  <text x="510" y="132" text-anchor="middle" font-family="Montserrat,sans-serif" font-size="14" font-weight="700" fill="#4a56c0">REACT-REDUX SPA</text>
+  <!-- Dashboard mockup -->
+  <rect x="340" y="150" width="340" height="30" rx="6" fill="url(#gp)"/>
+  <text x="510" y="170" text-anchor="middle" font-family="Montserrat,sans-serif" font-size="11" font-weight="600" fill="#fff">Navigation • Search • Filters</text>
+  <!-- D3 Visualizations -->
+  <rect x="340" y="200" width="160" height="110" rx="10" fill="#fff" stroke="#0c8599" stroke-width="1.5"/>
+  <text x="420" y="224" text-anchor="middle" font-family="Montserrat,sans-serif" font-size="11" font-weight="600" fill="#0c8599">D3.js Tree Map</text>
+  <circle cx="380" cy="270" r="20" fill="rgba(12,133,153,0.1)" stroke="#0c8599" stroke-width="1"/>
+  <circle cx="420" cy="265" r="15" fill="rgba(12,133,153,0.15)" stroke="#0c8599" stroke-width="1"/>
+  <circle cx="455" cy="275" r="12" fill="rgba(12,133,153,0.2)" stroke="#0c8599" stroke-width="1"/>
+  <rect x="520" y="200" width="160" height="110" rx="10" fill="#fff" stroke="#be185d" stroke-width="1.5"/>
+  <text x="600" y="224" text-anchor="middle" font-family="Montserrat,sans-serif" font-size="11" font-weight="600" fill="#be185d">D3.js Hierarchy</text>
+  <line x1="545" y1="250" x2="580" y2="280" stroke="#be185d" stroke-width="1.5"/>
+  <line x1="580" y1="280" x2="560" y2="295" stroke="#be185d" stroke-width="1.5"/>
+  <line x1="580" y1="280" x2="610" y2="295" stroke="#be185d" stroke-width="1.5"/>
+  <line x1="545" y1="250" x2="630" y2="260" stroke="#be185d" stroke-width="1.5"/>
+  <rect x="340" y="325" width="340" height="50" rx="8" fill="#fff" stroke="#059669" stroke-width="1.5"/>
+  <text x="510" y="348" text-anchor="middle" font-family="Montserrat,sans-serif" font-size="11" font-weight="600" fill="#059669">Redux State Management</text>
+  <text x="510" y="366" text-anchor="middle" font-family="Montserrat,sans-serif" font-size="10" fill="#4d5f72">Centralized State • Middleware • Selectors</text>
+  <!-- Policy Engine -->
+  <rect x="780" y="160" width="180" height="260" rx="16" fill="rgba(5,150,105,0.06)" stroke="#059669" stroke-width="2"/>
+  <text x="870" y="190" text-anchor="middle" font-family="Montserrat,sans-serif" font-size="13" font-weight="700" fill="#059669">POLICY ENGINE</text>
+  <rect x="800" y="210" width="140" height="40" rx="8" fill="#fff" stroke="#e5ddd3" stroke-width="1.5"/>
+  <text x="870" y="235" text-anchor="middle" font-family="Montserrat,sans-serif" font-size="10" fill="#4d5f72">Access Analysis</text>
+  <rect x="800" y="265" width="140" height="40" rx="8" fill="#fff" stroke="#e5ddd3" stroke-width="1.5"/>
+  <text x="870" y="290" text-anchor="middle" font-family="Montserrat,sans-serif" font-size="10" fill="#4d5f72">Risk Scoring</text>
+  <rect x="800" y="320" width="140" height="40" rx="8" fill="#fff" stroke="#e5ddd3" stroke-width="1.5"/>
+  <text x="870" y="345" text-anchor="middle" font-family="Montserrat,sans-serif" font-size="10" fill="#4d5f72">Report Export</text>
+  <text x="512" y="530" text-anchor="middle" font-family="Montserrat,sans-serif" font-size="11" fill="#7a8da0">Architecture by Omri Wallach • Apollo's Cloud EOOD</text>
+</svg>

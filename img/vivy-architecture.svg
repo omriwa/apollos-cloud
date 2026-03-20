@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 559" fill="none">
+  <defs><linearGradient id="gp" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#4a56c0"/><stop offset="1" stop-color="#0c8599"/></linearGradient></defs>
+  <rect width="1024" height="559" fill="#f7f3ee"/>
+  <text x="512" y="40" text-anchor="middle" font-family="Montserrat,sans-serif" font-size="16" font-weight="700" fill="#4d5f72">VIVY HEALTHTECH — MICRO-FRONTEND &amp; GRAPHQL ARCHITECTURE</text>
+  <!-- Browser -->
+  <rect x="350" y="70" width="324" height="55" rx="12" fill="#fff" stroke="#1e2a3a" stroke-width="2"/>
+  <circle cx="370" cy="97" r="6" fill="#be185d"/><circle cx="388" cy="97" r="6" fill="#d97706"/><circle cx="406" cy="97" r="6" fill="#059669"/>
+  <text x="512" y="103" text-anchor="middle" font-family="Montserrat,sans-serif" font-size="13" font-weight="700" fill="#1e2a3a">Patient Browser / Mobile App</text>
+  <!-- Micro-frontends -->
+  <rect x="100" y="170" width="190" height="70" rx="12" fill="#fff" stroke="#4a56c0" stroke-width="2"/>
+  <text x="195" y="200" text-anchor="middle" font-family="Montserrat,sans-serif" font-size="12" font-weight="700" fill="#4a56c0">Health Records MFE</text>
+  <text x="195" y="220" text-anchor="middle" font-family="Montserrat,sans-serif" font-size="10" fill="#4d5f72">React Component</text>
+  <rect x="320" y="170" width="190" height="70" rx="12" fill="#fff" stroke="#4a56c0" stroke-width="2"/>
+  <text x="415" y="200" text-anchor="middle" font-family="Montserrat,sans-serif" font-size="12" font-weight="700" fill="#4a56c0">Insurance MFE</text>
+  <text x="415" y="220" text-anchor="middle" font-family="Montserrat,sans-serif" font-size="10" fill="#4d5f72">React Component</text>
+  <rect x="540" y="170" width="190" height="70" rx="12" fill="#fff" stroke="#4a56c0" stroke-width="2"/>
+  <text x="635" y="200" text-anchor="middle" font-family="Montserrat,sans-serif" font-size="12" font-weight="700" fill="#4a56c0">Appointments MFE</text>
+  <text x="635" y="220" text-anchor="middle" font-family="Montserrat,sans-serif" font-size="10" fill="#4d5f72">React Component</text>
+  <rect x="760" y="170" width="190" height="70" rx="12" fill="#fff" stroke="#4a56c0" stroke-width="2"/>
+  <text x="855" y="200" text-anchor="middle" font-family="Montserrat,sans-serif" font-size="12" font-weight="700" fill="#4a56c0">Documents MFE</text>
+  <text x="855" y="220" text-anchor="middle" font-family="Montserrat,sans-serif" font-size="10" fill="#4d5f72">React Component</text>
+  <!-- GraphQL Layer -->
+  <rect x="200" y="290" width="624" height="55" rx="12" fill="url(#gp)"/>
+  <text x="512" y="323" text-anchor="middle" font-family="Montserrat,sans-serif" font-size="14" font-weight="700" fill="#fff">GraphQL API Gateway — Node.js</text>
+  <!-- Backend Services -->
+  <rect x="130" y="395" width="170" height="65" rx="10" fill="#fff" stroke="#0c8599" stroke-width="2"/>
+  <text x="215" y="422" text-anchor="middle" font-family="Montserrat,sans-serif" font-size="11" font-weight="600" fill="#0c8599">Auth Service</text>
+  <text x="215" y="442" text-anchor="middle" font-family="Montserrat,sans-serif" font-size="10" fill="#4d5f72">JWT / OAuth</text>
+  <rect x="330" y="395" width="170" height="65" rx="10" fill="#fff" stroke="#0c8599" stroke-width="2"/>
+  <text x="415" y="422" text-anchor="middle" font-family="Montserrat,sans-serif" font-size="11" font-weight="600" fill="#0c8599">Data Service</text>
+  <text x="415" y="442" text-anchor="middle" font-family="Montserrat,sans-serif" font-size="10" fill="#4d5f72">PostgreSQL / S3</text>
+  <rect x="530" y="395" width="170" height="65" rx="10" fill="#fff" stroke="#0c8599" stroke-width="2"/>
+  <text x="615" y="422" text-anchor="middle" font-family="Montserrat,sans-serif" font-size="11" font-weight="600" fill="#0c8599">Vivy Backend API</text>
+  <text x="615" y="442" text-anchor="middle" font-family="Montserrat,sans-serif" font-size="10" fill="#4d5f72">Integration Layer</text>
+  <rect x="730" y="395" width="170" height="65" rx="10" fill="#fff" stroke="#d97706" stroke-width="2"/>
+  <text x="815" y="422" text-anchor="middle" font-family="Montserrat,sans-serif" font-size="11" font-weight="600" fill="#d97706">AWS Services</text>
+  <text x="815" y="442" text-anchor="middle" font-family="Montserrat,sans-serif" font-size="10" fill="#4d5f72">Lambda / ECS</text>
+  <text x="512" y="530" text-anchor="middle" font-family="Montserrat,sans-serif" font-size="11" fill="#7a8da0">Architecture by Omri Wallach • Apollo's Cloud EOOD</text>
+</svg>
