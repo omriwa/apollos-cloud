@@ -1,63 +1,115 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 559" fill="none">
   <defs>
-    <linearGradient id="gp" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#4a56c0"/><stop offset="1" stop-color="#0c8599"/></linearGradient>
-    <linearGradient id="gw" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#d97706"/><stop offset="1" stop-color="#be185d"/></linearGradient>
-    <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 Z" fill="#4a56c0"/></marker>
+    <linearGradient id="gAzure" x1="0" y1="0" x2="1" y2="0.6"><stop offset="0" stop-color="#0078d4"/><stop offset="1" stop-color="#00a4ef"/></linearGradient>
+    <linearGradient id="gGo" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#00add8"/><stop offset="1" stop-color="#007d9c"/></linearGradient>
+    <linearGradient id="gWarm" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#d97706"/><stop offset="1" stop-color="#be185d"/></linearGradient>
+    <linearGradient id="gSRE" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#632ca6"/><stop offset="1" stop-color="#4a56c0"/></linearGradient>
+    <marker id="a1" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0,1 L8,5 L0,9" fill="none" stroke="#0078d4" stroke-width="2"/></marker>
+    <marker id="a2" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0,1 L8,5 L0,9" fill="none" stroke="#1e2a3a" stroke-width="2"/></marker>
   </defs>
-  <rect width="1024" height="559" fill="#f7f3ee"/>
-  <text x="512" y="38" text-anchor="middle" font-family="Montserrat,sans-serif" font-size="16" font-weight="700" fill="#4d5f72">MERCEDES-BENZ — SPEECH CLOUD KUBERNETES PLATFORM</text>
-  <!-- Vehicles -->
-  <rect x="40" y="140" width="170" height="280" rx="16" fill="rgba(30,42,58,0.04)" stroke="#1e2a3a" stroke-width="2"/>
-  <text x="125" y="170" text-anchor="middle" font-family="Montserrat,sans-serif" font-size="12" font-weight="700" fill="#1e2a3a">CONNECTED FLEET</text>
-  <rect x="58" y="190" width="134" height="38" rx="8" fill="#fff" stroke="#e5ddd3" stroke-width="1.5"/>
-  <text x="125" y="214" text-anchor="middle" font-family="Montserrat,sans-serif" font-size="10" fill="#4d5f72">🚗 "Hey Mercedes"</text>
-  <rect x="58" y="240" width="134" height="38" rx="8" fill="#fff" stroke="#e5ddd3" stroke-width="1.5"/>
-  <text x="125" y="264" text-anchor="middle" font-family="Montserrat,sans-serif" font-size="10" fill="#4d5f72">🚗 Voice Commands</text>
-  <rect x="58" y="290" width="134" height="38" rx="8" fill="#fff" stroke="#e5ddd3" stroke-width="1.5"/>
-  <text x="125" y="314" text-anchor="middle" font-family="Montserrat,sans-serif" font-size="10" fill="#4d5f72">🚗 Audio Streams</text>
-  <text x="125" y="370" text-anchor="middle" font-family="Montserrat,sans-serif" font-size="10" font-weight="600" fill="#1e2a3a">Millions of vehicles</text>
-  <text x="125" y="390" text-anchor="middle" font-family="Montserrat,sans-serif" font-size="10" fill="#4d5f72">worldwide</text>
-  <!-- Arrow -->
-  <path d="M210 280 L270 280" stroke="#1e2a3a" stroke-width="2" marker-end="url(#arr)" stroke-dasharray="5 3"/>
-  <!-- Azure Cloud -->
-  <rect x="280" y="75" width="700" height="400" rx="22" fill="rgba(74,86,192,0.04)" stroke="#4a56c0" stroke-width="2" stroke-dasharray="8 4"/>
-  <text x="630" y="103" text-anchor="middle" font-family="Montserrat,sans-serif" font-size="14" font-weight="700" fill="#4a56c0">AZURE CLOUD — MULTI-CLUSTER KUBERNETES</text>
+  <!-- Background -->
+  <rect width="1024" height="559" rx="0" fill="#f7f3ee"/>
+  <!-- Title -->
+  <text x="512" y="34" text-anchor="middle" font-family="Montserrat,sans-serif" font-size="15" font-weight="700" fill="#1e2a3a" letter-spacing="0.5">MERCEDES-BENZ SPEECH CLOUD</text>
+  <text x="512" y="54" text-anchor="middle" font-family="Montserrat,sans-serif" font-size="11" fill="#7a8da0">Enterprise Kubernetes Orchestration &amp; Real-Time Voice Processing Platform</text>
+
+  <!-- ========== LEFT: VEHICLES ========== -->
+  <rect x="32" y="90" width="175" height="370" rx="14" fill="#fff" stroke="#1e2a3a" stroke-width="1.5"/>
+  <rect x="32" y="90" width="175" height="38" rx="14" fill="#1e2a3a"/>
+  <rect x="32" y="114" width="175" height="14" fill="#1e2a3a"/>
+  <text x="120" y="115" text-anchor="middle" font-family="Montserrat,sans-serif" font-size="11" font-weight="700" fill="#fff">CONNECTED VEHICLES</text>
+  <!-- Car icons -->
+  <rect x="50" y="142" width="139" height="46" rx="8" fill="#f7f3ee" stroke="#e5ddd3" stroke-width="1"/>
+  <text x="120" y="162" text-anchor="middle" font-family="Montserrat,sans-serif" font-size="10" font-weight="600" fill="#1e2a3a">S-Class / EQS</text>
+  <text x="120" y="178" text-anchor="middle" font-family="Montserrat,sans-serif" font-size="9" fill="#7a8da0">"Hey Mercedes" NLU</text>
+  <rect x="50" y="198" width="139" height="46" rx="8" fill="#f7f3ee" stroke="#e5ddd3" stroke-width="1"/>
+  <text x="120" y="218" text-anchor="middle" font-family="Montserrat,sans-serif" font-size="10" font-weight="600" fill="#1e2a3a">C-Class / GLC</text>
+  <text x="120" y="234" text-anchor="middle" font-family="Montserrat,sans-serif" font-size="9" fill="#7a8da0">Audio Stream Upload</text>
+  <rect x="50" y="254" width="139" height="46" rx="8" fill="#f7f3ee" stroke="#e5ddd3" stroke-width="1"/>
+  <text x="120" y="274" text-anchor="middle" font-family="Montserrat,sans-serif" font-size="10" font-weight="600" fill="#1e2a3a">E-Class / GLE</text>
+  <text x="120" y="290" text-anchor="middle" font-family="Montserrat,sans-serif" font-size="9" fill="#7a8da0">Navigation + Media</text>
+  <rect x="50" y="310" width="139" height="46" rx="8" fill="#f7f3ee" stroke="#e5ddd3" stroke-width="1"/>
+  <text x="120" y="330" text-anchor="middle" font-family="Montserrat,sans-serif" font-size="10" font-weight="600" fill="#1e2a3a">A-Class / CLA</text>
+  <text x="120" y="346" text-anchor="middle" font-family="Montserrat,sans-serif" font-size="9" fill="#7a8da0">Smart Home Control</text>
+  <!-- Stats -->
+  <text x="120" y="385" text-anchor="middle" font-family="Montserrat,sans-serif" font-size="11" font-weight="700" fill="#1e2a3a">Millions of vehicles</text>
+  <text x="120" y="402" text-anchor="middle" font-family="Montserrat,sans-serif" font-size="10" fill="#7a8da0">Real-time audio streams</text>
+  <rect x="56" y="415" width="128" height="28" rx="14" fill="url(#gWarm)"/>
+  <text x="120" y="434" text-anchor="middle" font-family="Montserrat,sans-serif" font-size="9" font-weight="700" fill="#fff">SUB-SECOND LATENCY</text>
+
+  <!-- Arrow from vehicles to cloud -->
+  <path d="M207 250 L248 250" stroke="#1e2a3a" stroke-width="2" marker-end="url(#a2)"/>
+  <text x="228" y="242" text-anchor="middle" font-family="Montserrat,sans-serif" font-size="8" fill="#7a8da0">TLS</text>
+
+  <!-- ========== AZURE CLOUD ========== -->
+  <rect x="256" y="78" width="740" height="395" rx="18" fill="rgba(0,120,212,0.03)" stroke="#0078d4" stroke-width="1.5" stroke-dasharray="6 3"/>
+  <text x="626" y="100" text-anchor="middle" font-family="Montserrat,sans-serif" font-size="12" font-weight="700" fill="#0078d4">MICROSOFT AZURE CLOUD</text>
+
   <!-- AKS Cluster -->
-  <rect x="310" y="120" width="640" height="170" rx="16" fill="rgba(12,133,153,0.04)" stroke="#0c8599" stroke-width="2"/>
-  <text x="630" y="146" text-anchor="middle" font-family="Montserrat,sans-serif" font-size="12" font-weight="700" fill="#0c8599">Azure Kubernetes Service (AKS) — Helm Managed</text>
-  <!-- Microservices -->
-  <rect x="330" y="160" width="140" height="60" rx="10" fill="#fff" stroke="#4a56c0" stroke-width="2"/>
-  <text x="400" y="185" text-anchor="middle" font-family="Montserrat,sans-serif" font-size="11" font-weight="600" fill="#4a56c0">Speech NLU</text>
-  <text x="400" y="203" text-anchor="middle" font-family="Montserrat,sans-serif" font-size="9" fill="#4d5f72">Golang / gRPC</text>
-  <rect x="485" y="160" width="140" height="60" rx="10" fill="#fff" stroke="#4a56c0" stroke-width="2"/>
-  <text x="555" y="185" text-anchor="middle" font-family="Montserrat,sans-serif" font-size="11" font-weight="600" fill="#4a56c0">Audio Pipeline</text>
-  <text x="555" y="203" text-anchor="middle" font-family="Montserrat,sans-serif" font-size="9" fill="#4d5f72">Golang / Protobuf</text>
-  <rect x="640" y="160" width="140" height="60" rx="10" fill="#fff" stroke="#4a56c0" stroke-width="2"/>
-  <text x="710" y="185" text-anchor="middle" font-family="Montserrat,sans-serif" font-size="11" font-weight="600" fill="#4a56c0">Command Svc</text>
-  <text x="710" y="203" text-anchor="middle" font-family="Montserrat,sans-serif" font-size="9" fill="#4d5f72">Java Spring Boot</text>
-  <rect x="795" y="160" width="140" height="60" rx="10" fill="#fff" stroke="#4a56c0" stroke-width="2"/>
-  <text x="865" y="185" text-anchor="middle" font-family="Montserrat,sans-serif" font-size="11" font-weight="600" fill="#4a56c0">Session Mgr</text>
-  <text x="865" y="203" text-anchor="middle" font-family="Montserrat,sans-serif" font-size="9" fill="#4d5f72">Redis / State</text>
-  <!-- Connection lines between services -->
-  <line x1="470" y1="240" x2="470" y2="260" stroke="#4a56c0" stroke-width="1" stroke-dasharray="3 2"/>
-  <line x1="625" y1="240" x2="625" y2="260" stroke="#4a56c0" stroke-width="1" stroke-dasharray="3 2"/>
-  <line x1="780" y1="240" x2="780" y2="260" stroke="#4a56c0" stroke-width="1" stroke-dasharray="3 2"/>
-  <!-- gRPC Layer -->
-  <rect x="310" y="310" width="310" height="50" rx="10" fill="url(#gp)"/>
-  <text x="465" y="340" text-anchor="middle" font-family="Montserrat,sans-serif" font-size="12" font-weight="700" fill="#fff">gRPC / ProtoBuf — Service Mesh</text>
-  <!-- Observability -->
-  <rect x="640" y="310" width="310" height="50" rx="10" fill="url(#gw)"/>
-  <text x="795" y="340" text-anchor="middle" font-family="Montserrat,sans-serif" font-size="12" font-weight="700" fill="#fff">Datadog + OpsGenie SRE</text>
-  <!-- Infra -->
-  <rect x="310" y="385" width="200" height="60" rx="10" fill="#fff" stroke="#d97706" stroke-width="2"/>
-  <text x="410" y="410" text-anchor="middle" font-family="Montserrat,sans-serif" font-size="11" font-weight="600" fill="#d97706">Terraform IaC</text>
-  <text x="410" y="430" text-anchor="middle" font-family="Montserrat,sans-serif" font-size="10" fill="#4d5f72">Declarative Infra</text>
-  <rect x="530" y="385" width="200" height="60" rx="10" fill="#fff" stroke="#d97706" stroke-width="2"/>
-  <text x="630" y="410" text-anchor="middle" font-family="Montserrat,sans-serif" font-size="11" font-weight="600" fill="#d97706">Azure DevOps</text>
-  <text x="630" y="430" text-anchor="middle" font-family="Montserrat,sans-serif" font-size="10" fill="#4d5f72">CI/CD Pipelines</text>
-  <rect x="750" y="385" width="200" height="60" rx="10" fill="#fff" stroke="#d97706" stroke-width="2"/>
-  <text x="850" y="410" text-anchor="middle" font-family="Montserrat,sans-serif" font-size="11" font-weight="600" fill="#d97706">TDD/BDD</text>
-  <text x="850" y="430" text-anchor="middle" font-family="Montserrat,sans-serif" font-size="10" fill="#4d5f72">Golang + Mockito</text>
-  <text x="512" y="500" text-anchor="middle" font-family="Montserrat,sans-serif" font-size="12" font-weight="700" fill="#059669">Sub-second voice command latency • 99.9%+ uptime</text>
-  <text x="512" y="540" text-anchor="middle" font-family="Montserrat,sans-serif" font-size="11" fill="#7a8da0">Architecture by Omri Wallach • Apollo's Cloud EOOD</text>
+  <rect x="275" y="114" width="700" height="178" rx="14" fill="rgba(0,120,212,0.04)" stroke="#00a4ef" stroke-width="1.5"/>
+  <text x="625" y="136" text-anchor="middle" font-family="Montserrat,sans-serif" font-size="11" font-weight="700" fill="#0078d4">AZURE KUBERNETES SERVICE (AKS) — Multi-Cluster / Helm Charts</text>
+
+  <!-- Microservice pods -->
+  <rect x="292" y="150" width="155" height="70" rx="10" fill="#fff" stroke="#00add8" stroke-width="2"/>
+  <circle cx="310" cy="166" r="6" fill="url(#gGo)"/>
+  <text x="370" y="170" text-anchor="middle" font-family="Montserrat,sans-serif" font-size="11" font-weight="700" fill="#007d9c">Speech NLU</text>
+  <text x="370" y="188" text-anchor="middle" font-family="Montserrat,sans-serif" font-size="9" fill="#4d5f72">Golang • gRPC Server</text>
+  <text x="370" y="206" text-anchor="middle" font-family="Montserrat,sans-serif" font-size="8" fill="#7a8da0">Natural Language Understanding</text>
+
+  <rect x="460" y="150" width="155" height="70" rx="10" fill="#fff" stroke="#00add8" stroke-width="2"/>
+  <circle cx="478" cy="166" r="6" fill="url(#gGo)"/>
+  <text x="538" y="170" text-anchor="middle" font-family="Montserrat,sans-serif" font-size="11" font-weight="700" fill="#007d9c">Audio Pipeline</text>
+  <text x="538" y="188" text-anchor="middle" font-family="Montserrat,sans-serif" font-size="9" fill="#4d5f72">Golang • Protobuf</text>
+  <text x="538" y="206" text-anchor="middle" font-family="Montserrat,sans-serif" font-size="8" fill="#7a8da0">Stream Processing</text>
+
+  <rect x="628" y="150" width="155" height="70" rx="10" fill="#fff" stroke="#d97706" stroke-width="2"/>
+  <circle cx="646" cy="166" r="6" fill="#d97706"/>
+  <text x="706" y="170" text-anchor="middle" font-family="Montserrat,sans-serif" font-size="11" font-weight="700" fill="#d97706">Command Svc</text>
+  <text x="706" y="188" text-anchor="middle" font-family="Montserrat,sans-serif" font-size="9" fill="#4d5f72">Java Spring Boot</text>
+  <text x="706" y="206" text-anchor="middle" font-family="Montserrat,sans-serif" font-size="8" fill="#7a8da0">Business Logic</text>
+
+  <rect x="796" y="150" width="162" height="70" rx="10" fill="#fff" stroke="#be185d" stroke-width="2"/>
+  <circle cx="814" cy="166" r="6" fill="#be185d"/>
+  <text x="877" y="170" text-anchor="middle" font-family="Montserrat,sans-serif" font-size="11" font-weight="700" fill="#be185d">Session + Cache</text>
+  <text x="877" y="188" text-anchor="middle" font-family="Montserrat,sans-serif" font-size="9" fill="#4d5f72">Redis Cluster</text>
+  <text x="877" y="206" text-anchor="middle" font-family="Montserrat,sans-serif" font-size="8" fill="#7a8da0">State Management</text>
+
+  <!-- gRPC arrows between services -->
+  <path d="M447 185 L460 185" stroke="#00add8" stroke-width="1.5" marker-end="url(#a1)"/>
+  <path d="M615 185 L628 185" stroke="#00add8" stroke-width="1.5" marker-end="url(#a1)"/>
+  <path d="M783 185 L796 185" stroke="#00add8" stroke-width="1.5" marker-end="url(#a1)"/>
+  <!-- gRPC label -->
+  <text x="625" y="248" text-anchor="middle" font-family="Montserrat,sans-serif" font-size="9" font-weight="600" fill="#00a4ef">gRPC / ProtoBuf inter-service communication • HPA auto-scaling</text>
+  <!-- Horizontal pod line -->
+  <line x1="292" y1="238" x2="958" y2="238" stroke="#00a4ef" stroke-width="1" stroke-dasharray="3 2"/>
+
+  <!-- ========== MIDDLE LAYER: SERVICE MESH + SRE ========== -->
+  <rect x="275" y="300" width="340" height="52" rx="10" fill="url(#gGo)"/>
+  <text x="445" y="322" text-anchor="middle" font-family="Montserrat,sans-serif" font-size="12" font-weight="700" fill="#fff">gRPC Service Mesh</text>
+  <text x="445" y="340" text-anchor="middle" font-family="Montserrat,sans-serif" font-size="9" fill="rgba(255,255,255,0.85)">Binary serialization • Low-latency RPC</text>
+
+  <rect x="635" y="300" width="340" height="52" rx="10" fill="url(#gSRE)"/>
+  <text x="805" y="322" text-anchor="middle" font-family="Montserrat,sans-serif" font-size="12" font-weight="700" fill="#fff">Observability Stack</text>
+  <text x="805" y="340" text-anchor="middle" font-family="Montserrat,sans-serif" font-size="9" fill="rgba(255,255,255,0.85)">Datadog APM • OpsGenie Alerts • SLOs</text>
+
+  <!-- ========== BOTTOM: INFRASTRUCTURE ========== -->
+  <rect x="275" y="368" width="222" height="56" rx="10" fill="#fff" stroke="#d97706" stroke-width="1.5"/>
+  <text x="386" y="392" text-anchor="middle" font-family="Montserrat,sans-serif" font-size="11" font-weight="600" fill="#d97706">Terraform IaC</text>
+  <text x="386" y="410" text-anchor="middle" font-family="Montserrat,sans-serif" font-size="9" fill="#7a8da0">Declarative • Git-versioned</text>
+
+  <rect x="514" y="368" width="222" height="56" rx="10" fill="#fff" stroke="#d97706" stroke-width="1.5"/>
+  <text x="625" y="392" text-anchor="middle" font-family="Montserrat,sans-serif" font-size="11" font-weight="600" fill="#d97706">Azure DevOps CI/CD</text>
+  <text x="625" y="410" text-anchor="middle" font-family="Montserrat,sans-serif" font-size="9" fill="#7a8da0">Helm deploys • Canary</text>
+
+  <rect x="753" y="368" width="222" height="56" rx="10" fill="#fff" stroke="#059669" stroke-width="1.5"/>
+  <text x="864" y="392" text-anchor="middle" font-family="Montserrat,sans-serif" font-size="11" font-weight="600" fill="#059669">Quality Engineering</text>
+  <text x="864" y="410" text-anchor="middle" font-family="Montserrat,sans-serif" font-size="9" fill="#7a8da0">TDD/BDD • Golang Tests • Mockito</text>
+
+  <!-- ========== BOTTOM STRIP ========== -->
+  <rect x="275" y="438" width="700" height="32" rx="8" fill="rgba(0,120,212,0.06)" stroke="#0078d4" stroke-width="1"/>
+  <text x="625" y="459" text-anchor="middle" font-family="Montserrat,sans-serif" font-size="10" font-weight="600" fill="#0078d4">Azure AKS • Golang • Java Spring Boot • gRPC • Terraform • Datadog • OpsGenie • Redis • Helm</text>
+
+  <!-- Footer -->
+  <text x="512" y="500" text-anchor="middle" font-family="Montserrat,sans-serif" font-size="11" font-weight="700" fill="#059669">Sub-second voice latency • 99.9%+ uptime • Millions of connected vehicles</text>
+  <text x="512" y="525" text-anchor="middle" font-family="Montserrat,sans-serif" font-size="10" fill="#7a8da0">Architecture by Omri Wallach • Apollo's Cloud EOOD</text>
 </svg>
